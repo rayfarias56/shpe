@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Shpe::Application.config.secret_token = '1d0c0a55adf89d1f66c1b472ac90d3eef66832599b663386cde92c73a2f1f6651a83d95cab62bcaf90db618a65aa503cc3c045f973d0160e9a016b2cb2162496'
+SampleApp::Application.config.secret_token = '6ac0e09d77abb26f704a334627d85a7f8148be7ef8a8723991414f474b36a1b54e2f584f3eb09db3e03913c4e49e2bd3f1cccf1c085ff3f18e059f3ddb42e95d'

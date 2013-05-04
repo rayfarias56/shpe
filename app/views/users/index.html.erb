@@ -1,35 +1,10 @@
-<h1>Listing users</h1>
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
 
-<table>
-  <tr>
-    <th>Username</th>
-    <th>Password hash</th>
-    <th>First name</th>
-    <th>Last name</th>
-    <th>Major</th>
-    <th>Graduation date</th>
-    <th>Linkedin link</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<%= will_paginate %>
 
-<% @users.each do |user| %>
-  <tr>
-    <td><%= user.username %></td>
-    <td><%= user.password_hash %></td>
-    <td><%= user.first_name %></td>
-    <td><%= user.last_name %></td>
-    <td><%= user.major %></td>
-    <td><%= user.graduation_date %></td>
-    <td><%= user.linkedin_link %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
-</table>
+<ul class="users">
+    <%= render @users %>
+</ul>
 
-<br />
-
-<%= link_to 'New User', new_user_path %>
+<%= will_paginate %>
