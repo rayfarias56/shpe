@@ -14,6 +14,14 @@ SampleApp::Application.routes.draw do
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
   match '/mission', to: 'static_pages#mission'
+  match '/meeting', to: 'static_pages#meeting'
+  match '/history', to: 'static_pages#history'
+  match '/constitution', to: 'static_pages#constitution'
+  match '/regioniv', to: 'static_pages#regioniv'
+  match '/national', to: 'static_pages#national'
+  match '/documentary', to: 'static_pages#documentary'
+
+
   
 
   # The priority is based upon order of creation:
