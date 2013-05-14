@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:index,:edit, :update, :destroy]
+  before_filter :signed_in_user, only: [:index,:edit, :update, :destroy,:control_panel]
   before_filter :correct_user,   only: [:edit, :update]
-  before_filter :admin_user, only: :destroy
+  before_filter :admin_user, only: [:destroy,:control_panel]
   
   def show
     @user = User.find(params[:id])
@@ -54,7 +54,7 @@ class UsersController < ApplicationController
   def add_admin
     user = User.find(params[:id])
     user.admin = true
-    if user.save(:validate => false)
+    if user.update_column(:admin, true)
       flash[:success] = "Added as Admin"
       redirect_to control_panel_path
     else
@@ -66,8 +66,7 @@ class UsersController < ApplicationController
 
   def remove_admin
     user = User.find(params[:id])
-    user.admin = false
-    if user.save(:validate => false)
+    if user.update_column(:admin, false)
       flash[:success] = "Removed as Admin"
       redirect_to control_panel_path
     else
@@ -78,8 +77,7 @@ class UsersController < ApplicationController
 
   def add_eboard
     user = User.find(params[:id])
-    user.eboard = true
-    if user.save(:validate => false)
+    if user.update_column(:eboard, true)
       flash[:success] = "Added as Eboard"
       redirect_to control_panel_path
     else
@@ -90,8 +88,7 @@ class UsersController < ApplicationController
 
   def remove_eboard
     user = User.find(params[:id])
-    user.eboard = false
-    if user.save(:validate => false)
+    if user.update_column(:eboard, false)
       flash[:success] = "Removed as Eboard"
       redirect_to control_panel_path
     else
@@ -111,4 +108,5 @@ class UsersController < ApplicationController
   def admin_user
     redirect_to(root_path) unless current_user.admin?
   end
+
 end

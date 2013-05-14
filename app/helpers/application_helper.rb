@@ -8,7 +8,7 @@ module ApplicationHelper
     end
   end
 
-  def admin?(user)
-  	user.admin
-  end
+ # def admin?(user)
+  #	user.admin
+  #end
 end
