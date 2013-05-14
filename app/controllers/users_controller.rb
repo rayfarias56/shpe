@@ -52,19 +52,52 @@ class UsersController < ApplicationController
   end
 
   def add_admin
-    
+    user = User.find(params[:id])
+    user.admin = true
+    if user.save(:validate => false)
+      flash[:success] = "Added as Admin"
+      redirect_to control_panel_path
+    else
+      flash[:error] = "Failed Adding Admin"
+
+      redirect_to control_panel_path
+    end
   end
 
   def remove_admin
-
+    user = User.find(params[:id])
+    user.admin = false
+    if user.save(:validate => false)
+      flash[:success] = "Removed as Admin"
+      redirect_to control_panel_path
+    else
+      flash[:error] = "Failed removing Admin"
+      redirect_to control_panel_path
+    end
   end
 
   def add_eboard
-
+    user = User.find(params[:id])
+    user.eboard = true
+    if user.save(:validate => false)
+      flash[:success] = "Added as Eboard"
+      redirect_to control_panel_path
+    else
+      flash[:error] = "Failed Adding Eboard"
+      redirect_to control_panel_path
+    end
   end
 
   def remove_eboard
-
+    user = User.find(params[:id])
+    user.eboard = false
+    if user.save(:validate => false)
+      flash[:success] = "Removed as Eboard"
+      redirect_to control_panel_path
+    else
+      flash[:error] = "Failed removing Eboard"
+      redirect_to control_panel_path
+    end
   end
 
   private

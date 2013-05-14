@@ -21,6 +21,12 @@ SampleApp::Application.routes.draw do
   match '/national', to: 'static_pages#national'
   match '/documentary', to: 'static_pages#documentary'
 
+  match 'add_admin/:id', to: 'users#add_admin'
+  match 'remove_admin/:id', to: 'users#remove_admin'
+
+  match 'add_eboard/:id', to: 'users#add_eboard'
+  match 'remove_eboard/:id', to: 'users#remove_eboard'
+
 
   
 
