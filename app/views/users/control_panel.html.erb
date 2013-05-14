@@ -1,0 +1,16 @@
+<% for user in @users %>
+<div class="row">
+    <section>
+      <p>
+        <%= gravatar_for user %>
+        <%= user.name %>
+        <%= link_to 'ADMIN', '#', :class => 'btn btn-success' if user.admin? %>
+
+        <%= link_to "Delete", user, method: :delete,
+                                  data: { confirm: "You sure?" }, :class => 'btn btn-danger' %>
+      </p>
+    </section>
+</div>
+<hr>
+
+<%  end %>
