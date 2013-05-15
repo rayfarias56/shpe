@@ -29,6 +29,6 @@
 	<p><%= "UIN: " + @user.uin.to_s  if @user.uin %></p>
 	<p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
 	<p><%= "Phone Number " +  number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number  %></p>
-	<%= link_to "Resume", @resume.pdf.url if @resume%>
+	<%= link_to @resume.pdf.url, @resume.pdf.url if @resume %>
 
 </div>

@@ -40,6 +40,7 @@ class ResumesController < ApplicationController
   # POST /resumes
   # POST /resumes.json
   def create
+    old_resume = current_user.resume.destroy
     @resume = Resume.new(params[:resume])
     @resume.user_id = current_user.id
     respond_to do |format|
@@ -56,8 +57,9 @@ class ResumesController < ApplicationController
   # PUT /resumes/1
   # PUT /resumes/1.json
   def update
+    @resume = current_user.resume.destroy
     @resume = Resume.find(params[:id])
-
+    @resume.user_id = current_user.id
     respond_to do |format|
       if @resume.update_attributes(params[:resume])
         format.html { redirect_to @resume, notice: 'Resume was successfully updated.' }
