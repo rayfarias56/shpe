@@ -1,0 +1,6 @@
+<%= form_tag("/users/add_resume", :method => "post") do %>
+
+<%= file_field_tag :resume %>
+<%= submit_tag 'Create' %>
+
+<% end %>
