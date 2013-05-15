@@ -9,7 +9,7 @@
 #  updated_at :datetime         not null
 #
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:phone_number, :admin
+  attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:phone_number
   has_secure_password
 
   before_save { self.email.downcase! }
@@ -20,6 +20,10 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6}
   validates :password_confirmation, presence: true
+  validates :major, presence: true
+  validates :grad_date, presence: true
+  validates :uin, presence: true, length: {is: 9}, uniqueness:true
+  validates :phone_number, presence: true, length: {is: 10} 
 
   private
 
