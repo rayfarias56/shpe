@@ -26,6 +26,8 @@ SampleApp::Application.routes.draw do
 
   match 'add_eboard/:id', to: 'users#add_eboard'
   match 'remove_eboard/:id', to: 'users#remove_eboard'
+  match 'new_resume', to: 'users#new_resume'
+  match 'users/add_resume', to: 'users#add_resume'
 
 
   

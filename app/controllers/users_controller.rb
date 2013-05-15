@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:index,:edit, :update, :destroy,:control_panel]
+  before_filter :signed_in_user, only: [:index,:edit, :update, :destroy,:control_panel, :add_resume]
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user, only: [:destroy,:control_panel,:add_admin, :add_eboard, :remove_admin, :remove_eboard]
   
@@ -94,6 +94,21 @@ class UsersController < ApplicationController
     else
       flash[:error] = "Failed removing Eboard"
       redirect_to control_panel_path
+    end
+  end
+
+  def new_resume
+
+  end
+
+  def add_resume
+    user = current_user
+    if user.update_column(:resume, params[:resume])
+      flash[:success] = "Added resume"
+      redirect_to user
+    else
+      flash[:error] = "Failed adding resume"
+      redirect_to user
     end
   end
 
