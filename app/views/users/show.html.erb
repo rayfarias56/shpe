@@ -23,11 +23,12 @@
 
 <div class="row center">
 	<%=link_to "Edit Profile", edit_user_path(current_user), :class => 'btn' %>
-	<%= link_to "Upload Resume" , new_resume_path, :class => 'btn' %>
+	<%= link_to "Add Resume", new_resume_path %>
 	<p><%= "GPA: " + @user.gpa.to_s if @user.gpa %></p>
 	<p><%= "Major: " + @user.major  if @user.major%></p>
 	<p><%= "UIN: " + @user.uin.to_s  if @user.uin %></p>
 	<p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
 	<p><%= "Phone Number " +  number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number  %></p>
+	<%= link_to "Resume", @resume.pdf.url if @resume%>
 
 </div>

@@ -11,8 +11,7 @@
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:phone_number,:resume
   has_secure_password
-
-  has_attached_file :resume
+  has_one :resume
 
   before_save { self.email.downcase! }
   before_save :create_remember_token

@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   
   def show
     @user = User.find(params[:id])
+    @resume = @user.resume
   end
 
   def new
@@ -97,20 +98,6 @@ class UsersController < ApplicationController
     end
   end
 
-  def new_resume
-
-  end
-
-  def add_resume
-    user = current_user
-    if user.update_column(:resume, params[:resume])
-      flash[:success] = "Added resume"
-      redirect_to user
-    else
-      flash[:error] = "Failed adding resume"
-      redirect_to user
-    end
-  end
 
   private
 

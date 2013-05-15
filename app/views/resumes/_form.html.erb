@@ -1,0 +1,7 @@
+
+
+
+<%= form_for @resume, :url => resumes_path, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :pdf %>
+  <%= form.submit "Submit" %></p>
+<% end %>
