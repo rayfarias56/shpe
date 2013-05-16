@@ -2,45 +2,51 @@
 <div class="row">
 
 
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-        
-      </h1>
+  <h1>
+    <%= gravatar_for @user %>
+    <%= @user.name %>
 
-              
-
- </div>
- <div class="row center">
-<% if @user.admin? %> 
- <p>You are an admin</p>
- <%= link_to 'Control Panel', control_panel_path, :class => 'btn btn-primary' %>
-<% end %>
-
-<% if @user.eboard? %>
- <p>You are on Eboard</p>
-       <%= link_to "Add announcement", new_announcement_path, :class => 'btn' %>
-
-<% end %>
+  </h1>
 
 
-	<%=link_to "Edit Profile", edit_user_path(current_user), :class => 'btn' %>
-	<%= link_to "Add Resume", new_resume_path, :class => 'btn' %>
-	<p><%= "GPA: " + @user.gpa.to_s if @user.gpa %></p>
-	<p><%= "Major: " + @user.major  if @user.major%></p>
-	<p><%= "UIN: " + @user.uin.to_s  if @user.uin %></p>
-	<p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
-	<p><%= "Phone Number " +  number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number  %></p>
-	<%= link_to "Resume Link", @resume.pdf.url if @resume %>
+</div>
+<div class="row center">
+  <% if @user.admin? %>
+      <p>You are an admin</p>
+      <%= link_to 'Control Panel', control_panel_path, :class => 'btn btn-primary' %>
+  <% end %>
+
+  <% if @user.eboard? %>
+      <p>You are on Eboard</p>
+  <% end %>
+
+  <% if @user.admin? or @user.eboard? %>
+      <%= link_to "Add announcement", new_announcement_path, :class => 'btn' %>
+  <% end %>
 
 
-   <h1>Your Announcements</h1>
-   <% for announcement in @announcements %>
-       <h2><%= announcement.title %></h2>
-       <h5>By <%= @user.name %></h5>
-       <p><%= announcement.content.html_safe %></p>
-       <td><%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+  <%= link_to "Edit Profile", edit_user_path(current_user), :class => 'btn' %>
+  <%= link_to "Add Resume", new_resume_path, :class => 'btn' %>
+  <p><%= "GPA: " + @user.gpa.to_s if @user.gpa %></p>
 
-   <% end %>
+  <p><%= "Major: " + @user.major if @user.major %></p>
+
+  <p><%= "UIN: " + @user.uin.to_s if @user.uin %></p>
+
+  <p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
+
+  <p><%= "Phone Number " + number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number %></p>
+  <%= link_to "Resume Link", @resume.pdf.url if @resume %>
+
+
+  <h1>Your Announcements</h1>
+  <% for announcement in @announcements %>
+      <h2><%= announcement.title %></h2>
+      <h5>By <%= @user.name %></h5>
+
+      <p><%= announcement.content.html_safe %></p>
+      <td><%= link_to 'Destroy', announcement, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger' %></td>
+
+  <% end %>
 
 </div>

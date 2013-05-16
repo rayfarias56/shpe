@@ -1,4 +1,7 @@
 class AnnouncementsController < ApplicationController
+  before_filter :signed_in_user, except:  [:index,:show]
+  before_filter :eboard_user, except:  [:index,:show]
+  before_filter :admin_user, except:  [:index,:show]
   # GET /announcements
   # GET /announcements.json
   def index
@@ -80,5 +83,15 @@ class AnnouncementsController < ApplicationController
       format.html { redirect_to announcements_url }
       format.json { head :no_content }
     end
+  end
+
+  private
+
+  def eboard_user
+    redirect_to(root_path) unless current_user.eboard?
+  end
+
+  def admin_user
+    redirect_to(root_path) unless current_user.admin?
   end
 end
