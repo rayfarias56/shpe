@@ -5,18 +5,22 @@
 	<h2> This is the home page for SHPE UIUC </h2>
 
 </div>
+ <hr>
+<h1>Announcements</h1>
+<% for announcement in @announcements %>
+        <h2><%= announcement.title %></h2>
+        <h5>By <%= User.find_by_id(announcement.user_id).name %></h5>
+        <p><%= announcement.content.html_safe %></p>
 
+<% end %>
+
+<hr>
     <section id="carousel">
             <div class="bs-docs-example">
               <div id="myCarousel" class="carousel slide">
-                <ol class="carousel-indicators">
-                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#myCarousel" data-slide-to="1"></li>
-                  <li data-target="#myCarousel" data-slide-to="2"></li>
-                </ol>
                 <div class="carousel-inner">
                   <div class="item active">
-                    <img src="<%= image_path("kitten.jpg") %>" alt="">
+                    <img src="<%= image_path('kitten.jpg') %>" alt="">
                     <div class="carousel-caption">
                       <h4>First Thumbnail label</h4>
                       <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -41,3 +45,4 @@
                 <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
               </div>
             </div>
+       </section>

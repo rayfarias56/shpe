@@ -19,6 +19,7 @@
 
 <% if @user.eboard? %>
  <p>You are on Eboard</p>
+       <%= link_to "Add announcement", new_announcement_path, :class => 'btn' %>
 
 <% end %>
 

@@ -40,7 +40,8 @@ class ResumesController < ApplicationController
   # POST /resumes
   # POST /resumes.json
   def create
-    old_resume = current_user.resume.destroy
+    old_resume = current_user.resume
+    old_resume.destroy unless old_resume.nil?
     @resume = Resume.new(params[:resume])
     @resume.user_id = current_user.id
     respond_to do |format|

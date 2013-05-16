@@ -9,9 +9,10 @@
 #  updated_at :datetime         not null
 #
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:phone_number,:resume
+  attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:phone_number
   has_secure_password
   has_one :resume
+  has_many :announcements
 
   before_save { self.email.downcase! }
   before_save :create_remember_token
@@ -24,7 +25,7 @@ class User < ActiveRecord::Base
   validates :major, presence: true
   validates :grad_date, presence: true
   validates :uin, presence: true, length: {is: 9}, uniqueness:true, :numericality => true
-  validates :phone_number, presence: true, length: {is: 10} , :numericality => true
+  validates :phone_number, presence: true, length: {is: 10, :message => "should be 10 characters with no dashes"} , :numericality => true
   validates :gpa, :inclusion => { :in => 0..4, :message => "is not in the valid range" } , :numericality => true
 
 
