@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @resume = @user.resume
+    @announcements = @user.announcements
   end
 
   def new

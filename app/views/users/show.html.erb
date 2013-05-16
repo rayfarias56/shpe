@@ -33,4 +33,14 @@
 	<p><%= "Phone Number " +  number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number  %></p>
 	<%= link_to "Resume Link", @resume.pdf.url if @resume %>
 
+
+   <h1>Your Announcements</h1>
+   <% for announcement in @announcements %>
+       <h2><%= announcement.title %></h2>
+       <h5>By <%= @user.name %></h5>
+       <p><%= announcement.content.html_safe %></p>
+       <td><%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %></td>
+
+   <% end %>
+
 </div>
