@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @announcements = Announcement.all
+    @announcements = Announcement.all(:limit => 3,:order => "created_at DESC")
    
   end
 

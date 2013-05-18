@@ -85,33 +85,21 @@
               <!-- something else will go here, maybe newsletter -->
               <div class="span4">
                 <h3 class="text-center">Announcements</h3>
+
+                <% for announcement in @announcements %>
                 <div class="media">
                   <a class="pull-left" href="#">
                     <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
                   </a>
                   <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
-                    Short description of the event will go here...
+                    <h4 class="media-heading"><a href="#"><%= announcement.title %></a></h4>
+                    <small><%= announcement.created_at %></small>
+                   <p> <%= announcement.content %> </p>
                   </div>
                 </div>
-                <div class="media">
-                  <a class="pull-left" href="#">
-                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
-                    Short description of the event will go here...
-                  </div>
-                </div>
-                <div class="media">
-                  <a class="pull-left" href="#">
-                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
-                  </a>
-                  <div class="media-body">
-                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
-                    Short description of the event will go here...
-                  </div>
-                </div>
+                <% end %>
+
+
               </div>
             </div>
             <div class="row">
