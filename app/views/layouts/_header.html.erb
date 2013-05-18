@@ -1,63 +1,74 @@
-<header class="navbar navbar-fixed-top navbar-inverse">
-  <div class="navbar-inner">
-    <div class="container">
-      <%= link_to "SHPE UIUC", root_path, id: "logo" %>
-      <nav>
-        <ul class="nav pull-right">
-          <li><%= link_to "Home", root_path %></li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Mission and Vision", mission_path %></li>
-              <li><%= link_to "Meeting Info", meeting_path %></li>
-              <li><%= link_to "History", history_path %></li>
-              <li><%= link_to "Constitution", constitution_path %></li>
-              <li><%= link_to "Region IV", regioniv_path %></li>
-              <li><%= link_to "SHPE National", national_path %></li>
-              <li><%= link_to "SHPE Documentary", documentary_path %></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Members <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Mission and Vision", mission_path %></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Mission and Vision", mission_path %></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
-            <ul class="dropdown-menu">
-              <li><%= link_to "Mission and Vision", mission_path %></li>
-            </ul>
-          </li>
+ <header>
+      <div class="container">
+        <div class="header row">
+                  <div class="span12">
+                      <div class="navbar">
+                          <div class="navbar-inner">
+                              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                                  <span class="icon-bar"></span>
+                              </a>
+                              <a href="#">
 
+                                <%= image_tag "shpe-header.png", :size => '150x150', :class => 'pull-left' %>
+                              </a>
+                              <a class="brand" href="#">
+                                
+                                <p>Society of Hispanic Professional Engineers</p>
+                                
+                                <h3>SHPE at UIUC</h3>
 
-
-          <% if signed_in? %>
-            <li><%= link_to "Users", users_path %></li>
-            <li id="fat-menu" class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                Account <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><%= link_to "Profile", current_user %></li>
-                <li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to "Sign out", signout_path, method: "delete" %>
-                </li>
-              </ul>
-            </li>
-          <% else %>
-            <li><%= link_to "Sign in", signin_path %></li>
-          <% end %>
-        </ul>
-      </nav>
-    </div>
-  </div>
-</header>
+                              </a>
+                              
+                              <div class="nav-collapse collapse">
+                                  <ul class="nav pull-right">
+                                      <li class="current-page">
+                                          <a href="<%= root_path %>">
+                                            <i class="icon-home"></i><br />
+                                            Home
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href= "<%= about_path %>">
+                                            <i class="icon-question-sign"></i>
+                                            <br />
+                                            About
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="#">
+                                            <i class="icon-user"></i>
+                                            <br />
+                                            Members
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="#">
+                                            <i class="icon-calendar"></i>
+                                            <br />
+                                            Events
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="#">
+                                            <i class="icon-folder-close"></i>
+                                            <br />
+                                            Resources
+                                          </a>
+                                      </li>
+                                      <li>
+                                          <a href="<%= signin_path %>">
+                                            <i class="icon-ok"></i>
+                                            <br />
+                                            Sign In
+                                          </a>
+                                      </li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      </div>
+    </header>

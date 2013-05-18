@@ -1,11 +1,44 @@
-<footer class="footer">
-  <small>
-    By Sean Freiburg
-  </small>
-  <nav>
-    <ul>
-      <li><%= link_to "About",   about_path %></li>
-      <li><%= link_to "Contact", contact_path %></li>
-    </ul>
-  </nav>
-</footer>
+<footer>
+      <div class="container">
+        <div class="row">
+          <div class="span3">
+            <h5>About SHPE</h5>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent convallis, magna ac mollis lacinia, velit dui suscipit orci, in convallis sem nunc iaculis odio. Sed ut laoreet justo. Suspendisse potenti. Aenean placerat condimentum elit eget aliquam. </p>
+            <a href="#">Learn more...</a>
+          </div>
+          <div class="span3">
+            <h5>Contact Us</h5>
+            <p>
+              <i class="icon-map-marker"></i>
+              Address: University of Illinois at Urbana-Champaign
+  103A Engineering Hall 1308 West Green Street
+  Urbana, Illinois 61801
+            </p>
+            <p>
+              <i class="icon-headphones"></i>
+              Phone: 1(217)244-8899
+            </p>
+            <p>
+              <i class="icon-envelope"></i>
+              Email: <a href="mailto:#">example@gmail.com</a>
+            </p>
+          </div>
+          <div class="span3">
+            <h5>Facebook Announcements</h3>
+            <!-- We will need to use the Facebook API to randomly generate this -->
+            <!-- <blockquote class="pull-right"> -->
+              <p>SHPE|UIUC Visits A.O. Marshall was a huge success! Our fundraising efforts have been recognized on a district-wide level, and thanks to those who came, the strength of our chapter was felt and noted multiple times as well.</p>
+              <small>Cesar Martinez</small>
+            <!-- </blockquote> -->
+          </div>
+          <div class="span3 social-container">
+            <%= image_tag "picons40.png",  :class => 'social googleplus pull-right' %>
+            <%= image_tag "picons03.png",  :class => 'social twitter pull-right' %>
+            <%= image_tag "picons06.png",  :class => 'social facebook pull-right' %>
+          </div>
+        </div>
+        <div class="row footnote">
+          <p class="text-center">Society of Hispanic Professional Engineers at the University of Illinois at Urbana-Champaign</p>
+        </div>
+      </div>
+    </footer>

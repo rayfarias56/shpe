@@ -1,48 +1,201 @@
 
-<div class="center hero-unit">
-	<h1>Welcome to the SHPE UIUC</h1>
-
-	<h2> This is the home page for SHPE UIUC </h2>
-
-</div>
- <hr>
-<h1>Announcements</h1>
-<% for announcement in @announcements %>
-        <h2><%= announcement.title %></h2>
-        <h5>By <%= User.find_by_id(announcement.user_id).name %></h5>
-        <p><%= announcement.content.html_safe %></p>
-
-<% end %>
-
-<hr>
-    <section id="carousel">
-            <div class="bs-docs-example">
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="span9">
+            <div id="carousel-container">
               <div id="myCarousel" class="carousel slide">
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                  <li data-target="#myCarousel" data-slide-to="3"></li>
+                  <li data-target="#myCarousel" data-slide-to="4"></li>
+                  <li data-target="#myCarousel" data-slide-to="5"></li>
+                  <li data-target="#myCarousel" data-slide-to="6"></li>
+                  <li data-target="#myCarousel" data-slide-to="7"></li>
+                </ol>
+                <!-- Carousel items -->
                 <div class="carousel-inner">
-                  <div class="item active">
-                    <img src="<%= image_path('kitten.jpg') %>" alt="">
+                  <div class="active item">
+                    <%= image_tag "Chrysanthemum.jpg" %>
                     <div class="carousel-caption">
-                      <h4>First Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4>Chrysanthemum</h4>
+                      <p>Chrysanthemums, often called mums or chrysanths, are perennial flowering plants of the genus Chrysanthemum in the family Asteraceae which are native to Asia and northeastern Europe.</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="<%= image_path("kitten4.jpg") %>" alt="">
+                    <%= image_tag "Desert.jpg" %>
                     <div class="carousel-caption">
-                      <h4>Second Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4>Desert</h4>
+                      <p>A desert is a landscape or region of land that is very dry because of low rainfall amounts (precipitation), often has little coverage by plants, and in which streams dry up unless they are supplied by water from outside areas.</p>
                     </div>
                   </div>
                   <div class="item">
-                    <img src="<%= image_path("kitten3.jpg") %>" alt="">
+                    <%= image_tag "Hydrangeas.jpg" %>
                     <div class="carousel-caption">
-                      <h4>Third Thumbnail label</h4>
-                      <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                      <h4>Hydrangeas</h4>
+                      <p>bHydrangea flowers are produced from early spring to late autumn; they grow in flowerheads (corymbs or panicles) at the ends of the stems.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <%= image_tag "Jellyfish.jpg" %>
+                    <div class="carousel-caption">
+                      <h4>Jellyfish</h4>
+                      <p>Jellyfish or jellies are the major non-polyp form of individuals of the phylum Cnidaria. They are typified as free-swimming marine animals consisting of a gelatinous umbrella-shaped bell and trailing tentacles.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <%= image_tag "Koala.jpg" %>
+                    <div class="carousel-caption">
+                      <h4>Koala</h4>
+                      <p>Koalas typically inhabit open Eucalyptus woodlands, and the leaves of these trees make up most of their diet. Because this eucalypt diet provides them with only low nutrition and energy, koalas are largely sedentary and sleep for up to 20 hours a day.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <%= image_tag "Lighthouse.jpg" %>
+                    <div class="carousel-caption">
+                      <h4>Lighthouse</h4>
+                      <p>Lighthouses mark dangerous coastlines, hazardous shoals, reefs, safe entries to harbors, and can also assist in aerial navigation. Once widely used, the number of operational lighthouses has declined due to the expense of maintenance and replacement by modern electronic navigational systems.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <%= image_tag "Penguins.jpg" %>
+                    <div class="carousel-caption">
+                      <h4>Penguins</h4>
+                      <p>Penguins are popular around the world, primarily for their unusually upright, waddling gait and (compared to other birds) lack of fear of humans. Their striking black-and-white plumage is often likened to a tuxedo suit.</p>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <%= image_tag "Tulips.jpg" %>
+                    <div class="carousel-caption">
+                      <h4>Tulips</h4>
+                      <p>Tulips are spring-blooming perennials that grow from bulbs. Depending on the species, tulip plants can grow as short as 4 inches (10 cm) or as high as 28 inches (71 cm).</p>
                     </div>
                   </div>
                 </div>
-                <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                <!-- Carousel nav -->
+                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
               </div>
             </div>
-       </section>
+          </div>
+          <div class="span3">
+            <div class="row">
+              <!-- something else will go here, maybe newsletter -->
+              <div class="span4">
+                <h3 class="text-center">Announcements</h3>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
+                    Short description of the event will go here...
+                  </div>
+                </div>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
+                    Short description of the event will go here...
+                  </div>
+                </div>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
+                    Short description of the event will go here...
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="span4">
+                <h3 class="text-center">Upcoming Events</h3>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
+                    <h5>5/16</h5>
+                    Short description of the event will go here...
+                  </div>
+                </div>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
+                    <h5>5/16</h5>
+                    Short description of the event will go here...
+                  </div>
+                </div>
+                <div class="media">
+                  <a class="pull-left" href="#">
+                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
+                  </a>
+                  <div class="media-body">
+                    <h4 class="media-heading"><a href="#">Media heading</a></h4>
+                    <h5>5/16</h5>
+                    Short description of the event will go here...
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div> <!-- /container -->
+    </section>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <h3 class="text-center">Announcements</h3>
+        <p>To apply to the SHPE Undergraduate Research Fellowship <a href="#">Click Here.</a><br>
+To view sponsorship info <a href="#">Click Here.</a><br>
+
+Spring 2013 High School Visitation<br>
+Come spend a three day weekend at the University of Illinois, hosted by the Society of Hispanic Professional Engineers (SHPE). The Spring 2013 High School Visitation starts on Thursday, March 7th and ends Sunday, March 10th Transportation, food, and housing will be provided by SHPE as well as fun activities and informational seminars at the University of Illinois at Urbana-Champaign. <br>
+
+Application Deadline: March 5<br>
+To apply for the Spring 2013 High School Visitation hosted by the Society of Hispanic Professional Engineers at the University of Illinois Urbana-Champaign, please fill out this online application. <br>
+
+If you have any questions, please email Ruben Robles at outreach@shpe-uiuc.org</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <h3 class="text-center">Our Sponsors</h3>
+          <div class="row">
+            <div class="span2 offset3">
+              <%= image_tag "accenture.png", :size => '170x100' %>
+            </div>
+            <div class="span2">
+              <%= image_tag "capitalone.png", :size => '170x100' %>
+            </div>
+            <div class="span2">
+              <%= image_tag "dow.png", :size => '170x100' %>
+            </div>
+          </div>
+          <div class="row">
+            <div class="span2 offset3">
+              <%= image_tag "qualcomm.png", :size => '170x100' %>
+            </div>
+            <div class="span2">
+              <%= image_tag "rgengineering.png", :size => '170x100' %>
+            </div>
+            <div class="span2">
+              <%= image_tag "northrupgrumman.png", :size => '170x100' %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
