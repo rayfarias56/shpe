@@ -3,21 +3,21 @@
 
 <% provide(:title, @user.name) %>
 
-<section>
-      <div class="container">
+<div class="container">
 
-<div class="row">
-
-
-  <h1>
-    <%= gravatar_for @user %>
-    <%= @user.name %>
-
-  </h1>
+  <div class="span6 row center">
 
 
-</div>
-<div class="row center">
+    <h1>
+      <%= gravatar_for @user %>
+      <%= @user.name %>
+      <%= link_to 'Sign Out', signout_path, method: "delete" , :class => 'btn btn-danger'%>
+
+    </h1>
+
+
+  </div>
+<div class="span6 row center">
   <% if @user.admin? %>
       <p>You are an admin</p>
       <%= link_to 'Control Panel', control_panel_path, :class => 'btn btn-primary' %>
@@ -47,15 +47,17 @@
 
 
   <h1>Your Announcements</h1>
-  <% for announcement in @announcements %>
-      <h2><%= announcement.title %></h2>
+  <% if @announcements.nil? || @announcements.empty? %>
+    <h4>You have no announcements</h4>
+  <% else %>
+    <% for announcement in @announcements %>
+      <h4><%= announcement.title %></h4>
       <h5>By <%= @user.name %></h5>
 
       <p><%= announcement.content.html_safe %></p>
       <td><%= link_to 'Destroy', announcement, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger' %></td>
 
+    <% end %>
   <% end %>
-
 </div>
 </div>
-</section>
