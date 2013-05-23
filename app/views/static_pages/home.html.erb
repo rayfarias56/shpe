@@ -94,7 +94,7 @@
                   <div class="media-body">
                     <h4 class="media-heading"><a href="#"><%= announcement.title %></a></h4>
                     <small><%= announcement.created_at %></small>
-                   <p> <%= announcement.content %> </p>
+                   <p> <%= announcement.content.html_safe %> </p>
                   </div>
                 </div>
                 <% end %>
