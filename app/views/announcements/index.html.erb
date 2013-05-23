@@ -19,7 +19,7 @@
     <td><%= truncate(announcement.content.html_safe, :length => 30, :omission => '... (continued)')  %></td>
     <td><%= link_to 'Show', announcement , class: 'btn' %></td>
     <td><%= link_to 'Edit', edit_announcement_path(announcement) , class: 'btn' %></td>
-    <td><%= link_to 'Destroy', announcement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
+    <td><%= link_to 'Remove', announcement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %></td>
   </tr>
 <% end %>
 </table>
