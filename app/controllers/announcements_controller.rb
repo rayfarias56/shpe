@@ -48,8 +48,8 @@ class AnnouncementsController < ApplicationController
 
     respond_to do |format|
       if @announcement.save
-        format.html { redirect_to @announcement, notice: 'Announcement was successfully created.' }
-        format.json { render json: @announcement, status: :created, location: @announcement }
+        format.html { redirect_to current_user, notice: 'Announcement was successfully created.' }
+        format.json { render json: current_user, status: :created, location: @announcement }
       else
         format.html { render action: "new" }
         format.json { render json: @announcement.errors, status: :unprocessable_entity }

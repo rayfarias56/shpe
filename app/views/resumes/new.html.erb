@@ -1,8 +1,9 @@
+<div class="container">
+
 <h1>New resume</h1>
 <p>Only upload pdfs up to 10 MB in size</p>
 <%= render 'form' %>
 
-<%= link_to 'Back', resumes_path %>
+<%= link_to 'Back', user_path(current_user), class: 'btn' %>
 
-
-<%= "Current_user: " + current_user.to_s %>
+</div>

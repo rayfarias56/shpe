@@ -283,12 +283,23 @@ footer, section {
 
 body {
   background-color: #FFFFFF;
+  word-wrap:normal;
 }
 
 .center { 
   float: none; 
   margin-left: auto;
   margin-right: auto; 
+}
+
+.btn {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  /* or */
+  width: 450px;
 }
 
 

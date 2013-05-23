@@ -1,3 +1,5 @@
+<div class="container">
+
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -16,5 +18,7 @@
 </p>
 
 
-<%= link_to 'Edit', edit_announcement_path(@announcement) %> |
-<%= link_to 'Back', announcements_path %>
+<%= link_to 'Edit', edit_announcement_path(@announcement) , class: 'btn'%>
+<%= link_to 'Back', announcements_path, class: 'btn' %>
+
+</div>
