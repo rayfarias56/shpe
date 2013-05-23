@@ -33,6 +33,11 @@ SampleApp::Application.routes.draw do
   match 'add_eboard/:id', to: 'users#add_eboard'
   match 'remove_eboard/:id', to: 'users#remove_eboard'
 
+  match 'add_company/:id', to: 'users#add_company'
+  match 'remove_company/:id', to: 'users#remove_company'
+
+  match 'view_user/:id', to: 'users#view_user'
+
 
 
   

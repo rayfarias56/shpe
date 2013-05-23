@@ -1,0 +1,34 @@
+<% provide(:title, @user.name) %>
+
+<div class="container">
+
+  <div class="span4">
+
+    <h1>
+      <%= gravatar_for @user %>
+      <%= @user.name %>
+
+    </h1>
+
+
+    <div class="well">
+
+      <p><%= "GPA: " + @user.gpa.to_s if @user.gpa %></p>
+
+      <p><%= "Major: " + @user.major if @user.major %></p>
+
+      <p><%= "UIN: " + @user.uin.to_s if @user.uin %></p>
+
+      <p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
+
+      <p><%= "Phone Number: " + number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number %></p>
+      <%= link_to "Resume Link", @resume.pdf.url, class: 'btn' if @resume %>
+
+    </div>
+  </div>
+
+
+
+
+
+</div>

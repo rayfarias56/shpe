@@ -1,34 +1,42 @@
 <div class="container">
 
-<% for user in @users %>
-<div class="row">
+  <% for user in @users %>
+      <div class="row">
 
-      <p>
-        <%= gravatar_for user %>
-        <%= user.name %>
-        <% if user.admin? %>
-        	<%= link_to 'ADMIN', '#', :class => 'btn btn-success' %>
-        	<%= link_to 'Remove as Admin', {:controller=> "users",:action => "remove_admin",:id => user }, :class => "btn btn-danger"%>
-        <% else%>
-        	<%= link_to 'Add as Admin', {:controller=> "users",:action => "add_admin",:id => user }, :class => "btn btn-primary"%>
+        <p>
+          <%= gravatar_for user %>
+          <%= user.name %>
+          <% if user.admin? %>
+              <%= link_to 'ADMIN', '#', :class => 'btn btn-success' %>
+              <%= link_to 'Remove as Admin', {:controller => "users", :action => "remove_admin", :id => user}, :class => "btn btn-danger" %>
+          <% else %>
+              <%= link_to 'Add as Admin', {:controller => "users", :action => "add_admin", :id => user}, :class => "btn btn-primary" %>
 
-        <% end %>
+          <% end %>
 
-              <% if user.eboard? %>
-        	<%= link_to 'EBOARD', '#', :class => 'btn btn-warning' %>
-        	<%= link_to 'Remove as Eboard', {:controller=> "users",:action => "remove_eboard",:id => user }, :class => "btn btn-danger"%>
-        <% else%>
-        	<%= link_to 'Add as Eboard', {:controller=> "users",:action => "add_eboard",:id => user }, :class => "btn btn-info"%>
-        
-        <% end %>
+          <% if user.eboard? %>
+              <%= link_to 'EBOARD', '#', :class => 'btn btn-warning' %>
+              <%= link_to 'Remove as Eboard', {:controller => "users", :action => "remove_eboard", :id => user}, :class => "btn btn-danger" %>
+          <% else %>
+              <%= link_to 'Add as Eboard', {:controller => "users", :action => "add_eboard", :id => user}, :class => "btn btn-info" %>
+
+          <% end %>
+
+          <% if user.company? %>
+              <%= link_to 'Company', '#', :class => 'btn btn-warning' %>
+              <%= link_to 'Remove as Company', {:controller => "users", :action => "remove_company", :id => user}, :class => "btn btn-danger" %>
+          <% else %>
+              <%= link_to 'Add as Company', {:controller => "users", :action => "add_company", :id => user}, :class => "btn btn-info" %>
+
+          <% end %>
 
 
-        <%= link_to "Delete User", user, method: :delete,
-                                  data: { confirm: "You sure?" }, :class => 'btn btn-danger' %>
+          <%= link_to "Delete User", user, method: :delete,
+                      data: {confirm: "You sure?"}, :class => 'btn btn-danger' %>
         </p>
-</div>
-<hr>
+      </div>
+      <hr>
 
-<%  end %>
+  <% end %>
 
 </div>

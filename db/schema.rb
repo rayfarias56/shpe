@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130516013330) do
+ActiveRecord::Schema.define(:version => 20130523064010) do
 
   create_table "announcements", :force => true do |t|
     t.integer  "user_id"
@@ -46,6 +46,7 @@ ActiveRecord::Schema.define(:version => 20130516013330) do
     t.integer  "uin"
     t.string   "phone_number"
     t.boolean  "eboard",          :default => false
+    t.boolean  "company",         :default => false
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

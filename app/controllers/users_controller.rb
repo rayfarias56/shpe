@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:index,:edit, :update, :destroy,:control_panel]
-  before_filter :correct_user,   only: [:edit, :update]
+  before_filter :correct_user,   only: [:edit, :update,:show]
   before_filter :admin_user, only: [:destroy,:control_panel,:add_admin, :add_eboard, :remove_admin, :remove_eboard]
+  before_filter :company_user , only: [:index, :view_user]
   
   def show
     @user = User.find(params[:id])
@@ -29,7 +30,7 @@ class UsersController < ApplicationController
   end
   
   def index
-    @users = User.paginate(page: params[:page])
+    @users = User.all
   end
 
   def update
@@ -99,6 +100,35 @@ class UsersController < ApplicationController
     end
   end
 
+  def add_company
+    user = User.find(params[:id])
+    if user.update_column(:company, true) &&  user.update_column(:admin, false) && user.update_column(:eboard, false)
+      flash[:success] = "Added as Company"
+      redirect_to control_panel_path
+    else
+      flash[:error] = "Failed Adding Company"
+      redirect_to control_panel_path
+    end
+  end
+
+  def remove_company
+    user = User.find(params[:id])
+    if user.update_column(:company, false)
+      flash[:success] = "Removed as Company"
+      redirect_to control_panel_path
+    else
+      flash[:error] = "Failed removing Company"
+      redirect_to control_panel_path
+    end
+  end
+
+
+  def view_user
+    @user = User.find(params[:id])
+    @resume = @user.resume
+  end
+
+
 
   private
 
@@ -114,6 +144,10 @@ class UsersController < ApplicationController
 
   def eboard_user
     redirect_to(root_path) unless current_user.eboard?
+  end
+
+  def company_user
+    redirect_to(root_path) unless current_user.company?
   end
 
 end

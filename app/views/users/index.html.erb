@@ -1,10 +1,19 @@
 <% provide(:title, 'All users') %>
-<h1>All users</h1>
 
-<%= will_paginate %>
+<div class="container">
+  <div class="span6 center">
+    <h2>All users</h2>
 
-<ul class="users">
-    <%= render @users %>
-</ul>
+    <% for user in @users %>
+        <li>
+          <%= gravatar_for user, size: 52 %>
+          <%= link_to user.name, {:controller => "users", :action => "view_user", :id => user} %>
 
-<%= will_paginate %>
+        </li>
+        <hr>
+
+
+    <% end %>
+
+  </div>
+</div>
