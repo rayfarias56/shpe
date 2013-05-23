@@ -46,11 +46,14 @@
   <div class="span4">
     <h1>Your Announcements</h1>
     <%= link_to 'Add Announcement', new_announcement_path, class: 'btn' %>
-    <div class="well">
+
     <% if @announcements.nil? || @announcements.empty? %>
+        <div class="well">
         <h4>You have no announcements</h4>
+        </div>
     <% else %>
         <% for announcement in @announcements %>
+            <div class="well">
             <h4><%= announcement.title %></h4>
             <h5>By <%= @user.name %></h5>
 
@@ -58,9 +61,9 @@
 
 
             <td><%= link_to 'Remove', announcement, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'btn btn-danger' %></td>
-
+            </div>
         <% end %>
     <% end %>
     </div>
-  </div>
+
 </div>
