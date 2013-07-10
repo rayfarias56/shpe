@@ -1,3 +1,25 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  email           :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  password_digest :string(255)
+#  remember_token  :string(255)
+#  admin           :boolean          default(FALSE)
+#  gpa             :decimal(, )
+#  major           :string(255)
+#  resume_link     :string(255)
+#  grad_date       :date
+#  uin             :integer
+#  phone_number    :string(255)
+#  eboard          :boolean          default(FALSE)
+#  company         :boolean          default(FALSE)
+#
+
 require 'spec_helper'
 
 describe User do

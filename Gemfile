@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass','2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate', '3.0.3'
@@ -17,7 +17,6 @@ gem 'sqlite3', "~> 1.3.5"
 group :development, :test do
 
   gem 'rspec-rails', '2.11.0'
-  gem 'guard-rspec', '1.2.1'
   gem 'annotate', '2.5.0'
 
 end
@@ -38,18 +37,8 @@ gem 'jquery-rails' , '2.0.2'
 
 #test gems on Linux
 group :test do
-  gem 'capybara', '1.1.2'
-  # gem 'rb-inotify', '0.8.8'
-  # gem 'libnotify', '0.5.9'
-  # gem 'factory_girl_rails', '4.1.0'
-end
 
-# Test gems on Macintosh OS X
-# group :test do
- # gem 'capybara', '1.1.2'
- # gem 'rb-fsevent', '0.9.1', :require => false
- # gem 'growl', '1.0.3'
-# end
+end
 
 group :production do
 

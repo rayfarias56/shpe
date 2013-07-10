@@ -1,0 +1,38 @@
+<% major_array = [
+        'Aerospace Engineering',
+        'Agricultural and Biological Engineering',
+        'Bioengineering',
+        'Chemical and Biomolecular Engineering',
+        'Civil and Environmental Engineering',
+        'Computer Science',
+        'Electrical and Computer Engineering',
+        'Industrial and Enterprise Systems Engineering',
+        'Materials Science and Engineering',
+        'Mechanical Science and Engineering',
+        'Nuclear, Plasma, and Radiological Engineering',
+        'Physics',
+        'Other'
+
+] %>
+
+<% provide(:title, 'All users') %>
+
+<div class="container">
+
+  <div class="span8 center">
+    <h2>All users</h2>
+
+    <% for user in @users %>
+        <div class="span4">
+          <%= gravatar_for user, size: 52 %>
+          <%= link_to user.name, view_user_path(user) %>
+        </div>
+        <div class="span2">
+          <%= user.major%>
+        </div>
+        <hr>
+    <% end %>
+
+  </div>
+</div>
+<br/><br/>

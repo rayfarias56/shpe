@@ -36,7 +36,8 @@ SampleApp::Application.routes.draw do
   match 'add_company/:id', to: 'users#add_company'
   match 'remove_company/:id', to: 'users#remove_company'
 
-  match 'view_user/:id', to: 'users#view_user'
+  match 'view_user/:id', to: 'users#view_user', as: :view_user
+  match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
 
 
 

@@ -17,6 +17,7 @@
 #  uin             :integer
 #  phone_number    :string(255)
 #  eboard          :boolean          default(FALSE)
+#  company         :boolean          default(FALSE)
 #
 
 # == Schema Information

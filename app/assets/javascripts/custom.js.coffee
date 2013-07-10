@@ -1,2 +1,0 @@
-$(document).ready ->
-  $(".carousel").carousel()
