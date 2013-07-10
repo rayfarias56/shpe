@@ -1,0 +1,2 @@
+module ResumeViewsHelper
+end

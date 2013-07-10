@@ -8,7 +8,7 @@ SampleApp::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   
-  root to: 'static_pages#home'
+
   
   
   match '/signup',  to: 'users#new'
@@ -39,7 +39,7 @@ SampleApp::Application.routes.draw do
   match 'view_user/:id', to: 'users#view_user', as: :view_user
   match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
 
-
+  root to: 'static_pages#home'
 
   
 

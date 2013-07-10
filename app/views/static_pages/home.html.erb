@@ -78,9 +78,6 @@
 
                 <% for announcement in @announcements %>
                 <div class="media">
-                  <a class="pull-left" href="#">
-                    <%= image_tag "Koala.jpg", :size => '64x64', :class => 'media-object img-rounded' %>
-                  </a>
                   <div class="media-body">
                     <h4 class="media-heading"><%= link_to announcement.title, announcement %></h4>
                     <small><%= announcement.created_at %></small>
