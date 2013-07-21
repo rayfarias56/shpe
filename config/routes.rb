@@ -19,14 +19,8 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
-  #match '/mission', to: 'static_pages#mission'
-  #match '/meeting', to: 'static_pages#meeting'
-  #match '/history', to: 'static_pages#history'
-  #match '/constitution', to: 'static_pages#constitution'
-  #match '/regioniv', to: 'static_pages#regioniv'
-  #match '/national', to: 'static_pages#national'
-  #match '/documentary', to: 'static_pages#documentary'
   match '/events', to: 'static_pages#events', as: :events
+  match '/resources', to: 'static_pages#resources', as: :resources
 
   match 'add_admin/:id', to: 'users#add_admin'
   match 'remove_admin/:id', to: 'users#remove_admin'
