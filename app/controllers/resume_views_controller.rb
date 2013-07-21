@@ -1,6 +1,11 @@
 class ResumeViewsController < ApplicationController
   before_filter :company_user
+
   def index
-    @users = User.find_all_by_company(false)
+    if params[:major]
+      @users = User.where(company: false, major: params[:major])
+    else
+      @users = User.find_all_by_company(false)
+    end
   end
 end

@@ -22,13 +22,19 @@
   <div class="span8 center">
     <h2>All users</h2>
 
+    <%= form_tag '' do %>
+        <%=  select_tag 'major', options_for_select(major_array.collect{ |u| [u, u] }) %>
+        <%= submit_tag 'Submit', class: 'btn btn-primary' %>
+    <% end %>
+
+
     <% for user in @users %>
         <div class="span4">
           <%= gravatar_for user, size: 52 %>
           <%= link_to user.name, view_user_path(user) %>
         </div>
         <div class="span2">
-          <%= user.major%>
+          <%= user.major %>
         </div>
         <hr>
     <% end %>
