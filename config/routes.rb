@@ -26,6 +26,7 @@ SampleApp::Application.routes.draw do
   match '/regioniv', to: 'static_pages#regioniv'
   match '/national', to: 'static_pages#national'
   match '/documentary', to: 'static_pages#documentary'
+  match '/events', to: 'static_pages#events', as: :events
 
   match 'add_admin/:id', to: 'users#add_admin'
   match 'remove_admin/:id', to: 'users#remove_admin'

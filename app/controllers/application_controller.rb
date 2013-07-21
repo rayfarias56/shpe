@@ -15,9 +15,21 @@ class ApplicationController < ActionController::Base
     redirect_to(root_path) unless current_user.admin?
   end
 
+  def admin_user?
+    current_user.admin?
+  end
+
+  helper_method :admin_user?
+
   def eboard_user
     redirect_to(root_path) unless current_user.eboard?
   end
+
+  def eboard_user?
+    current_user.eboard?
+  end
+
+  helper_method :eboard_user?
 
   def company_user
     redirect_to(root_path) unless current_user.company?

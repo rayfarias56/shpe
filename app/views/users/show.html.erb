@@ -26,7 +26,11 @@
 
 
     <%= link_to "Edit Profile", edit_user_path(current_user), :class => 'btn' %>
-    <%= link_to "Add Resume", new_resume_path, :class => 'btn' unless @user.company? %>
+    <% if @user.resume %>
+        <%= link_to "Change Resume", new_resume_path, :class => 'btn' unless @user.company? %>
+    <% else %>
+        <%= link_to "Add Resume", new_resume_path, :class => 'btn' unless @user.company? %>
+    <% end %>
 
     <div class="well">
 
@@ -56,7 +60,7 @@
         <% else %>
             <% for announcement in @announcements %>
                 <div class="well">
-                  <h4><%= announcement.title %></h4>
+                  <h4><%= link_to announcement.title, announcement %></h4>
                   <h5>By <%= @user.name %></h5>
 
                   <p><%= truncate(announcement.content.html_safe, :length => 30, :omission => '... (continued)') %></p>
@@ -69,16 +73,13 @@
       </div>
 
   <% elsif @user.company? %>
-  <div class="span4">
-    <%= link_to "View users", view_resumes_list_path, class: 'btn btn-large btn-primary' %>
+      <div class="span4">
+        <%= link_to "View users", view_resumes_list_path, class: 'btn btn-large btn-primary' %>
 
-  </div>
-
+      </div>
 
 
   <% end %>
 
 
-
-
- </div>
+</div>

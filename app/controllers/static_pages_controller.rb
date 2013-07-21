@@ -1,6 +1,6 @@
 class StaticPagesController < ApplicationController
   def home
-    @announcements = Announcement.all(:limit => 3,:order => "created_at DESC")
+    @announcements = Announcement.all(:limit => 6,:order => "created_at DESC")
    
   end
 
@@ -40,6 +40,10 @@ class StaticPagesController < ApplicationController
   end
 
   def documentary
+
+  end
+
+  def events
 
   end
 

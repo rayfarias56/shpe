@@ -2,10 +2,7 @@
 
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>User:</b>
-  <%= @announcement.user_id %>
-</p>
+
 
 <p>
   <b>Title:</b>
@@ -18,7 +15,7 @@
 </p>
 
 
-<%= link_to 'Edit', edit_announcement_path(@announcement) , class: 'btn'%>
-<%= link_to 'Back', announcements_path, class: 'btn' %>
+<%= link_to 'Edit', edit_announcement_path(@announcement) , class: 'btn' if signed_in? && (admin_user? || eboard_user?)%>
+
 
 </div>
