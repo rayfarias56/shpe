@@ -25,7 +25,6 @@ end
 # in production environments by default.
 group :assets do
   gem 'sass-rails',   '3.2.5'
-  #gem 'coffee-rails', '3.2.2'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   gem 'therubyracer', :platforms => :ruby
@@ -35,7 +34,7 @@ end
 
 gem 'jquery-rails' , '2.0.2'
 
-#test gems on Linux
+
 group :test do
 
 end
@@ -54,7 +53,7 @@ end
 # gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem "capistrano", :group => :development
 
 # To use debugger
 # gem 'debugger'
