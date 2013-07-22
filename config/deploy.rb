@@ -5,10 +5,12 @@ set :application, "shpe"
 set :user, "sean"
 set :use_sudo, false
 
+
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
+set :scm_verbose, true
 set :repository,  "git@github.com:seanfreiburg/shpe.git"
 set :branch, "master"
-#set :deploy_via, :remote_cache
+set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
 
 
@@ -36,4 +38,5 @@ after 'deploy:update_code', 'deploy:migrate'
 
 set :keep_releases, 5
 after "deploy:restart", "deploy:cleanup"
+
 
