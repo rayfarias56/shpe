@@ -8,7 +8,7 @@ set :use_sudo, false
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
 set :repository,  "git@github.com:seanfreiburg/shpe.git"
 set :branch, "master"
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
 
 
