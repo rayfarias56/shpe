@@ -7,17 +7,16 @@ set :use_sudo, false
 
 
 set :scm, :git # You can set :scm explicitly or Capistrano will make an intelligent guess based on known version control directory names
-set :scm_verbose, true
 set :repository,  "git@github.com:seanfreiburg/shpe.git"
 set :branch, "master"
-set :deploy_via, :remote_cache
+#set :deploy_via, :remote_cache
 ssh_options[:forward_agent] = true
 
 
 set :deploy_to, "/var/www/apps/#{application}"
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `git`, `mercurial`, `perforce`, `subversion` or `none`
 
-server "seanfreiburg.com", :app, :web, :db, :primary => true
+server "shpe.seanfreiburg.com", :app, :web, :db, :primary => true
 
 # if you want to clean up old releases on each deploy uncomment this:
 # after "deploy:restart", "deploy:cleanup"
