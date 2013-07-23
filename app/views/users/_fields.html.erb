@@ -21,29 +21,29 @@
 
 
 <%= f.label :name %>
-<%= f.text_field :name %>
+<%= f.text_field :name, class:"span9" %>
 
 <%= f.label :email %>
-<%= f.text_field :email %>
+<%= f.text_field :email, class:"span9" %>
 
 <%= f.label :password %>
-<%= f.password_field :password %>
+<%= f.password_field :password, class:"span9" %>
 
 <%= f.label :password_confirmation, "Confirm Password" %>
-<%= f.password_field :password_confirmation %>
+<%= f.password_field :password_confirmation, class:"span9" %>
 
 <%= f.label :gpa %>
-<%= f.text_field :gpa %>
+<%= f.text_field :gpa, class:"span9" %>
 
 <%= f.label :major %>
-<%= f.select :major, major_array %>
+<%= f.select :major, major_array, class:"span9" %>
 
-<%= f.label :grad_date %> <small>Format is YYYY/MM/DD </small>
-<%= f.text_field :grad_date %>
+<%= f.label :grad_date %> <small>Format is YYYY/MM/DD </small><br/>
+<%= f.text_field :grad_date, class:"span9" %>
 
 
 <%= f.label :uin %>
-<%= f.text_field :uin %>
+<%= f.text_field :uin, class:"span9" %>
 
 <%= f.label :phone_number %>
-<%= f.phone_field :phone_number %>
+<%= f.phone_field :phone_number, class:"span9" %>
