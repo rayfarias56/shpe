@@ -2,15 +2,15 @@
 
 
 <div class="row">
-  <div class="span4 center">
+  <div class="span9 center">
     <h1>Sign in</h1>
     <%= form_for(:session, url: sessions_path) do |f| %>
 
       <%= f.label :email %>
-      <%= f.text_field :email %>
+    <%= f.text_field :email, class: 'span6' %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+    <%= f.password_field :password, class: 'span6' %>
       <br>
       <%= f.submit "Sign in", class: "btn btn-large btn-primary" %>
     <% end %>
@@ -21,7 +21,7 @@
 <br><br>
 
 <div class="row">
- <div class="span4 center">
-   <p>New user? <%= link_to "Sign up now!", signup_path, class: "btn btn-primary" %></p>
+ <div class="span9 center">
+   <p>New user?</p><p> <%= link_to "Sign up now!", signup_path, class: "btn btn-primary" %></p>
  </div>
 </div>
