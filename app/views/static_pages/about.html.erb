@@ -2,8 +2,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="span9">
-      <h1>About Us</h1>
+    <div class="span9 center">
+      <h3>About Us</h3>
       <ul class="nav nav-tabs">
         <li><a href="#mission" data-toggle="tab">Mission and Vision</a></li>
         <li><a href="#meeting" data-toggle="tab">Meeting Info</a></li>
@@ -16,13 +16,13 @@
       </ul>
       <div id="myTabContent" class="tab-content">
         <div class="tab-pane fade in active" id="mission">
-          <h2>Mission Statement</h2>
+          <h3>Mission Statement</h3>
 
           <p>
             SHPE changes lives by empowering the Hispanic community to realize their
             fullest potential and impacts the world through STEM awareness, access, support and development. </p>
 
-          <h2>Vision</h2>
+          <h3>Vision</h3>
 
           <p>
             SHPE's vision is a world where Hispanics are highly valued and influential
@@ -32,7 +32,7 @@
           <%= image_tag 'eboard2012-2013.jpg' %>
         </div>
         <div class="tab-pane fade" id="meeting">
-          <h2>General Chapter Meeting Information</h2>
+          <h3>General Chapter Meeting Information</h3>
 
           <p>For outlines of past meetings, please take a look at The Minutes under the Members tab.</p>
 
@@ -42,7 +42,7 @@
           <p>Freshmen Round Table meetings every Sunday from 4:00pm-5:00pm in Engineering Hall room 106.</p>
         </div>
         <div class="tab-pane fade" id="history">
-          <h2>SHPE History</h2>
+          <h3>SHPE History</h3>
 
           <p>
             The Society of Hispanic Professional Engineers (SHPE) was founded in Los Angeles, California, in 1974 by a
@@ -57,7 +57,7 @@
             throughout the nation.
           </p>
 
-          <h2>Chapter History</h2>
+          <h3>Chapter History</h3>
 
           <p>
             The Society of Hispanic Professional Engineers chapter at the University of Illinois at Urbana Champaign was
@@ -111,20 +111,22 @@
           </p>
         </div>
         <div class="tab-pane fade" id="constitution">
-          <h3>Chapter Constitution</h3>
 
+           <%= render 'constitution' %>
 
         </div>
         <div class="tab-pane fade" id="regionvi">
-            <h2>Region VI</h2>
+          <h3>Region VI</h3>
+
+          <p><%= link_to 'External Region IV page', 'http://oneshpe.shpe.org/wps/portal/region6' %></p>
         </div>
         <div class="tab-pane fade" id="documentary">
           <iframe src="http://www.youtube.com/embed/lcIzx3t53HM?autoplay=0&amp;hd=1&amp;wmode=opaque" allowfullscreen="" frameborder="0" height="500" width="700"></iframe>
         </div>
         <div class="tab-pane fade" id="national">
-          <h2>
-            <%= link_to 'External SHPE National Web Page', 'http://www.shpe.org' %>
-          </h2>
+          <h3>National</h3>
+
+          <p><%= link_to 'External SHPE National Web Page', 'http://www.shpe.org' %></p>
         </div>
 
       </div>

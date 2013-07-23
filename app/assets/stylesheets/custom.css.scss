@@ -1,6 +1,23 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
+.text-center {
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+.media {
+  background-color: white;
+  border: 1px solid #CCCCCC;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  padding: 5px;
+}
+
 .nav {
   text-align: center;
   > li > a {
@@ -64,7 +81,7 @@
 }
 
 .social {
-  margin-right: 5px;
+  //margin-right: 5px;
   padding: 5px;
   border-radius: 3em;
 }
