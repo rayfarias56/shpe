@@ -52,9 +52,6 @@ class User < ActiveRecord::Base
 
   def send_password_reset
     generate_token(:password_reset_token)
-    #self.password_reset_sent_at = Time.zone.now
-    #self.password = self.password_confirmation = SecureRandom.urlsafe_base64
-    #self.save
     self.update_attribute(:password_reset_sent_at, Time.zone.now )
     UserMailer.password_reset(self).deliver
   end
