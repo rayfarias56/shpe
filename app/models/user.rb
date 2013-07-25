@@ -50,6 +50,19 @@ class User < ActiveRecord::Base
   validates :phone_number, presence: true, length: {is: 10, :message => "should be 10 characters with no dashes"} , :numericality => true
   validates :gpa, :inclusion => { :in => 0..4, :message => "is not in the valid range" } , :numericality => true
 
+  def send_password_reset
+    generate_token(:password_reset_token)
+    self.password_reset_sent_at = Time.zone.now
+    self.password = self.password_confirmation = SecureRandom.urlsafe_base64
+    self.save
+    UserMailer.password_reset(self).deliver
+  end
+
+  def generate_token(column)
+    begin
+      self[column] = SecureRandom.urlsafe_base64
+    end while User.exists?(column => self[column])
+  end
 
   private
 
