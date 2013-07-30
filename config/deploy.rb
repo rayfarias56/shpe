@@ -1,6 +1,8 @@
 require "bundler/capistrano"
 #load 'lib/deploy/seed' #include if you need to load seed data with cap deploy:seed
 
+set :stages, %w(develop staging production)
+set :default_stage, "develop"
 server "shpe-uiuc.org", :app, :web, :db, :primary => true
 set :user, "deployer" # The server's user for deploys
 set :scm_passphrase, "0ok9ij8uh" # The deploy user's password
@@ -12,7 +14,6 @@ set :use_sudo, false
 default_environment["GEM_PATH"] ="/home/deployer/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1:/home/deployer/.rbenv/shims/ruby"
 default_environment["PATH"] = "$HOME/.rbenv/shims:$HOME/.rbenv/bin:$HOME/.rbenv/versions/1.9.3-p385/lib/ruby/gems/1.9.1:$PATH"
 
-set :deploy_to, "/var/www/production/shpe"
 set :deploy_via, :remote_cache
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
@@ -20,7 +21,7 @@ after "deploy", "deploy:cleanup" # keep only the last 5 releases
 set :scm, "git"
 set :scm_verbose, true
 set :repository, "git@github.com:seanfreiburg/shpe.git"
-set :branch, "master"
+
 
 default_run_options[:pty] = true # Must be set for the password prompt from git to work
 ssh_options[:forward_agent] = true
