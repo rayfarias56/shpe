@@ -4,7 +4,7 @@ The new rails based website. We will follow industry standards in the interest o
 
 # Attention Devs
 
-Please commit to develop. Merging of branches and releases will be controlled by the lead developer on the projects
+Please commit to develop. Merging of branches and releases will be controlled by the lead developer on the project.
 
 # PLEASE PLEASE PLEASE
 
