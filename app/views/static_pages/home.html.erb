@@ -1,121 +1,141 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="span8">
+        <div id="carousel-container">
+          <div id="myCarousel" class="carousel slide">
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item">
+                <%= image_tag "gil.jpg", size: '5000x500' %>
+                <div class="carousel-caption">
+                  <h4>Chrysanthemum</h4>
 
-    <section>
-      <div class="container">
-        <div class="row">
-          <div class="span9">
-            <div id="carousel-container">
-              <div id="myCarousel" class="carousel slide">
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                  <div class="active item">
-                    <%= image_tag "gil.jpg", size: '960x541' %>
-                    <div class="carousel-caption">
-                      <h4>Chrysanthemum</h4>
-                      <p>Chrysanthemums, often called mums or chrysanths, are perennial flowering plants of the genus Chrysanthemum in the family Asteraceae which are native to Asia and northeastern Europe.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <%= image_tag "pen_pals.jpg", size: '960x541' %>
-                    <div class="carousel-caption">
-                      <h4>Desert</h4>
-                      <p>A desert is a landscape or region of land that is very dry because of low rainfall amounts (precipitation), often has little coverage by plants, and in which streams dry up unless they are supplied by water from outside areas.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <%= image_tag "hsv_alma.jpg", size: '960x541' %>
-                    <div class="carousel-caption">
-                      <h4>Hydrangeas</h4>
-                      <p>bHydrangea flowers are produced from early spring to late autumn; they grow in flowerheads (corymbs or panicles) at the ends of the stems.</p>
-                    </div>
-                  </div>
-                  <div class="item">
-                    <%= image_tag "ray_sleep.jpg", size: '960x541' %>
-                    <div class="carousel-caption">
-                      <h4>Jellyfish</h4>
-                      <p>Jellyfish or jellies are the major non-polyp form of individuals of the phylum Cnidaria. They are typified as free-swimming marine animals consisting of a gelatinous umbrella-shaped bell and trailing tentacles.</p>
-                    </div>
-                  </div>
-                <!-- Carousel nav -->
-                <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-                <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                  <p>Chrysanthemums, often called mums or chrysanths, are perennial flowering plants of the genus
+                    Chrysanthemum in the family Asteraceae which are native to Asia and northeastern Europe.</p>
+                </div>
+              </div>
+              <div class="item">
+                <%= image_tag "pen_pals.jpg",  size: '5000x500' %>
+                <div class="carousel-caption">
+                  <h4>Desert</h4>
+
+                  <p>A desert is a landscape or region of land that is very dry because of low rainfall amounts
+                    (precipitation), often has little coverage by plants, and in which streams dry up unless they are
+                    supplied by water from outside areas.</p>
+                </div>
+              </div>
+              <div class="item">
+                <%= image_tag "hsv_alma.jpg",  size: '5000x500' %>
+                <div class="carousel-caption">
+                  <h4>Hydrangeas</h4>
+
+                  <p>bHydrangea flowers are produced from early spring to late autumn; they grow in flowerheads (corymbs
+                    or panicles) at the ends of the stems.</p>
+                </div>
+              </div>
+              <div class="item">
+                <%= image_tag "ray_sleep.jpg",  size: '5000x500' %>
+                <div class="carousel-caption">
+                  <h4>Jellyfish</h4>
+
+                  <p>Jellyfish or jellies are the major non-polyp form of individuals of the phylum Cnidaria. They are
+                    typified as free-swimming marine animals consisting of a gelatinous umbrella-shaped bell and
+                    trailing tentacles.</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="span3">
-              <!-- something else will go here, maybe newsletter -->
-              <!--<div class="span4">-->
-                <h3 class="text-center">Announcements</h3>
-
-                <% for announcement in @announcements %>
-                <div class="media">
-                  <div class="media-body">
-                    <h4 class="media-heading"><%= link_to announcement.title, announcement %></h4>
-                    <small><%= announcement.created_at %></small>
-                   <p> <%= announcement.content.html_safe %> </p>
-                  </div>
-                </div>
-                <% end %>
-            <!--</div>-->
-
-            
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
           </div>
         </div>
-      </div> <!-- /container -->
-    </section>
-    <div class="container">
+      </div>
+      <div class="span4">
+        <!-- something else will go here, maybe newsletter -->
+        <!--<div class="span4">-->
+        <h3 class="text-center">Announcements</h3>
+
+        <% for announcement in @announcements %>
+            <div class="media">
+              <div class="media-body">
+                <h4 class="media-heading"><%= link_to announcement.title, announcement %></h4>
+                <small><%= announcement.created_at %></small>
+                <p> <%= announcement.content.html_safe %> </p>
+              </div>
+            </div>
+        <% end %>
+        <!--</div>-->
+
+
+      </div>
+    </div>
+  </div>
+  <!-- /container -->
+</section>
+<div class="container">
+  <div class="row">
+    <div class="span12">
+      <h3 class="text-center">Announcements</h3>
+
+      <p>To apply to the SHPE Undergraduate Research Fellowship
+        <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDQ1SzFpa1c5SFVGeDhpZmtocWh3ZFE6MQ#gid=0">Click
+          Here.</a><br>
+        To view sponsorship info <a href="http://shpe-uiuc.org/files/SHPEproposalppt.pdf">Click Here.</a><br>
+
+        Spring 2013 High School Visitation<br>
+        Come spend a three day weekend at the University of Illinois, hosted by the Society of Hispanic Professional
+        Engineers (SHPE). The Spring 2013 High School Visitation starts on Thursday, March 7th and ends Sunday, March
+        10th Transportation, food, and housing will be provided by SHPE as well as fun activities and informational
+        seminars at the University of Illinois at Urbana-Champaign. <br>
+
+        Application Deadline: March 5<br>
+        To apply for the Spring 2013 High School Visitation hosted by the Society of Hispanic Professional Engineers at
+        the University of Illinois Urbana-Champaign, please fill out this online application. <br>
+
+        If you have any questions, please email Ruben Robles at
+        <a href="mailto:outreach@shpe-uiuc.org">outreach@shpe-uiuc.org</a></p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <h3 class="text-center">Our Sponsors</h3>
+
       <div class="row">
-        <div class="span12">
-          <h3 class="text-center">Announcements</h3>
-        <p>To apply to the SHPE Undergraduate Research Fellowship <a href="https://docs.google.com/spreadsheet/viewform?formkey=dDQ1SzFpa1c5SFVGeDhpZmtocWh3ZFE6MQ#gid=0">Click Here.</a><br>
-To view sponsorship info <a href="http://shpe-uiuc.org/files/SHPEproposalppt.pdf">Click Here.</a><br>
-
-Spring 2013 High School Visitation<br>
-Come spend a three day weekend at the University of Illinois, hosted by the Society of Hispanic Professional Engineers (SHPE). The Spring 2013 High School Visitation starts on Thursday, March 7th and ends Sunday, March 10th Transportation, food, and housing will be provided by SHPE as well as fun activities and informational seminars at the University of Illinois at Urbana-Champaign. <br>
-
-Application Deadline: March 5<br>
-To apply for the Spring 2013 High School Visitation hosted by the Society of Hispanic Professional Engineers at the University of Illinois Urbana-Champaign, please fill out this online application. <br>
-
-          If you have any questions, please email Ruben Robles at <a href="mailto:outreach@shpe-uiuc.org">outreach@shpe-uiuc.org</a></p>
+        <div class="span2 offset3">
+          <a href="http://www.accenture.com/us-en/pages/index.aspx">
+            <%= image_tag "accenture.png", :size => '170x100' %>
+          </a>
+        </div>
+        <div class="span2">
+          <a href="http://www.capitalone.com/">
+            <%= image_tag "capitalone.png", :size => '170x100' %>
+          </a>
+        </div>
+        <div class="span2">
+          <a href="http://www.dow.com/">
+            <%= image_tag "dow.png", :size => '170x100' %>
+          </a>
         </div>
       </div>
       <div class="row">
-        <div class="span12">
-          <h3 class="text-center">Our Sponsors</h3>
-          <div class="row">
-            <div class="span2 offset3">
-              <a href="http://www.accenture.com/us-en/pages/index.aspx">
-                <%= image_tag "accenture.png", :size => '170x100' %>
-              </a>
-            </div>
-            <div class="span2">
-              <a href="http://www.capitalone.com/">
-                <%= image_tag "capitalone.png", :size => '170x100' %>
-              </a>
-            </div>
-            <div class="span2">
-              <a href="http://www.dow.com/">
-                <%= image_tag "dow.png", :size => '170x100' %>
-              </a>
-            </div>
-          </div>
-          <div class="row">
-            <div class="span2 offset3">
-              <a href="http://www.qualcomm.com/">
-                <%= image_tag "qualcomm.png", :size => '170x100' %>
-              </a>
-            </div>
-            <div class="span2">
-              <a href="http://rgengineering.net/">
-                <%= image_tag "rgengineering.png", :size => '170x100' %>
-              </a>
-            </div>
-            <div class="span2">
-              <a href="http://www.northropgrumman.com/Pages/default.aspx">
-                <%= image_tag "northrupgrumman.png", :size => '170x100' %>
-              </a>
-            </div>
-          </div>
+        <div class="span2 offset3">
+          <a href="http://www.qualcomm.com/">
+            <%= image_tag "qualcomm.png", :size => '170x100' %>
+          </a>
+        </div>
+        <div class="span2">
+          <a href="http://rgengineering.net/">
+            <%= image_tag "rgengineering.png", :size => '170x100' %>
+          </a>
+        </div>
+        <div class="span2">
+          <a href="http://www.northropgrumman.com/Pages/default.aspx">
+            <%= image_tag "northrupgrumman.png", :size => '170x100' %>
+          </a>
         </div>
       </div>
     </div>
+  </div>
+</div>
     
