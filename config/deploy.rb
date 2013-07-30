@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 #load 'lib/deploy/seed' #include if you need to load seed data with cap deploy:seed
 
-server "50.116.43.128", :app, :web, :db, :primary => true
+server "shpe-uiuc.org", :app, :web, :db, :primary => true
 set :user, "deployer" # The server's user for deploys
 set :scm_passphrase, "0ok9ij8uh" # The deploy user's password
 
