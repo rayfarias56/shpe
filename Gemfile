@@ -9,6 +9,7 @@ gem 'bootstrap-will_paginate', '0.0.6'
 
 gem "paperclip", "~> 3.0"
 gem 'sqlite3', "~> 1.3.5"
+gem 'google-analytics-rails'
 
 
 # Bundle edge Rails instead:

@@ -52,6 +52,7 @@ GEM
       multi_json (~> 1.0)
     faker (1.0.1)
       i18n (~> 0.4)
+    google-analytics-rails (0.0.4)
     highline (1.6.19)
     hike (1.2.2)
     i18n (0.6.1)
@@ -156,6 +157,7 @@ DEPENDENCIES
   bootstrap-will_paginate (= 0.0.6)
   capistrano
   faker (= 1.0.1)
+  google-analytics-rails
   jquery-rails (= 2.0.2)
   mysql2
   paperclip (~> 3.0)
