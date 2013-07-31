@@ -1,8 +1,9 @@
 require "bundler/capistrano"
 #load 'lib/deploy/seed' #include if you need to load seed data with cap deploy:seed
 
-set :stages, %w(develop staging production)
+set :stages, %w(development staging production)
 set :default_stage, "develop"
+require 'capistrano/ext/multistage'
 server "shpe-uiuc.org", :app, :web, :db, :primary => true
 set :user, "deployer" # The server's user for deploys
 set :scm_passphrase, "0ok9ij8uh" # The deploy user's password

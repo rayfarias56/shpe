@@ -13,7 +13,7 @@ gem "paperclip", "~> 3.0"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development, :test do
+group :development do
 
   gem 'rspec-rails', '2.11.0'
   gem 'annotate', '2.5.0'
@@ -39,7 +39,7 @@ group :test do
 
 end
 
-group :production do
+group :production, :test do
   gem 'mysql2'
 end
 

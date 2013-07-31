@@ -42,6 +42,8 @@ GEM
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
+    capistrano-ext (1.2.1)
+      capistrano (>= 1.0.0)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -155,6 +157,7 @@ DEPENDENCIES
   bootstrap-sass (= 2.1)
   bootstrap-will_paginate (= 0.0.6)
   capistrano
+  capistrano-ext
   faker (= 1.0.1)
   jquery-rails (= 2.0.2)
   mysql2

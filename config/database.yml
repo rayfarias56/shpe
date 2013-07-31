@@ -13,13 +13,16 @@ development:
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter:  mysql2
+  database: shpe_staging
   pool: 5
+  username: deployer
+  password: re45dncjdsdjkfs
+  socket: /var/run/mysqld/mysqld.sock
   timeout: 5000
 
 production:
-  adapter: mysql2
+  adapter:  mysql2
   database: shpe_production
   pool: 5
   username: deployer
