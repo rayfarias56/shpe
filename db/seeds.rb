@@ -7,6 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-user = User.new(:name => 'Sean', :password => '12qwaszx', :password_confirmation => '12qwaszx', :email => 'frycicle@gmail.com', :gpa => 2.5, :major => 'Computer Science',:uin => 678802721, :phone_number => 2176173798, :grad_date => '2014/05/15')
+user = User.new(:name => 'Sean', :password => 'blah1234', :password_confirmation => 'blah1234', :email => 'frycicle@gmail.com', :gpa => 2.5, :major => 'Computer Science',:uin => 678802721, :phone_number => 2176173798, :grad_date => '2014/05/15')
 user.admin = true
 user.save
