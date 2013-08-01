@@ -41,7 +41,7 @@ group :test do
 
 end
 
-group :production, :test do
+group :production, :staging do
   gem 'mysql2'
 end
 
