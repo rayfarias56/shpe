@@ -6,7 +6,6 @@
 
     <% for user in @users %>
         <li>
-          <%= gravatar_for user, size: 52 %>
           <%= link_to user.name, view_user_path(user) %>
 
         </li>
