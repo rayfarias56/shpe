@@ -31,7 +31,7 @@
 #  updated_at :datetime         not null
 #
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:phone_number
+  attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:phone_number, as: :default
   has_secure_password
   has_one :resume
   has_many :announcements

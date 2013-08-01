@@ -13,7 +13,7 @@
 #
 
 class Resume < ActiveRecord::Base
-  attr_accessible :pdf, :user_id
+  attr_accessible :pdf, :user_id, as: :default
   has_attached_file :pdf
 
   validates_attachment :pdf, :presence => true,
