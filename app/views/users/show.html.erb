@@ -12,8 +12,7 @@
 
 
     <% if @user.admin? %>
-        <p>You are an admin</p>
-        <%= link_to 'Control Panel', control_panel_path, :class => 'btn btn-primary' %>
+        <%= link_to 'Admin Panel', admin_root_path, :class => 'btn btn-primary' %>
     <% end %>
 
     <% if @user.eboard? %>

@@ -16,7 +16,6 @@ SampleApp::Application.routes.draw do
   
   
   match '/signup',  to: 'users#new'
-  match '/control_panel', to: 'users#control_panel'
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
   
