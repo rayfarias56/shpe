@@ -11,3 +11,4 @@ user = User.new(:name => 'Sean', :password => 'blah1234', :password_confirmation
 user.admin = true
 user.save
 User.create(:name => 'Bill Guy', :password => 'blah1234', :password_confirmation => 'blah1234', :email => 'bevis@gmail.com', :gpa => 2.5, :major => 'Computer Science',:uin => 678802731, :phone_number => 2176173748, :grad_date => '2014/05/15')
+user.announcements.create(title: 'test')
