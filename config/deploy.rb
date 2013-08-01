@@ -19,6 +19,7 @@ set :deploy_via, :remote_cache
 
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 after "deploy:update_code", "deploy:migrate"
+after "deploy:cleanup", "deploy:seed"
 
 set :scm, "git"
 set :scm_verbose, true
