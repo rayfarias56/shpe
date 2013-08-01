@@ -1,7 +1,7 @@
 require "bundler/capistrano"
 #load 'lib/deploy/seed' #include if you need to load seed data with cap deploy:seed
 
-set :stages, %w(development staging production)
+set :stages, %w(development staging production ci)
 set :default_stage, "develop"
 require 'capistrano/ext/multistage'
 server "shpe-uiuc.org", :app, :web, :db, :primary => true
