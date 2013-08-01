@@ -1,4 +1,6 @@
 SampleApp::Application.routes.draw do
+
+
   get "password_resets/new"
 
   resources :announcements
@@ -37,6 +39,7 @@ SampleApp::Application.routes.draw do
   match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
 
   root to: 'static_pages#home'
+  ActiveAdmin.routes(self)
 
   
 

@@ -12,11 +12,14 @@ class ApplicationController < ActionController::Base
   end
 
   def admin_user
-    redirect_to(root_path) unless current_user.admin?
+    unless current_user && current_user.admin?
+      flash[:error] = 'You must sign in'
+      redirect_to(root_path)
+    end
   end
 
   def admin_user?
-    current_user.admin?
+    current_user && current_user.admin?
   end
 
   helper_method :admin_user?
@@ -33,5 +36,9 @@ class ApplicationController < ActionController::Base
 
   def company_user
     redirect_to(root_path) unless current_user.company?
+  end
+
+  def authenticate_admin!
+    redirect_to new_session_path unless current_user.is_admin?
   end
 end
