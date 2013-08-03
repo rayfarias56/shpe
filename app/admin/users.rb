@@ -4,8 +4,6 @@ ActiveAdmin.register User do
     f.inputs "Edit" do
       f.input :name
       f.input :email
-      f.input :password
-      f.input :password_confirmation
       f.input :major
       f.input :gpa
       f.input :grad_date

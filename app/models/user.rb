@@ -44,8 +44,8 @@ class User < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: false
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 6}
-  validates :password_confirmation, presence: true
+  validates :password, presence: true, length: { minimum: 6}  unless :on_admin_page?
+  validates :password_confirmation, presence: true  unless :on_admin_page?
   validates :major, presence: true
   validates :grad_date, presence: true
   validates :uin, presence: true, length: {is: 9}, uniqueness:true, :numericality => true
@@ -64,9 +64,15 @@ class User < ActiveRecord::Base
     end while User.exists?(column => self[column])
   end
 
+  def on_admin_page?
+    params[:controller] == :admin
+  end
+
   private
 
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64
   end
+
+
 end
