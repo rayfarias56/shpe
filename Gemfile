@@ -16,11 +16,13 @@ gem 'activeadmin'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-group :development do
+group :development, :test do
 
   gem 'rspec-rails', '2.11.0'
   gem 'annotate', '2.5.0'
   gem 'capistrano'
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
 
 end
 

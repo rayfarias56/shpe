@@ -32,7 +32,8 @@
 #
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,
-                  :phone_number, :eboard, :company, :admin, as: [:default ,:admin]
+                  :phone_number, :eboard, :company, :admin , as: [:default ,:admin]
+  attr_accessor   :updating_password
 
   has_secure_password
   has_one :resume
@@ -44,8 +45,8 @@ class User < ActiveRecord::Base
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: false
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: 6}  unless :on_admin_page?
-  validates :password_confirmation, presence: true  unless :on_admin_page?
+  validates :password, presence: true, length: { minimum: 6}, if: :should_validate_password?
+  validates :password_confirmation, presence: true, if: :should_validate_password?
   validates :major, presence: true
   validates :grad_date, presence: true
   validates :uin, presence: true, length: {is: 9}, uniqueness:true, :numericality => true
@@ -64,8 +65,8 @@ class User < ActiveRecord::Base
     end while User.exists?(column => self[column])
   end
 
-  def on_admin_page?
-    params[:controller] == :admin
+  def should_validate_password?
+    updating_password || new_record?
   end
 
   private

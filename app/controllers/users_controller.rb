@@ -16,6 +16,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(params[:user])
+    @user.updating_password = true
     if @user.save
       sign_in @user
       flash[:success] = "Welcome to your profile!"
@@ -26,7 +27,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    #@user = User.find(params[:id])
+    @user = User.find(params[:id])
   end
   
   def index
@@ -34,7 +35,8 @@ class UsersController < ApplicationController
   end
 
   def update
-    #@user = User.find(params[:id])
+    @user = User.find(params[:id])
+    @user.updating_password = true
     if @user.update_attributes(params[:user])
       flash[:success] = "Profile updated"
       sign_in @user
@@ -53,75 +55,6 @@ class UsersController < ApplicationController
   def control_panel
     @users = User.all
   end
-
-  def add_admin
-    user = User.find(params[:id])
-    user.admin = true
-    if user.update_column(:admin, true)
-      flash[:success] = "Added as Admin"
-      redirect_to control_panel_path
-    else
-      flash[:error] = "Failed Adding Admin"
-
-      redirect_to control_panel_path
-    end
-  end
-
-  def remove_admin
-    user = User.find(params[:id])
-    if user.update_column(:admin, false)
-      flash[:success] = "Removed as Admin"
-      redirect_to control_panel_path
-    else
-      flash[:error] = "Failed removing Admin"
-      redirect_to control_panel_path
-    end
-  end
-
-  def add_eboard
-    user = User.find(params[:id])
-    if user.update_column(:eboard, true)
-      flash[:success] = "Added as Eboard"
-      redirect_to control_panel_path
-    else
-      flash[:error] = "Failed Adding Eboard"
-      redirect_to control_panel_path
-    end
-  end
-
-  def remove_eboard
-    user = User.find(params[:id])
-    if user.update_column(:eboard, false)
-      flash[:success] = "Removed as Eboard"
-      redirect_to control_panel_path
-    else
-      flash[:error] = "Failed removing Eboard"
-      redirect_to control_panel_path
-    end
-  end
-
-  def add_company
-    user = User.find(params[:id])
-    if user.update_column(:company, true) &&  user.update_column(:admin, false) && user.update_column(:eboard, false)
-      flash[:success] = "Added as Company"
-      redirect_to control_panel_path
-    else
-      flash[:error] = "Failed Adding Company"
-      redirect_to control_panel_path
-    end
-  end
-
-  def remove_company
-    user = User.find(params[:id])
-    if user.update_column(:company, false)
-      flash[:success] = "Removed as Company"
-      redirect_to control_panel_path
-    else
-      flash[:error] = "Failed removing Company"
-      redirect_to control_panel_path
-    end
-  end
-
 
   def view_user
     @user = User.find(params[:id])

@@ -8,7 +8,7 @@ describe "Static pages" do
 
 
     before { visit root_path }
-    it { should have_selector('h1', :text => 'SHPE UIUC') }
+    it { should have_selector('h3', :text => 'SHPE UIUC') }
     it { should have_selector('title',
                               :text => "SHPE UIUC") }
 
@@ -26,9 +26,9 @@ describe "Static pages" do
 
   describe "About page" do
 
-    it "should have the h1 'About Us'" do
+    it "should have the h3 'About Us'" do
       visit about_path
-      page.should have_selector('h1', :text => 'About Us')
+      page.should have_selector('h3', :text => 'About Us')
     end
 
     it "should have the title 'About Us'" do
@@ -53,17 +53,4 @@ describe "Static pages" do
     end
   end
 
-  describe "Mission & Vision page" do
-
-    it "should have the h1 'Mission & Vision'" do
-      visit mission_path
-      page.should have_selector('h1', :text => 'Mission Statement')
-    end
-
-    it "should have the title 'Mission & Vision'" do
-      visit mission_path
-      page.should have_selector('title',
-                                :text => "SHPE UIUC | Mission and Vision")
-    end
-  end
 end
