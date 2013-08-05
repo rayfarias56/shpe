@@ -17,10 +17,10 @@ describe "Static pages" do
   describe "Help page" do
 
 
-      before { visit help_path }
-      it {should have_selector('h1', :text => 'Help')   }
-      it {should have_selector('title',
-                                :text => "SHPE UIUC | Help")  }
+    before { visit help_path }
+    it { should have_selector('h1', :text => 'Help') }
+    it { should have_selector('title',
+                              :text => "SHPE UIUC | Help") }
 
   end
 
@@ -50,6 +50,28 @@ describe "Static pages" do
       visit contact_path
       page.should have_selector('title',
                                 :text => "SHPE UIUC | Contact Us")
+    end
+  end
+
+  describe "Events page" do
+    before { visit events_path }
+    it "should have h1 'Events'" do
+      page.should have_selector('h1', text: 'Events')
+    end
+    it "should have title 'Events'" do
+      visit events_path
+      page.should have_selector('title', text: "SHPE UIUC | Events")
+    end
+  end
+
+  describe "Resources page" do
+    before { visit resources_path }
+    it "should have h1 'Resources'" do
+      page.should have_selector('h1', text: 'Resources')
+    end
+    it "should have title 'Resources'" do
+      visit resources_path
+      page.should have_selector('title', text: "SHPE UIUC | Resources")
     end
   end
 
