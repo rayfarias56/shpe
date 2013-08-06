@@ -23,45 +23,23 @@
       <div class="nav-collapse collapse">
           <ul class="nav pull-right">
               <li class="current-page">
-                  <a href="<%= root_path %>">
-                    <!-- <i class="icon-home"></i><br /> -->
-                    HOME
-                  </a>
+                <%= link_to 'HOME', root_path %>
               </li>
               <li>
-                  <a href="<%= about_path %>">
-                    <!-- <i class="icon-question-sign"></i> -->
-                    
-                    ABOUT
-                  </a>
+                <%= link_to 'ABOUT', about_path %>
               </li>
               <li>
-                  <a href="<%= events_path %>">
-                    <!-- <i class="icon-user"></i> -->
-                    
-                    MEMBERS
-                  </a>
+                <%= link_to 'MEMBERS', root_path %>
               </li>
               <li>
-                  <a href="<%= resources_path %>">
-                    <!-- <i class="icon-calendar"></i> -->
-                    
-                    EVENTS
-                  </a>
+                <%= link_to 'EVENTS', events_path %>
               </li>
               <li>
-                  <a href="<%= resources_path %>">
-                    <!-- <i class="icon-folder-close"></i> -->
-                    
-                    RESOURCES
-                  </a>
+                <%= link_to 'RESOURCES', resources_path  %>
               </li>
               <% if signed_in? %>
               <li>
-                  <a href="<%= user_path(current_user) %>">
-                    <!-- <i class="icon-user"></i> -->
-                    PROFILE
-                  </a>
+                  <%= link_to 'PROFILE', user_path(current_user)  %>
               </li>
               <li>
 
@@ -70,10 +48,7 @@
               </li>
               <% else %>
               <li>
-                  <a href="<%= signin_path %>">
-                    <!-- <i class="icon-ok"></i> -->
-                    SIGN IN
-                  </a>
+                <%= link_to 'SIGN IN', signin_path  %>
               </li>
               <% end %>
           </ul>
