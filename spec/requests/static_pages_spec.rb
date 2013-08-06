@@ -8,7 +8,7 @@ describe "Static pages" do
 
 
     before { visit root_path }
-    it { should have_selector('h3', :text => 'SHPE UIUC') }
+    it { should have_selector('p', :text => 'SHPE UIUC') }
     it { should have_selector('title',
                               :text => "SHPE UIUC") }
 
