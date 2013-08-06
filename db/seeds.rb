@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-user = User.new(:name => 'Sean Freiburg', :password => 'blah1234', :password_confirmation => 'blah1234', :email => 'freibur1@illinois.edu', :gpa => 2.5, :major => 'Computer Science',:uin => 678802721, :phone_number => 2176173798, :grad_date => '2014/05/15')
+user = User.new(:name => 'Sean Freiburg', :password => 'blah1234', :password_confirmation => 'blah1234', :email => 'freibur1@illinois.edu', :gpa => 2.98, :major => 'Computer Science',:uin => 678802721, :phone_number => 2176173798, :grad_date => '2014/05/15')
 user.admin = true
 user.save
-User.create(:name => 'Bill Guy', :password => 'blah1234', :password_confirmation => 'blah1234', :email => 'bevis@gmail.com', :gpa => 2.5, :major => 'Computer Science',:uin => 678802731, :phone_number => 2176173748, :grad_date => '2014/05/15')
+User.create(:name => 'Bill Guy', :password => 'blah1234', :password_confirmation => 'blah1234', :email => 'bevis@gmail.com', :gpa => 2.5, :major => 'Computer Science',:uin => 678802731, :phone_number => 2176173748, :grad_date => '2014/05/15', :company => true)

@@ -8,7 +8,7 @@ describe "Static pages" do
 
 
     before { visit root_path }
-    it { should have_selector('h1', :text => 'SHPE UIUC') }
+    it { should have_selector('h3', :text => 'SHPE UIUC') }
     it { should have_selector('title',
                               :text => "SHPE UIUC") }
 
@@ -17,18 +17,18 @@ describe "Static pages" do
   describe "Help page" do
 
 
-      before { visit help_path }
-      it {should have_selector('h1', :text => 'Help')   }
-      it {should have_selector('title',
-                                :text => "SHPE UIUC | Help")  }
+    before { visit help_path }
+    it { should have_selector('h1', :text => 'Help') }
+    it { should have_selector('title',
+                              :text => "SHPE UIUC | Help") }
 
   end
 
   describe "About page" do
 
-    it "should have the h1 'About Us'" do
+    it "should have the h3 'About Us'" do
       visit about_path
-      page.should have_selector('h1', :text => 'About Us')
+      page.should have_selector('h3', :text => 'About Us')
     end
 
     it "should have the title 'About Us'" do
@@ -53,17 +53,26 @@ describe "Static pages" do
     end
   end
 
-  describe "Mission & Vision page" do
-
-    it "should have the h1 'Mission & Vision'" do
-      visit mission_path
-      page.should have_selector('h1', :text => 'Mission Statement')
+  describe "Events page" do
+    before { visit events_path }
+    it "should have h1 'Events'" do
+      page.should have_selector('h1', text: 'Events')
     end
-
-    it "should have the title 'Mission & Vision'" do
-      visit mission_path
-      page.should have_selector('title',
-                                :text => "SHPE UIUC | Mission and Vision")
+    it "should have title 'Events'" do
+      visit events_path
+      page.should have_selector('title', text: "SHPE UIUC | Events")
     end
   end
+
+  describe "Resources page" do
+    before { visit resources_path }
+    it "should have h1 'Resources'" do
+      page.should have_selector('h1', text: 'Resources')
+    end
+    it "should have title 'Resources'" do
+      visit resources_path
+      page.should have_selector('title', text: "SHPE UIUC | Resources")
+    end
+  end
+
 end

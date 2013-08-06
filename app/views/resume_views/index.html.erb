@@ -1,20 +1,3 @@
-<% major_array = [
-        'Aerospace Engineering',
-        'Agricultural and Biological Engineering',
-        'Bioengineering',
-        'Chemical and Biomolecular Engineering',
-        'Civil and Environmental Engineering',
-        'Computer Science',
-        'Electrical and Computer Engineering',
-        'Industrial and Enterprise Systems Engineering',
-        'Materials Science and Engineering',
-        'Mechanical Science and Engineering',
-        'Nuclear, Plasma, and Radiological Engineering',
-        'Physics',
-        'Other'
-
-] %>
-
 <% provide(:title, 'All users') %>
 
 <div class="container">
@@ -23,7 +6,7 @@
     <h2>All users</h2>
 
     <%= form_tag '' do %>
-        <%=  select_tag 'major', options_for_select(major_array.collect{ |u| [u, u] }) %>
+        <%=  select_tag 'major', options_for_select(MAJOR_ARRAY.collect{ |u| [u, u] }), prompt: 'All' %>
         <%= submit_tag 'Submit', class: 'btn btn-primary' %>
     <% end %>
 
