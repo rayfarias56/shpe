@@ -1,82 +1,84 @@
- <header>
-      <div class="container">
-        <div class="header row">
-                  <div class="span12">
-                      <div class="navbar">
-                          <div class="navbar-inner">
-                              <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                                  <span class="icon-bar"></span>
-                                  <span class="icon-bar"></span>
-                                  <span class="icon-bar"></span>
-                              </a>
-                              <a href="<%= root_path %>">
+<header class="navbar mainheader">
+  <div class="navbar-inner">
+      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </a>
+      <!-- TODO: needs to be one pic -->
+        <a href="#">
+          <%= image_tag "shpe-header.png", :size => '100x100', :class => 'pull-left' %>
+          <!-- <img src="img/shpe-logo-transparent.png" height="100px" width="100px" class="pull-left" /> -->
+        </a>
+        <a class="brand" href="<%= root_path %>">
+          <p>Society of Hispanic Professional Engineers<br>SHPE UIUC</p>
+          <!-- <h3>SHPE UIUC</h3> -->
+        </a>
+      <!-- the correct way how to do it:  -->
+      <!-- <div class="brand">
+        <a href="#">
+          <img src="img/shpe-header.png" height="150px" width="150px" class="pull-left" />
+        </a>
+      </div> -->
+      <div class="nav-collapse collapse">
+          <ul class="nav pull-right">
+              <li class="current-page">
+                  <a href="<%= root_path %>">
+                    <!-- <i class="icon-home"></i><br /> -->
+                    HOME
+                  </a>
+              </li>
+              <li>
+                  <a href="<%= about_path %>">
+                    <!-- <i class="icon-question-sign"></i> -->
+                    
+                    ABOUT
+                  </a>
+              </li>
+              <li>
+                  <a href="<%= events_path %>">
+                    <!-- <i class="icon-user"></i> -->
+                    
+                    MEMBERS
+                  </a>
+              </li>
+              <li>
+                  <a href="<%= resources_path %>">
+                    <!-- <i class="icon-calendar"></i> -->
+                    
+                    EVENTS
+                  </a>
+              </li>
+              <li>
+                  <a href="<%= resources_path %>">
+                    <!-- <i class="icon-folder-close"></i> -->
+                    
+                    RESOURCES
+                  </a>
+              </li>
+              <% if signed_in? %>
+              <li>
+                  <a href="<%= user_path(current_user) %>">
+                    <!-- <i class="icon-user"></i> -->
+                    PROFILE
+                  </a>
+              </li>
+              <li>
 
-                                <%= image_tag "shpe-header.png", :size => '150x150', :class => 'pull-left' %>
-                              </a>
-                              <a class="brand" href="<%= root_path %>">
-                                
-                                <p>Society of Hispanic Professional Engineers</p>
-                                
-                                <h3>SHPE UIUC</h3>
+                <%= link_to "<i class=\"icon-off\"></i><br />Sign Out".html_safe, signout_path, method: 'delete' %>
+                  
+              </li>
+              <% else %>
+              <li>
+                  <a href="<%= signin_path %>">
+                    <!-- <i class="icon-ok"></i> -->
+                    SIGN IN
+                  </a>
+              </li>
+              <% end %>
+          </ul>
+      <!--</div>-->
+    </div>
+  </div>
+</header>
 
-                              </a>
-                              
-                              <div class="nav-collapse collapse">
-                                  <ul class="nav pull-right">
-                                      <li>
-                                          <a href="<%= root_path %>">
-                                            <i class="icon-home"></i><br />
-                                            Home
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href= "<%= about_path %>">
-                                            <i class="icon-question-sign"></i>
-                                            <br />
-                                            About
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="<%= events_path %>">
-                                            <i class="icon-calendar"></i>
-                                            <br />
-                                            Events
-                                          </a>
-                                      </li>
-                                      <li>
-                                          <a href="<%= resources_path %>">
-                                            <i class="icon-folder-close"></i>
-                                            <br />
-                                            Resources
-                                          </a>
-                                      </li>
-                                      <% if signed_in? %>
-                                      <li>
-                                          <a href="<%= user_path(current_user) %>">
-                                            <i class="icon-user"></i>
-                                            <br />
-                                            Profile
-                                          </a>
-                                      </li>
-                                      <li>
-
-                                        <%= link_to "<i class=\"icon-off\"></i><br />Sign Out".html_safe, signout_path, method: 'delete' %>
-                                          
-                                      </li>
-                                      <% else %>
-                                      <li>
-                                          <a href="<%= signin_path %>">
-                                            <i class="icon-ok"></i>
-                                            <br />
-                                            Sign In
-                                          </a>
-                                      </li>
-                                      <% end %>
-                                  </ul>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-      </div>
-    </header>
