@@ -35,64 +35,20 @@
               <li><a href="#"><i class="icon-plus"></i> Add</a></li>
             </ul>
             <div class="border">
+
+              <% for announcement in @announcements %>
               <div class="media white-accent no-margin-top">
-                <a class="pull-left" href="#">
-                  <img class="media-object img-polaroid" data-src="/img/shpe-logo-transparent.png" src="/img/shpe-logo-transparent.png" height="150px" width="200px">
-                </a>
                 <div class="media-body">
-                  <h3 class="media-heading">Media heading</h3>
-                  <p><i>Date: 1/1/2013</i></p>
-                  <p>Here we will write a short description of the announcement.</p>
-                  <a href="#">Read more...</a>
+                  <h3 class="media-heading"><%= announcement.title %></h3>
+                  <p><i>Date: <%= announcement.created_at %></i></p>
+                  <p><%=  announcement.content %></p>
+                  <%= link_to "Read more...", announcement %>
                 </div>
                 <hr class="no-margin-bottom">
               </div>
-              <div class="media white-accent no-margin-top">
-                <a class="pull-left" href="#">
-                  <img class="media-object img-polaroid" data-src="/img/shpe-logo-transparent.png" src="/img/shpe-logo-transparent.png" height="150px" width="200px">
-                </a>
-                <div class="media-body">
-                  <h3 class="media-heading">Media heading</h3>
-                  <p><i>Date: 1/1/2013</i></p>
-                  <p>Here we will write a short description of the announcement.</p>
-                  <a href="#">Read more...</a>
-                </div>
-                <hr class="no-margin-bottom">
-              </div>
-              <div class="media white-accent no-margin-top">
-                <a class="pull-left" href="#">
-                  <img class="media-object img-polaroid" data-src="/img/shpe-logo-transparent.png" src="/img/shpe-logo-transparent.png" height="150px" width="200px">
-                </a>
-                <div class="media-body">
-                  <h3 class="media-heading">Media heading</h3>
-                  <p><i>Date: 1/1/2013</i></p>
-                  <p>Here we will write a short description of the announcement.</p>
-                  <a href="#">Read more...</a>
-                </div>
-                <hr class="no-margin-bottom">
-              </div>
-              <div class="media white-accent no-margin-top">
-                <a class="pull-left" href="#">
-                  <img class="media-object img-polaroid" data-src="/img/shpe-logo-transparent.png" src="/img/shpe-logo-transparent.png" height="150px" width="200px">
-                </a>
-                <div class="media-body">
-                  <h3 class="media-heading">Media heading</h3>
-                  <p><i>Date: 1/1/2013</i></p>
-                  <p>Here we will write a short description of the announcement.</p>
-                  <a href="#">Read more...</a>
-                </div>
-                <hr class="no-margin-bottom">
-              </div>
-              <div class="media white-accent no-margin-top">
-                <a class="pull-left" href="#">
-                  <img class="media-object img-polaroid" data-src="/img/shpe-logo-transparent.png" src="/img/shpe-logo-transparent.png" height="150px" width="200px">
-                </a>
-                <div class="media-body">
-                  <h3 class="media-heading">Media heading</h3>
-                  <p><i>Date: 1/1/2013</i></p>
-                  <p>Here we will write a short description of the announcement.</p>
-                  <a href="#">Read more...</a>
-                </div>
+              <% end %>
+
+
                 <!-- choose this or pagination for article loading -->
                 <hr class="no-margin-bottom">
                 <a href="#">
@@ -200,32 +156,32 @@
             <div class="row">
               <div class="span2">
                 <a href="http://www.accenture.com/us-en/pages/index.aspx">
-                  <img alt="Accenture" height="100" src="/img/accenture.png" width="170">
+                  <%= image_tag "accenture.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
                 <a href="http://www.capitalone.com/">
-                  <img alt="Capitalone" height="100" src="/img/capitalone.png" width="170">
+                  <%= image_tag "capitalone.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
                 <a href="http://www.dow.com/">
-                  <img alt="Dow" height="100" src="/img/dow.png" width="170">
+                  <%= image_tag "dow.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
                 <a href="http://www.qualcomm.com/">
-                  <img alt="Qualcomm" height="100" src="/img/qualcomm.png" width="170">
+                  <%= image_tag "qualcomm.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
                 <a href="http://rgengineering.net/">
-                  <img alt="Rgengineering" height="100" src="/img/rgengineering.png" width="170">
+                  <%= image_tag "rgengineering.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
                 <a href="http://www.northropgrumman.com/Pages/default.aspx">
-                  <img alt="Northrupgrumman" height="100" src="/img/northrupgrumman.png" width="170">
+                  <%= image_tag "northrupgrumman.png", :size => '170x100' %>
                 </a>
               </div>
             </div>

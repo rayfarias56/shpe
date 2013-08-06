@@ -88,7 +88,7 @@ class AnnouncementsController < ApplicationController
   private
 
   def eboard_user
-    redirect_to(root_path) unless current_user.eboard?
+    redirect_to(root_path) unless current_user.eboard? || current_user.admin?
   end
 
   def admin_user
