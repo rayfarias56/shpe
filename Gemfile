@@ -21,6 +21,7 @@ group :development, :test do
 
   gem 'annotate', '2.5.0'
   gem 'capistrano'
+  gem 'pry'
 
 
 end
