@@ -24,12 +24,8 @@ class ApplicationController < ActionController::Base
 
   helper_method :admin_user?
 
-  def eboard_user
-    redirect_to(root_path) unless current_user.eboard?
-  end
-
   def eboard_user?
-    current_user.eboard?
+    current_user && (current_user.eboard? || current_user.admin?)
   end
 
   helper_method :eboard_user?
@@ -41,4 +37,11 @@ class ApplicationController < ActionController::Base
   def authenticate_admin!
     redirect_to new_session_path unless current_user.is_admin?
   end
+
+
+  def eboard_user
+    redirect_to(root_path) unless current_user.eboard? || current_user.admin?
+  end
+
+
 end

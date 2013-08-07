@@ -19,7 +19,7 @@
     <% end %>
 
     <% if @user.admin? or @user.eboard? %>
-        <%= link_to "Add announcement", new_announcement_path, :class => 'btn' %>
+        <%= link_to "Add event", new_event_path, :class => 'btn' %>
     <% end %>
 
 
