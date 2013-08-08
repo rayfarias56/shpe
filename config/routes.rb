@@ -1,6 +1,9 @@
 SampleApp::Application.routes.draw do
 
 
+  resources :events
+
+
   get "password_resets/new"
 
   resources :announcements
