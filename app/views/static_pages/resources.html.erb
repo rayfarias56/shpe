@@ -1,35 +1,97 @@
 <% provide(:title, 'Resources') %>
 
-<div class="container">
-  <div class="row">
-    <div class="span9 center">
-      <h1>Resources</h1>
-      <ul class="nav nav-tabs">
-        <li><a href="#career" data-toggle="tab">Careers</a></li>
-        <li><a href="#scholarships" data-toggle="tab">Scholarships</a></li>
-        <li><a href="#study-room" data-toggle="tab">Study Room Schedule</a></li>
-
-
-      </ul>
-      <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="career">
-          <h3>Careers</h3>
-          <p> <%= link_to 'After College External Link', 'http://www.aftercollege.com/group/354032134/' %></p>
-          <p><%= link_to 'Career Center External Link', 'http://www.careercenter.uiuc.edu/interestgroups/default.asp' %></p>
-
+<section>
+      <div class="container">
+        <div class="row">
+          <div class="span8 offset2">
+            <h3 class="text-center"><a href="#">The Vault</a></h3>
+            <img src="vault.jpg" alt="vault">
+            <p>
+              A collection of all past members' academic resources. Through participation in SHPE, you can contribute to and view the immense data source of SHPE collected wisdom. In hope, this will be an invaluable aid towards mastering your course subjects. 
+            </p>
+            <p class="text-warning">
+               With great power comes great responsibility. These resources are simply here to assist learning, not to be used as a crutch.
+            </p>
+            <p class="text-error">
+              Requirement: National Membership and Bronze Level Status
+            </p>
+          </div>
         </div>
-        <div class="tab-pane fade" id="scholarships">
-          <h3>Scholarships</h3>
-          <p><%= link_to 'SHPE Foundation External Link', 'http://www.shpefoundation.org/' %></p>
-          <p><%= link_to 'Hispanic Fund External Link', 'http://www.hispanicfund.org/' %></p>
-          <p><%= link_to 'HENAAC Scholars External Link', 'http://www.greatmindsinstem.org/college/henaac-scholarship-program' %></p>
+        <div class="row">
+          <div class="span8 offset2">
+            <h3 class="text-center">SHPE Study Hours</h3>
+            <img src="grainger.jpg" alt="grainger library">
+            <p>Location: 4th Floor Grainger Library Room #</p>
+            <!-- maybe add locator to this address -->
+            <p>
+              The SHPE Study room at Grainger is reserved from 7pm to 9pm on Tuesday and 8pm to 10 pm on Thursday.
+            </p>
+          </div>
         </div>
-        <div class="tab-pane fade" id="study-room">
-          <h3>Study Room Schedule</h3>
-          <p>The SHPE Study room at Grainger is reserved from 7pm to 9pm on Tuesday and 8pm to 10 pm on Thursday.</p>
+        <div class="row">
+          <div class="span8 offset2">
+            <h3 class="text-center"><a href="http://publish.illinois.edu/engineering-care/">Center for Academic Resources (CARE) Services</a></h3>
+            <img src="CARE.jpg" alt="CARE services">
+            <p>Location: 4th Floor Grainger Library</p>
+            <!-- maybe add locator to this address -->
+            <p>
+              The Center for Academic Resources in Engineering (CARE) enhances the learning experience for all undergraduate engineering students through academic support, enhancing collaborative learning opportunities, and providing positive influence through peer mentoring.
+            </p>
+          </div>
         </div>
-
+        <div class="row">
+          <div class="span8 offset2">
+            <h3 class="text-center"><a href="http://www.omsa.illinois.edu/">Office of Minority Student Affairs (OMSA) Services</a></h3>
+            <img src="OMSA.jpg" alt="OMSA services">
+            <p>Location: 130 Student Services Building, MC-306, 610 E. John St., Champaign, IL 61820</p>
+            <p>
+              The Office of Minority Student Affairs provides leadership in developing, implementing, coordinating and operating student support services, events and activities that are designed to assist underrepresented students' personal development, academic achievement and graduation. The OMSA is one of the longest-running and most comprehensive support programs in the country.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h3 class="text-center">Additional Help</h3>
+            <p>
+              Can't find what you're looking for? Send a message to the <a href="mailto:advisor@shpe-uiuc.org">student advisor</a> and he/she will get back to you as soon as possible.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h3 class="text-center">Additional Resources</h3>
+            <h5>Scholarships</h5>
+            <ul>
+              <li>
+                <p>
+                  <a href="http://www.shpefoundation.org/">SHPE Foundation</a> - Programs and information for anything SHPE
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="http://www.hispanicfund.org/">Hispanic Fund</a> - Promoter of Hispanic Higher Education Support and Assistance
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="http://www.greatmindsinstem.org/college/henaac-scholarship-program">HENNAC Scholars</a> - Recognition of underserved scholars and provide scholarship programs
+                </p>
+              </li>
+            </ul>
+            <h5>Careers</h5>
+            <ul>
+              <li>
+                <p>
+                  <a href="http://www.aftercollege.com/group/354032134/">After College</a> - An indispensable tool for SHPE employment
+                </p>
+              </li>
+              <li>
+                <p>
+                  <a href="http://www.careercenter.uiuc.edu/interestgroups/default.asp">Career Center</a> - Professional services including resume tuning, mock interviews and more
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</div>
+    </section>
