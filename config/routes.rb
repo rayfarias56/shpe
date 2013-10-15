@@ -24,7 +24,7 @@ SampleApp::Application.routes.draw do
   
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about' , as: :about
-  match '/contact', to: 'static_pages#contact'
+  match '/contact', to: 'static_pages#contact', as: :contact
   match '/events', to: 'static_pages#events', as: :events
   match '/resources', to: 'static_pages#resources', as: :resources
 
