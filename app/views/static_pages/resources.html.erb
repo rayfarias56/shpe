@@ -5,25 +5,32 @@
     <div class="span9 center">
       <h1>Resources</h1>
       <ul class="nav nav-tabs">
+        <li><a href="#fallhsv" data-toggle="tab">Fall HSV</a></li>
         <li><a href="#career" data-toggle="tab">Careers</a></li>
         <li><a href="#scholarships" data-toggle="tab">Scholarships</a></li>
 
 
+
       </ul>
       <div id="myTabContent" class="tab-content">
-        <div class="tab-pane fade in active" id="career">
-          <h3>Careers</h3>
+
+        <div class="tab-pane fadein active" id="fallhsv">
+          <h4>Fall HSV</h4>
+          <p><%= link_to 'Register here', 'https://docs.google.com/forms/d/1erTLMVXI0aY4YQkvjzkpn562dazCgGcK6SteQbqapSA/viewform' %></p>
+        </div>
+        <div class="tab-pane fade " id="career">
+          <h4>Careers</h4>
           <p> <%= link_to 'After College External Link', 'http://www.aftercollege.com/group/354032134/' %></p>
           <p><%= link_to 'Career Center External Link', 'http://www.careercenter.uiuc.edu/interestgroups/default.asp' %></p>
 
         </div>
         <div class="tab-pane fade" id="scholarships">
-          <h3>Scholarships</h3>
+          <h4>Scholarships</h4>
           <p><%= link_to 'SHPE Foundation External Link', 'http://www.shpefoundation.org/' %></p>
           <p><%= link_to 'Hispanic Fund External Link', 'http://www.hispanicfund.org/' %></p>
           <p><%= link_to 'HENAAC Scholars External Link', 'http://www.greatmindsinstem.org/college/henaac-scholarship-program' %></p>
         </div>
-
+        <hr/>
       </div>
     </div>
   </div>
