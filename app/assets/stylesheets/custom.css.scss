@@ -33,6 +33,11 @@
   height: 100px;
   margin: 10px auto;
 }
+
+.resource-img {
+  width: 400px;
+  height: 200px;
+}
 /*eventually take top and left attributes out and do direct styling on which ever div used on*/
 
 .triangle-down-white {
@@ -292,7 +297,6 @@ h1, h2, h3, h4, h5, h6, p {
   margin-bottom: 5px;
   margin-left: 5px;
   margin-right: 5px;
-  background-image: none;
 }
 
 /* Exec board styling begin */
