@@ -213,8 +213,6 @@ footer {
   color: white;
   background: #0a1c26;
   padding-top: 15px;
-  margin-left: -20px;
-  margin-right: -20px;
 }
 
 .footer-logo {
@@ -298,6 +296,29 @@ footer {
 h1, h2, h3, h4, h5, h6, p {
   font-family: "ff-din-web","proxima-nova-alt",Tahoma,Arial,sans-serif;
   font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  section {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.clear {
+  display: inline !important;
+}
+
+.clear input {
+  margin-top: -7px;  
 }
 
 .btn {

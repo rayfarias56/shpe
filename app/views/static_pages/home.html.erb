@@ -81,15 +81,20 @@
 
             <!-- start of email widget -->
             <div class="widget span4">
-              <h4 class="text-center btn-info"><i class="icon-envelope"></i> Email Newsletter</h4>
+              <h4 class="text-center btn-info">Email Newsletter</h4>
               <div class="widget-inside">
                 
                 
                 
             <form action="http://shpe-uiuc.us7.list-manage.com/subscribe/post?u=d159baac801e8be7862676536&amp;id=1eec253102" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-              <label for="mce-EMAIL">Subscribe to our mailing list</label>
-              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-              <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              <fieldset>
+                <legend>Subscribe to our mailing list</legend>
+                <label for="EMAIL">Email Address:</label>
+                <div class="input-append">
+                  <input type="email" value="" name="EMAIL" class="email" placeholder="email address" required>
+                  <button class="btn btn-primary" type="submit" name="subscribe">Subscribe</button>
+                </div>
+              </fieldset>
             </form>
               </div>
             </div>
@@ -122,7 +127,6 @@
             <!-- TODO: add better social icons -->
             <div class="widget span4">
               <h4 class="text-center btn-info">Social</h4>
-              <!-- fill this in with AddThis generated code -->
               <div class="widget-inside socialize">                
                 <%= link_to (image_tag 'picons40.png', class: 'social googleplus'), '#'%>
                 <%= link_to (image_tag 'picons03.png', class: 'social twitter'), '#'%>
@@ -141,19 +145,19 @@
             <h1 class="text-center">Supported By</h1>
             <hr>
             <div class="row">
-              <div class="span2">
-                <a href="http://www.accenture.com/us-en/pages/index.aspx">
-                  <%= image_tag "accenture.png", :size => '170x100' %>
+              <div class="span2 offset1">
+                <a href="http://www.cisco.com/">
+                  <%= image_tag "Cisco_logo_transparent.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
-                <a href="http://www.capitalone.com/">
-                  <%= image_tag "capitalone.png", :size => '170x100' %>
+                <a href="http://www.rockwellcollins.com/">
+                  <%= image_tag "rockwell_collins_logo.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
-                <a href="http://www.dow.com/">
-                  <%= image_tag "dow.png", :size => '170x100' %>
+                <a href="http://www.nscorp.com/nscportal/nscorp/">
+                  <%= image_tag "NorfolkSouthernLogo.png", :size => '170x100' %>
                 </a>
               </div>
               <div class="span2">
@@ -162,13 +166,8 @@
                 </a>
               </div>
               <div class="span2">
-                <a href="http://rgengineering.net/">
-                  <%= image_tag "rgengineering.png", :size => '170x100' %>
-                </a>
-              </div>
-              <div class="span2">
-                <a href="http://www.northropgrumman.com/Pages/default.aspx">
-                  <%= image_tag "northrupgrumman.png", :size => '170x100' %>
+                <a href="http://www.phillips66.com/EN/Pages/index.aspx">
+                  <%= image_tag "phillips-66-logo.png", :size => '170x100' %>
                 </a>
               </div>
             </div>
