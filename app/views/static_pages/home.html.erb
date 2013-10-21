@@ -2,7 +2,7 @@
       <div class="container">
         <div class="row">
           <div class="span5">
-            <img src="/img/icon-practice2.png" />
+            <%= image_tag 'icon-practice2.png'%>
           </div>
           <div class="span6">
             <h2>SHPE</h2>
@@ -123,10 +123,10 @@
             <div class="widget span4">
               <h4 class="text-center btn-info">Social</h4>
               <!-- fill this in with AddThis generated code -->
-              <div class="widget-inside socialize">
-                <a href="#"><img src="img/picons40.png" class="social googleplus"></a>
-                <a href="#"><img src="img/picons03.png" class="social twitter"></a>
-                <a href="#"><img src="img/picons06.png" class="social facebook"></a>
+              <div class="widget-inside socialize">                
+                <%= link_to (image_tag 'picons40.png', class: 'social googleplus'), '#'%>
+                <%= link_to (image_tag 'picons03.png', class: 'social twitter'), '#'%>
+                <%= link_to (image_tag 'picons06.png', class: 'social facebook'), '#'%>
               </div>
             </div>
             <!-- end of socialize widget -->

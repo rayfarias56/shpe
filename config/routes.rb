@@ -1,9 +1,5 @@
 SampleApp::Application.routes.draw do
 
-
-  resources :events
-
-
   get "password_resets/new"
 
   resources :announcements
@@ -28,7 +24,7 @@ SampleApp::Application.routes.draw do
   match '/events', to: 'static_pages#events', as: :events
   match '/resources', to: 'static_pages#resources', as: :resources
   match '/members', to: 'static_pages#members', as: :members
-
+  match '/constitution', to: 'static_pages#constitution', as: :constitution
   match 'add_admin/:id', to: 'users#add_admin'
   match 'remove_admin/:id', to: 'users#remove_admin'
 
