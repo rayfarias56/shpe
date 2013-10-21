@@ -24,6 +24,10 @@
   border-bottom: 1px solid #ddd;
 }
 
+.white-back {
+  background-color: white;
+}
+
 /*eventually take top and left attributes out and do direct styling on which ever div used on*/
 
 .triangle-down-white {
@@ -192,6 +196,8 @@ footer {
   color: white;
   background: #0a1c26;
   padding-top: 15px;
+  margin-left: -20px;
+  margin-right: -20px;
 }
 
 .footer-logo {
@@ -278,7 +284,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .btn {
-  margin-top: 5px;
   margin-bottom: 5px;
   margin-left: 5px;
   margin-right: 5px;

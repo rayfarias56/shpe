@@ -27,6 +27,7 @@ SampleApp::Application.routes.draw do
   match '/contact', to: 'static_pages#contact', as: :contact
   match '/events', to: 'static_pages#events', as: :events
   match '/resources', to: 'static_pages#resources', as: :resources
+  match '/members', to: 'static_pages#members', as: :members
 
   match 'add_admin/:id', to: 'users#add_admin'
   match 'remove_admin/:id', to: 'users#remove_admin'

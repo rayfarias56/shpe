@@ -20,7 +20,6 @@
           </div>
         </div>
       </div>
-      <div class="triangle-down-blue"></div>
     </section>
     <section class="grey-accent">
       <div class="container">
@@ -31,10 +30,8 @@
               <li class="active">
                 <a href="#">Announcements</a>
               </li>
-              <li><a href="#">Events</a></li>
-              <li><a href="#"><i class="icon-plus"></i> Add</a></li>
             </ul>
-            <div class="border">
+            <div class="border white-back">
 
               <% for announcement in @announcements %>
               <div class="media white-accent no-margin-top">
@@ -81,7 +78,7 @@
                 <h4><i class="icon-envelope"></i> RSS</h4>
               </div> -->
 
-              
+            <!-- start of email widget -->
             <div class="widget span4">
               <h4 class="text-center btn-info"><i class="icon-envelope"></i> Email Newsletter</h4>
               <div class="widget-inside">
@@ -96,29 +93,20 @@
                 </form>
               </div>
             </div>
-            <div class="widget span4">
+            <!-- end of email widget -->
+            
+            <!-- start of rss widget -->
+            <!--<div class="widget span4">
               <h4 class="text-center btn-info"><i class="icon-rss"></i> RSS</h4>
               <div class="input-append widget-inside no-margin-bottom">
                 <input class="span2" id="appendedInputButton" type="text" placeholder="copy to clipboard">
                 <button class="btn btn-success" type="button"><i class="icon-copy"></i></button>
               </div>
-            </div> 
-
-       <!--      <form>
-  <fieldset>
-    <legend>Legend</legend>
-    <label>Label name</label>
-    <input type="text" placeholder="Type something…">
-    <span class="help-block">Example block-level help text here.</span>
-    <label class="checkbox">
-      <input type="checkbox"> Check me out
-    </label>
-    <button type="submit" class="btn">Submit</button>
-  </fieldset>
-</form> -->
-            <!-- end of email-rss widget -->
+            </div> -->
+            <!-- end of rss widget -->
 
             <!-- start of donate widget -->
+            <!--
             <div class="widget span4 donate">
               <h4 class="text-center btn-info">Donate</h4>
               <div class="widget-inside">
@@ -127,7 +115,7 @@
                 <button class="btn btn-info" type="button">Paypal</button>
                 <button class="btn btn-success" type="button">Stripe</button>
               </div>
-            </div> 
+            </div> -->
             <!-- end of donate widget -->
 
             <!-- start of socialize widget -->
@@ -145,7 +133,6 @@
           </div>
         
       </div>
-      <div class="triangle-down-grey"></div>
     </section>
     <section class="sponsors">
       <div class="container">
@@ -188,5 +175,4 @@
           </div>
         </div>
       </div>
-      <div class="triangle-down-white"></div>
     </section>
