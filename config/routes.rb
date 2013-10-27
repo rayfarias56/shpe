@@ -21,6 +21,7 @@ SampleApp::Application.routes.draw do
   match '/resources', to: 'static_pages#resources', as: :resources
   match '/members', to: 'static_pages#members', as: :members
   match '/constitution', to: 'static_pages#constitution', as: :constitution
+  match '/executive_board', to: 'static_pages#execboard', as: :execboard
   match 'add_admin/:id', to: 'users#add_admin'
   match 'remove_admin/:id', to: 'users#remove_admin'
 

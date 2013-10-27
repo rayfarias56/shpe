@@ -11,11 +11,11 @@
 }
 
 .grey-accent {
-  background: #f2f2f2;
+  background: #f2f2f2 !important;
 }
 
 .white-accent {
-  background: white;
+  background: white !important;
 }
 
 .border {
@@ -30,7 +30,7 @@
 
 .shpe-logo {
   width: 100px;
-  height: 100px;
+  //height: 100px;
   margin: 10px auto;
 }
 
@@ -154,7 +154,7 @@
 /*end widgets design*/
 
 .pitch {
-  background: #34495e;
+  background: #34495e !important;
   color: whitesmoke;
   padding-top: 40px;
   padding-bottom: 40px;
@@ -168,7 +168,7 @@
 }
 
 .pitch-white {
-  background: white;
+  background: white !important;
   color: #888888;
   padding-top: 40px;
   padding-bottom: 80px;
@@ -189,6 +189,7 @@ hr {
 section {
   padding-top: 20px;
   padding-bottom: 20px;
+  background: #f4f4f4;
 }
 
 .main-info-nav {
@@ -211,13 +212,13 @@ section {
 
 footer {
   color: white;
-  background: #0a1c26;
-  padding-top: 15px;
+  background: #34495E;
+  //padding-top: 15px;
 }
 
 .footer-logo {
-  padding-top: 20px;
-  padding-bottom: 10px;
+  //padding-top: 20px;
+  //padding-bottom: 10px;
 }
 
 .get-connected {
@@ -255,7 +256,7 @@ footer {
 }
 
 .mainheader .nav li:hover {
-  border-top: 2px solid #3da1ef;
+  border-top: 2px solid #F47F24;
   transition-property: background-top;
   transition-duration: 0.15s;
   transition-timing-function: linear;
@@ -276,6 +277,7 @@ footer {
 .sponsors {
   margin-top: 60px;
   margin-bottom: 60px;
+  background: white;
 }
 
 /* Social styling */

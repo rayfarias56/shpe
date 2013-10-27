@@ -2,14 +2,14 @@
       <div class="container">
         <div class="row">
             <div class="shpe-logo">
-              <%= image_tag 'icon-practice2.png'%>
+              <%= image_tag 'icon-practice2.png' %>
             </div>
         </div>
         <div class="row">
-          <a href="#" class="span2 offset2">About</a>
-          <a href="#" class="span2">Contact</a>
-          <a href="#" class="span2 offset1">Feedback</a>
-          <a href="#" class="span2">Partners</a>
+          <%= link_to 'About', about_path, class: 'span2 offset2' %>
+          <%= link_to 'Contact', contact_path, class: 'span2 offset2' %>
+          <!--<a href="#" class="span2 offset1">Feedback</a>
+          <a href="#" class="span2">Partners</a>-->
         </div>
 
         <div class="row footnote">
