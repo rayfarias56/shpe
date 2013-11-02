@@ -7,7 +7,7 @@
 
     <%= form_tag '' do %>
         <%=  select_tag 'major', options_for_select(MAJOR_ARRAY.collect{ |u| [u, u] }), prompt: 'All' %>
-        <%= submit_tag 'Submit', class: 'btn btn-primary' %>
+        <%= submit_tag 'Search', class: 'btn btn-primary' %>
     <% end %>
 
 
