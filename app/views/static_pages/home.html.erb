@@ -39,7 +39,7 @@
                 <div class="media-body">
                   <h3 class="media-heading"><%= announcement.title %></h3>
                   <p><i>Date: <%= announcement.created_at %></i></p>
-                  <p><%=  announcement.content %></p>
+                  <p><%=  announcement.content.html_safe %></p>
                   <%= link_to "Read more...", announcement %>
                 </div>
                 <hr class="no-margin-bottom">
