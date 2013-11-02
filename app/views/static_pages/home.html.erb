@@ -1,92 +1,177 @@
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="span8">
-        <div id="carousel-container">
-          <div id="myCarousel" class="carousel slide">
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-              <div class="active item">
-                <%= image_tag "cheetos.jpg", size: '5000x500' %>
-
-              </div>
-              <div class="item">
-                <%= image_tag "reppin_illinois.jpg",  size: '5000x500' %>
-
-              </div>
-              <div class="item">
-                <%= image_tag "hsv_alma.jpg",  size: '5000x500' %>
-
-              </div>
-            </div>
-            <!-- Carousel nav -->
-            <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+<section class="pitch">
+      <div class="container">
+        <div class="row">
+          <div class="span5">
+            <%= image_tag 'icon-practice2.png'%>
+          </div>
+          <div class="span6">
+            <h2>SHPE</h2>
+            <h3>Changing lives by empowering the Hispanic community to realize their fullest potential and impacting the world through STEM awareness, access, support and development.</h3>
+            <%= link_to 'Learn More', about_path ,class: 'btn btn-info btn-large pull-right' %>
           </div>
         </div>
       </div>
-      <div class="span4">
-        <!-- something else will go here, maybe newsletter -->
-        <!--<div class="span4">-->
-        <h3 class="text-center">Announcements</h3>
+    </section>
+    <!--<section class="get-connected">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h1 class="text-center">Get Connected</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    -->
+    <section class="grey-accent">
+      <div class="container">
+        <div class="row">
+          <div class="span8 main-info">
+            <!-- nav will go here -->
+            <ul class="nav nav-tabs main-info-nav">
+              <li class="active">
+                <a href="#">Announcements</a>
+              </li>
+            </ul>
+            <div class="border white-back">
 
-        <% for announcement in @announcements %>
-            <div class="media">
-              <div class="media-body">
-                <h4 class="media-heading"><%= link_to announcement.title, announcement %></h4>
-                <small><%= announcement.created_at %></small>
-                <p> <%= announcement.content.html_safe %> </p>
+              <% for announcement in @announcements %>
+              <div class="media white-accent no-margin-top">
+                <div class="media-body">
+                  <h3 class="media-heading"><%= announcement.title %></h3>
+                  <p><i>Date: <%= announcement.created_at %></i></p>
+                  <p><%=  announcement.content %></p>
+                  <%= link_to "Read more...", announcement %>
+                </div>
+                <hr class="no-margin-bottom">
+              </div>
+              <% end %>
+
+
+                <!-- choose this or pagination for article loading -->
+                <hr class="no-margin-bottom">
+                <a href="#">
+                  <div class="row">
+                    <h4 class="text-center">See all announcements</h4>
+                  </div>
+                </a>
+                <!-- <hr class="no-margin-top"> -->
+              </div>
+              <!-- we can choose pagination when we get db set up -->
+              <!-- <div class="pagination">
+                <ul>
+                  <li><a href="#">Prev</a></li>
+                  <li><a href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li><a href="#">4</a></li>
+                  <li><a href="#">5</a></li>
+                  <li><a href="#">Next</a></li>
+                </ul>
+              </div> -->
+            
+          </div>
+          <div class="span4 side-widgets">
+            <!-- start of email-rss widget -->
+              <!-- eventually I will want this to be a nav, for now they can be separate
+               will need to toggle divs based on whether email or rss tab is selected -->
+              <!-- <div class="email-rss-nav">
+                <h4><i class="icon-envelope"></i> Email</h4>
+                <h4><i class="icon-envelope"></i> RSS</h4>
+              </div> -->
+
+            <!-- start of email widget -->
+            <div class="widget span4">
+              <h4 class="text-center btn-info">Email Newsletter</h4>
+              <div class="widget-inside">
+                
+                
+                
+            <form action="http://shpe-uiuc.us7.list-manage.com/subscribe/post?u=d159baac801e8be7862676536&amp;id=1eec253102" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <fieldset>
+                <legend>Subscribe to our mailing list</legend>
+                <label for="EMAIL">Email Address:</label>
+                <div class="input-append">
+                  <input type="email" value="" name="EMAIL" class="email" placeholder="email address" required>
+                  <button class="btn btn-primary" type="submit" name="subscribe">Subscribe</button>
+                </div>
+              </fieldset>
+            </form>
               </div>
             </div>
-        <% end %>
-        <!--</div>-->
+            <!-- end of email widget -->
+            
+            <!-- start of rss widget -->
+            <!--<div class="widget span4">
+              <h4 class="text-center btn-info"><i class="icon-rss"></i> RSS</h4>
+              <div class="input-append widget-inside no-margin-bottom">
+                <input class="span2" id="appendedInputButton" type="text" placeholder="copy to clipboard">
+                <button class="btn btn-success" type="button"><i class="icon-copy"></i></button>
+              </div>
+            </div> -->
+            <!-- end of rss widget -->
 
+            <!-- start of donate widget -->
+            <!--
+            <div class="widget span4 donate">
+              <h4 class="text-center btn-info">Donate</h4>
+              <div class="widget-inside">
+                <p><i>Feeling a little generous today? Donate to SHPE and help us grow!</i></p>
+                <button class="btn btn-primary" type="button">Bitcoin</button>
+                <button class="btn btn-info" type="button">Paypal</button>
+                <button class="btn btn-success" type="button">Stripe</button>
+              </div>
+            </div> -->
+            <!-- end of donate widget -->
 
+            <!-- start of socialize widget -->
+            <!-- TODO: add better social icons -->
+            <div class="widget span4">
+              <h4 class="text-center btn-info">Social</h4>
+              <div class="widget-inside socialize">                
+                <%= link_to (image_tag 'picons40.png', class: 'social googleplus'), '#'%>
+                <%= link_to (image_tag 'picons03.png', class: 'social twitter'), '#'%>
+                <%= link_to (image_tag 'picons06.png', class: 'social facebook'), '#'%>
+              </div>
+            </div>
+            <!-- end of socialize widget -->
+          </div>
+        
       </div>
-    </div>
-  </div>
-  <!-- /container -->
-</section>
-<div class="container">
-  <div class="row">
-    <div class="span12">
-      <h3 class="text-center">Our Sponsors</h3>
-
-      <div class="row">
-        <div class="span2 offset3">
-          <a href="http://www.accenture.com/us-en/pages/index.aspx">
-            <%= image_tag "accenture.png", :size => '170x100' %>
-          </a>
-        </div>
-        <div class="span2">
-          <a href="http://www.capitalone.com/">
-            <%= image_tag "capitalone.png", :size => '170x100' %>
-          </a>
-        </div>
-        <div class="span2">
-          <a href="http://www.dow.com/">
-            <%= image_tag "dow.png", :size => '170x100' %>
-          </a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="span2 offset3">
-          <a href="http://www.qualcomm.com/">
-            <%= image_tag "qualcomm.png", :size => '170x100' %>
-          </a>
-        </div>
-        <div class="span2">
-          <a href="http://rgengineering.net/">
-            <%= image_tag "rgengineering.png", :size => '170x100' %>
-          </a>
-        </div>
-        <div class="span2">
-          <a href="http://www.northropgrumman.com/Pages/default.aspx">
-            <%= image_tag "northrupgrumman.png", :size => '170x100' %>
-          </a>
+    </section>
+    <section class="sponsors">
+      <div class="container">
+        <div class="row">
+          <div class="span12">
+            <h1 class="text-center">Supported By</h1>
+            <hr>
+            <div class="row">
+              <div class="span2 offset1">
+                <a href="http://www.cisco.com/">
+                  <%= image_tag "Cisco_logo_transparent.png", :size => '170x100' %>
+                </a>
+              </div>
+              <div class="span2">
+                <a href="http://www.rockwellcollins.com/">
+                  <%= image_tag "rockwell_collins_logo.png", :size => '170x100' %>
+                </a>
+              </div>
+              <div class="span2">
+                <a href="http://www.nscorp.com/nscportal/nscorp/">
+                  <%= image_tag "NorfolkSouthernLogo.png", :size => '170x100' %>
+                </a>
+              </div>
+              <div class="span2">
+                <a href="http://www.qualcomm.com/">
+                  <%= image_tag "qualcomm.png", :size => '170x100' %>
+                </a>
+              </div>
+              <div class="span2">
+                <a href="http://www.phillips66.com/EN/Pages/index.aspx">
+                  <%= image_tag "phillips-66-logo.png", :size => '170x100' %>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-    
+    </section>

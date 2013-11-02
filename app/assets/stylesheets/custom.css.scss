@@ -1,166 +1,293 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-.text-center {
-  text-align: center;
+/*start class utilities*/
+.no-margin-bottom {
+  margin-bottom: 0px !important;
 }
 
-header {
-  background-color: #FFFFFF;
+.no-margin-top {
+  margin-top: 0px !important;
 }
 
-h3 {
-  text-align: center;
+.grey-accent {
+  background: #f2f2f2 !important;
+}
+
+.white-accent {
+  background: white !important;
+}
+
+.border {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.white-back {
+  background-color: white;
+}
+
+.shpe-logo {
+  width: 100px;
+  //height: 100px;
+  margin: 10px auto;
+}
+
+.resource-img {
+  width: 400px;
+  height: 200px;
+}
+
+.resource-img-center {
+  width: 400px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*eventually take top and left attributes out and do direct styling on which ever div used on*/
+
+.triangle-down-white {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 15px 15px 0 15px;
+  border-color: #ffffff transparent transparent transparent;
+  line-height: 0px;
+  _border-color: #007bff #000000 #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  position: relative;
+  top: 95px;
+  left: 656px;
+}
+
+.triangle-down-blue {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 15px 15px 0 15px;
+  border-color: #0A1C26 transparent transparent transparent;
+  line-height: 0px;
+  _border-color: #007bff #000000 #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  position: relative;
+  top: 15px;
+  left: 656px;
+}
+
+.triangle-down-grey {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 15px 15px 0 15px;
+  border-color: #f2f2f2 transparent transparent transparent;
+  line-height: 0px;
+  _border-color: #007bff #000000 #000000 #000000;
+  _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  position: relative;
+  top: 35px;
+  left: 656px;
+}
+
+/*end class utilities*/
+
+/*start header design*/
+.navbar-inner {
+  background: white;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: none;
+}
+/*end header design*/
+
+/*start widgets design*/
+.side-widgets {
+  border-left: 1px solid #ddd;
+  margin-right: -5px;
+  display: inline-block;
+  padding-top: 38px;
+}
+
+.side-widgets .email-rss h4 {
+  display: inline;
+}
+
+.widget {
+  background-color: white;
+  border: 1px solid #ddd;
+  margin-bottom: 40px;
+}
+
+.widget h4 {
+  color: white;
+  margin: 0px auto;
+  padding: 5px;
+}
+
+.widget button {
+  margin-bottom: 10px;
+}
+
+.widget-inside {
+  padding: 20px;
+}
+
+.donate button {
+  width: 100%;
+}
+/*start email/rss widget*/
+/*end email/rss widget*/
+
+
+/*start donate widget*/
+
+
+/*end donate widget*/
+
+/*start socialize widget*/
+.socialize img {
+  margin-left: 45px;
+}
+/*end socialize widget*/
+
+/*end widgets design*/
+
+.pitch {
+  background: #34495e !important;
+  color: whitesmoke;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.pitch-inherit {
+  background: inherit;
+  color: #777777;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.pitch-white {
+  background: white !important;
+  color: #888888;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+
+.main-info {
+  display: inline-block;
 }
 
 .media {
-  background-color: white;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 3px;
-  padding: 5px;
-}
-
-.nav {
-  text-align: center;
-  > li > a {
-    display: block;
-  }
-}
-
-.navbar p {
-  font-size: .75em;
-}
-
-.header ul.nav li {
-  a {
-    padding: 30px 20px 10px 20px;
-    text-shadow: none;
-  }
-  &.current-page a {
-    padding-top: 25px;
-    border-top: 5px solid rgb(255, 194, 73);
-    background-color: #f8f8f8;
-  }
-}
-
-.navbar .nav > li {
-  &:hover {
-    background-color: rgb(255, 194, 73);
-    color: #EEEEEE;
-    transition-property: background-color;
-    transition-duration: 0.25s;
-    transition-timing-function: linear;
-    /* Safari */
-    -webkit-transition-property: background-color;
-    -webkit-transition-duration: 0.25s;
-    -webkit-transition-timing-function: linear;
-    /* Firefox */
-    -moz-transition-property: background-color;
-    -moz-transition-duration: 0.25s;
-    -moz-transition-timing-function: linear;
-  }
-  transition-property: background-color;
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
-  /* Safari */
-  -webkit-transition-property: background-color;
-  -webkit-transition-duration: 0.25s;
-  -webkit-transition-timing-function: linear;
-  /* Firefox */
-  -moz-transition-property: background-color;
-  -moz-transition-duration: 0.25s;
-  -moz-transition-timing-function: linear;
-}
-
-.current-page:hover {
-  background-color: rgb(255, 194, 73) !important;
-  color: #EEEEEE;
-}
-
-#carousel-container {
-  margin: 15px;
   padding: 15px;
 }
 
+hr {
+  border-color: #ddd;
+}
+
+section {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background: #f4f4f4;
+}
+
+.main-info-nav {
+  margin-bottom: 0px !important;
+}
+
+/*thanks vladimir starkov from stackoverflow for this*/
+.pagination {
+  width: 275px;
+    height: 35px;
+
+    position: relative;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: auto;
+}
+
+footer {
+  color: white;
+  background: #34495E;
+  //padding-top: 15px;
+}
+
+.footer-logo {
+  //padding-top: 20px;
+  //padding-bottom: 10px;
+}
+
+.get-connected {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: #0a1c26;
+  color: whitesmoke;
+}
+
+.get-connected {
+  padding-top: 15px;
+}
+
+.mainheader .nav {
+  margin: 10px 5px;
+}
+
+.mainheader {
+  margin-bottom: 0px;
+}
+
+.mainheader .nav li {
+  border-top: 2px solid white;
+  transition-property: border-top;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  /* Safari */
+  -webkit-transition-property:background-top;
+  -webkit-transition-duration:0.15s;
+  -webkit-transition-timing-function:linear;
+  /* Firefox */
+  -moz-transition-property:background-top;
+  -moz-transition-duration:0.15s;
+  -moz-transition-timing-function:linear;
+}
+
+.mainheader .nav li:hover {
+  border-top: 2px solid #F47F24;
+  transition-property: background-top;
+  transition-duration: 0.15s;
+  transition-timing-function: linear;
+  /* Safari */
+  -webkit-transition-property:background-top;
+  -webkit-transition-duration:0.15s;
+  -webkit-transition-timing-function:linear;
+  /* Firefox */
+  -moz-transition-property:background-top;
+  -moz-transition-duration:0.15s;
+  -moz-transition-timing-function:linear;
+}
+
+.pitch .hero-unit {
+  background: inherit;
+}
+
+.sponsors {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  background: white;
+}
+
+/* Social styling */
 .social {
-  //margin-right: 5px;
+  margin-right: 10px;
   padding: 5px;
-  border-radius: 3em;
+  /*border-radius: 3em;*/
 }
 
-.facebook, .twitter, .googleplus {
-  transition-property: box-shadow;
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
-  /* Safari */
-  -webkit-transition-property: box-shadow;
-  -webkit-transition-duration: 0.25s;
-  -webkit-transition-timing-function: linear;
-  /* Firefox */
-  -moz-transition-property: box-shadow;
-  -moz-transition-duration: 0.25s;
-  -moz-transition-timing-function: linear;
-}
 
-.facebook:hover {
-  -moz-box-shadow: inset 0 0 15px 5px #3B5998;
-  -webkit-box-shadow: inset 0 0 15px 5px #3B5998;
-  box-shadow: inset 0 0 15px 5px #3B5998;
-  transition-property: box-shadow;
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
-  /* Safari */
-  -webkit-transition-property: box-shadow;
-  -webkit-transition-duration: 0.25s;
-  -webkit-transition-timing-function: linear;
-  /* Firefox */
-  -moz-transition-property: box-shadow;
-  -moz-transition-duration: 0.25s;
-  -moz-transition-timing-function: linear;
-}
-
-.twitter:hover {
-  -moz-box-shadow: inset 0 0 15px 5px #00BBF5;
-  -webkit-box-shadow: inset 0 0 15px 5px #00BBF5;
-  box-shadow: inset 0 0 15px 5px #00BBF5;
-  transition-property: box-shadow;
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
-  /* Safari */
-  -webkit-transition-property: box-shadow;
-  -webkit-transition-duration: 0.25s;
-  -webkit-transition-timing-function: linear;
-  /* Firefox */
-  -moz-transition-property: box-shadow;
-  -moz-transition-duration: 0.25s;
-  -moz-transition-timing-function: linear;
-}
-
-.googleplus:hover {
-  -moz-box-shadow: inset 0 0 15px 5px #DD4B39;
-  -webkit-box-shadow: inset 0 0 15px 5px #DD4B39;
-  box-shadow: inset 0 0 15px 10px #DD4B39;
-  transition-property: box-shadow;
-  transition-duration: 0.25s;
-  transition-timing-function: linear;
-  /* Safari */
-  -webkit-transition-property: box-shadow;
-  -webkit-transition-duration: 0.25s;
-  -webkit-transition-timing-function: linear;
-  /* Firefox */
-  -moz-transition-property: box-shadow;
-  -moz-transition-duration: 0.25s;
-  -moz-transition-timing-function: linear;
-}
-
-.social-container {
-  margin-top: 15px;
-}
-
-footer, section {
-  background-color: #ffffff;
-}
 
 .footnote {
   border-top: dashed #CCCCCC 1px;
@@ -168,155 +295,54 @@ footer, section {
   padding: 10px;
 }
 
-.row {
-  margin-bottom: 10px;
+h1, h2, h3, h4, h5, h6, p {
+  font-family: "ff-din-web","proxima-nova-alt",Tahoma,Arial,sans-serif;
+  font-weight: 300;
 }
 
-/* ribbon style */
-/* ribbon styles credit to Craig Buckler from http://www.sitepoint.com/pure-css3-ribbons/*/
-
-/*css specifically for eventDetails.html*/
-
-.ribbon-green {
-  position: relative;
-  width: 25%;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 6px 20px 6px 70px;
-  margin: 30px 10px 10px -70px;
-  color: #555;
-  background-color: #51A351;
-  text-shadow: 0px 1px 2px #bbb;
-  -webkit-box-shadow: 0px 2px 4px #888;
-  -moz-box-shadow: 0px 2px 4px #888;
-  box-shadow: 0px 2px 4px #888;
-  &:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 0px;
-    top: 100%;
-    border-width: 5px 10px;
-    border-style: solid;
-    border-color: #438943 #438943 transparent transparent;
+@media (max-width: 767px) {
+  section {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
-  &:before {
-    content: ' ';
-    position: absolute;
-    width: 10px;
-    height: 0;
-    right: -40px;
-    top: 1px;
-    border-width: 15px;
-    border-style: solid;
-    border-color: transparent transparent transparent #51A351;
+  footer {
+    margin-left: -20px;
+    margin-right: -20px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
-.ribbon-orange {
-  position: relative;
-  width: 25%;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 6px 20px 6px 70px;
-  /*margin: 30px 10px 10px -70px;*/
-  margin-left: -20px;
-  color: whitesmoke;
-  background-color: #EA7125;
-  text-shadow: 0px 1px 2px #bbb;
-  -webkit-box-shadow: 0px 2px 4px #888;
-  -moz-box-shadow: 0px 2px 4px #888;
-  box-shadow: 0px 2px 4px #888;
-  &:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 0px;
-    top: 100%;
-    border-width: 5px 10px;
-    border-style: solid;
-    border-color: #ce6625 #ce6625 transparent transparent;
-  }
-  &:before {
-    content: ' ';
-    position: absolute;
-    width: 10px;
-    height: 0;
-    right: -40px;
-    top: 1px;
-    border-width: 15px;
-    border-style: solid;
-    border-color: transparent transparent transparent #EA7125;
-  }
+.clear {
+  display: inline !important;
 }
 
-.ribbon-blue {
-  position: relative;
-  width: 20%;
-  font-size: 1.5em;
-  font-weight: bold;
-  padding: 6px 20px 6px 70px;
-  margin: 30px 10px 10px -70px;
-  color: #555;
-  background-color: #3482D6;
-  text-shadow: 0px 1px 2px #bbb;
-  -webkit-box-shadow: 0px 2px 4px #888;
-  -moz-box-shadow: 0px 2px 4px #888;
-  box-shadow: 0px 2px 4px #888;
-  &:after {
-    content: ' ';
-    position: absolute;
-    width: 0;
-    height: 0;
-    left: 0px;
-    top: 100%;
-    border-width: 5px 10px;
-    border-style: solid;
-    border-color: #004CCC #004CCC transparent transparent;
-  }
-  &:before {
-    content: ' ';
-    position: absolute;
-    width: 10px;
-    height: 0;
-    right: -40px;
-    top: 1px;
-    border-width: 15px;
-    border-style: solid;
-    border-color: transparent transparent transparent #3482D6;
-  }
-}
-
-
-.navbar-inner {
-  background-color: #FFFFFF;
-  border: none;
-  background-image: none;
-  box-shadow: none;
-}
-
-body {
-  background-color: #FFFFFF;
-  word-wrap:normal;
-}
-
-.center { 
-  float: none; 
-  margin-left: auto;
-  margin-right: auto; 
+.clear input {
+  margin-top: -7px;  
 }
 
 .btn {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
   background-image: none;
 }
 
-textarea {
-  width: 100%;
-  /* or */
-  width: 450px;
+/* Exec board styling begin */
+
+.exec-board {
+  width: 75%;
+  height: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
+/* Exec board styling end */
 
+/* Corporate sponsorship styling begin */
+.sponsor-donate {
+  display: inline-block;
+}
+/* Corporate sponsorship styling end */
