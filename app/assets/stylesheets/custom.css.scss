@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
+
 /*start class utilities*/
 .no-margin-bottom {
   margin-bottom: 0px !important;
@@ -35,16 +36,30 @@
 }
 
 .resource-img {
-  width: 400px;
-  height: 200px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 .resource-img-center {
-  width: 400px;
-  height: 200px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
+
+.study-hours{
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.CARE{
+  max-width: 534px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*eventually take top and left attributes out and do direct styling on which ever div used on*/
 
 .triangle-down-white {
@@ -93,6 +108,7 @@
 
 /*start header design*/
 .navbar-inner {
+  margin-top: 12px;
   background: white;
   box-shadow: none;
   -webkit-box-shadow: none;
