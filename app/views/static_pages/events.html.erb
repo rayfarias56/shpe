@@ -6,19 +6,19 @@
 
       <div class="span9">
         <h1>Events</h1>
-        </br>
+        <br/>
+        <hr/>
         <% @events.each do |e| %>
-            <h4><%= e.summary.to_s %>     </h4>
+            <h4><strong><i><%= e.summary.to_s %> </i></strong></h4>
 
-            <p><%= "Date: "+ e.start.dateTime.strftime("%A, %B %d, %Y") %>          </p>
+            <p><strong>Date: </strong><%= e.start.dateTime.strftime("%A, %B %d, %Y") %> </p>
 
-            <p><%= "Time: "+ e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
+            <p><strong>Time: </strong><%= e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
 
-            <p><%= "Location: "+ e.location.to_s if e.location %>            </p>
+            <p><strong>Location: </strong><%= e.location.to_s if e.location %>            </p>
 
-            <p><%= "Description: "+ e.description if e.description %>  </p>
-
-            <p></p>
+            <p><strong>Description: </strong><%= e.description if e.description %>  </p>
+            <hr/>
         <% end %>
       </div>
     </div>
