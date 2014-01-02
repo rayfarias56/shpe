@@ -28,24 +28,13 @@ class StaticPage
     result = client.execute(:api_method => service.events.list,
                             :parameters => {'calendarId' => 'f43nbgbtslbe9jou3920okesh0@group.calendar.google.com',
                                             'singleEvents' => 'true',
+                                            'maxResults'=> 6,
                                             'orderBy' => 'startTime',
                                             'timeMin' => Time.now.utc.iso8601})
     all_events = []
-    loop do
-      events = result.data.items
-      events.each do |e|
+    events = result.data.items
+    events.each do |e|
         all_events << e
-      end
-      #Only used if there are multiple pages of results.
-      if !(page_token = result.data.next_page_token)
-        break
-      end
-      result = client.execute(:api_method => service.events.list,
-                              :parameters => {'calendarId' => 'f43nbgbtslbe9jou3920okesh0@group.calendar.google.com',
-                                              'singleEvents' => 'true',
-                                              'orderBy' => 'startTime',
-                                              'timeMin' => Time.now.utc.iso8601,
-                                              'pageToken' => page_token})
     end
 
     all_events
