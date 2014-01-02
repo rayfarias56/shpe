@@ -1,13 +1,22 @@
 <% provide(:title, 'Events') %>
 
 <section>
-<div class="container">
-  <div class="row">
-    <div class="span9 center">
-      <h1>Events</h1>
-      <iframe src="http://www.google.com/calendar/embed?src=f43nbgbtslbe9jou3920okesh0%40group.calendar.google.com&ctz=America/Chicago" style=" border-width:0 " width="1000" height="635" frameborder="0" scrolling="no"></iframe>
+  <div class="container">
+    <div class="row">
+      <% @events.each do |e| %>
+          <h4><%= e.summary.to_s %>     </h4>
+
+          <p><%= "Date: "+ e.start.dateTime.strftime("%A, %B %d, %Y") %>          </p>
+
+          <p><%= "Time: "+ e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
+
+          <p><%= "Location: "+ e.location.to_s if e.location %>            </p>
+
+          <p><%= "Description: "+ e.description if e.description %>  </p>
+
+          <p></p>
+      <% end %>
     </div>
   </div>
-</div>
 </section>
 <br/>

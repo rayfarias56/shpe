@@ -16,7 +16,7 @@ class StaticPagesController < ApplicationController
 
 
   def events
-
+    @events = StaticPage.get_events
   end
 
   def resources

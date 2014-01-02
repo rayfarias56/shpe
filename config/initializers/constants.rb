@@ -15,3 +15,5 @@ MAJOR_ARRAY = [
 
 ]
 
+OAUTH_YAML_PATH = 'config/google-api/google-api.yaml'
+
