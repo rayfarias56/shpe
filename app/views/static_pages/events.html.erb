@@ -14,7 +14,7 @@
 
             <p><strong>Time: </strong><%= e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
 
-            <p><strong>Location: </strong><%= e.location.to_s if e.location %> <%= "TBD" if not e.description %> </p>
+            <p><strong>Location: </strong><%= e.location.to_s if e.location %> <%= "TBD" if not e.location %> </p>
 
             <p><strong>Description: </strong><%= e.description if e.description %> <%= "N/A" if not e.description %> </p>
             <hr/>
