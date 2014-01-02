@@ -3,8 +3,12 @@ require 'google/api_client'
 
 class StaticPage
 
-
   def self.get_events
+    get_events_from_google
+  end
+
+
+  def self.get_events_from_google
     oauth_yaml = YAML.load_file(OAUTH_YAML_PATH)
 
     client = Google::APIClient.new({:application_name => "SHPE Website", :application_version => "1.0"})

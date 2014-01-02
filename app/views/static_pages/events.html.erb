@@ -3,19 +3,24 @@
 <section>
   <div class="container">
     <div class="row">
-      <% @events.each do |e| %>
-          <h4><%= e.summary.to_s %>     </h4>
 
-          <p><%= "Date: "+ e.start.dateTime.strftime("%A, %B %d, %Y") %>          </p>
+      <div class="span9">
+        <h1>Events</h1>
+        </br>
+        <% @events.each do |e| %>
+            <h4><%= e.summary.to_s %>     </h4>
 
-          <p><%= "Time: "+ e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
+            <p><%= "Date: "+ e.start.dateTime.strftime("%A, %B %d, %Y") %>          </p>
 
-          <p><%= "Location: "+ e.location.to_s if e.location %>            </p>
+            <p><%= "Time: "+ e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
 
-          <p><%= "Description: "+ e.description if e.description %>  </p>
+            <p><%= "Location: "+ e.location.to_s if e.location %>            </p>
 
-          <p></p>
-      <% end %>
+            <p><%= "Description: "+ e.description if e.description %>  </p>
+
+            <p></p>
+        <% end %>
+      </div>
     </div>
   </div>
 </section>
