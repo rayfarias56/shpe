@@ -4,9 +4,8 @@
   <div class="container">
     <div class="row">
 
-      <div class="span9">
-        <h1>Events</h1>
-        <br/>
+      <div class="span7">
+        <h1 class="event-header">Upcoming Events</h1>
         <hr/>
         <% @events.each do |e| %>
             <h4><strong><i><%= e.summary.to_s %> </i></strong></h4>
@@ -15,9 +14,9 @@
 
             <p><strong>Time: </strong><%= e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
 
-            <p><strong>Location: </strong><%= e.location.to_s if e.location %>            </p>
+            <p><strong>Location: </strong><%= e.location.to_s if e.location %> <%= "TBD" if not e.description %> </p>
 
-            <p><strong>Description: </strong><%= e.description if e.description %>  </p>
+            <p><strong>Description: </strong><%= e.description if e.description %> <%= "N/A" if not e.description %> </p>
             <hr/>
         <% end %>
       </div>

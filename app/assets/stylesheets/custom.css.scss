@@ -54,6 +54,11 @@
   margin: 10px auto;
 }
 
+.sponsors img{
+  display: block;
+  margin: 10px auto 10px auto;
+}
+
 .resource-img {
   max-width: 100%;
   margin-left: auto;
@@ -77,6 +82,10 @@
   max-width: 534px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.event-header{
+  margin-bottom: 20px;
 }
 
 /*eventually take top and left attributes out and do direct styling on which ever div used on*/
@@ -311,8 +320,8 @@ footer {
 }
 
 .sponsors {
-  margin-top: 60px;
-  margin-bottom: 60px;
+ /* margin-top: 60px;
+  margin-bottom: 60px; */
   background: white;
 }
 
