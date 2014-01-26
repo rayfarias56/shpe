@@ -25,7 +25,7 @@ $(document).ready(function () {
                         //TODO: Handle Unregistered Members
                         if (result.status == 'success') {
 
-                            $('#swipeMessage').text('Thanks ' + result.name + '. You have been marked as attended.')
+                            $('#swipeMessage').html('Thanks ' +'<span id="name">' + result.name + '</span>'+ '. You have been marked as attended.')
                             $('#swipeMessage').removeClass().addClass('Success');
                             $('#infoModal').modal('show').delay(2500).queue(function (next) {
                                 $('#UINinput').val('');
