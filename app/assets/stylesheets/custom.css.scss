@@ -392,3 +392,22 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
 }
 /* Corporate sponsorship styling end */
+
+
+/* Brian's shit */
+#infoModal .Error{
+  text-align: center;
+  font-size: 24px;
+  color: red;
+}
+
+#infoModal .Success{
+  text-align: center;
+  font-size: 24px;
+  line-height:110%;
+}
+
+input[type=textbox]{
+  display: block;
+  width:250px;
+}
