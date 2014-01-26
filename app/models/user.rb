@@ -38,6 +38,8 @@ class User < ActiveRecord::Base
   has_secure_password
   has_one :resume
   has_many :announcements
+  has_many :event_users
+  has_many :events, through: :event_users
 
   before_save { self.email.downcase! }
   before_save :create_remember_token

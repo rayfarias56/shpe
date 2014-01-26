@@ -92,7 +92,7 @@ class EventsController < ApplicationController
   end
 
   def event_registration
-    @event = Event.find(params[:id])
-
+    @event = Event.find(params[:id]) if params[:id]
+    @event = Event.find(1) unless params[:id]
   end
 end

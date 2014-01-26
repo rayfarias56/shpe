@@ -1,8 +1,9 @@
 class EventUsersController < ApplicationController
 
   def create
-    if User.find_by_uin(params[:uin])
-      if EventUser.create(params)
+    user = User.find_by_uin(params[:event_user][:uin])
+    if user
+      if EventUser.create(user_id: user, event_id: params[:event_user][:event_id])
         render json: {error: 'You have successfully registered', status: 'success'}
       else
         render json: {error: 'Error registering', status: 'error'}

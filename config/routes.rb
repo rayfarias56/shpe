@@ -37,6 +37,7 @@ SampleApp::Application.routes.draw do
   match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
 
   resources :events
+  resources :event_users
   root to: 'static_pages#home'
   ActiveAdmin.routes(self)
 end

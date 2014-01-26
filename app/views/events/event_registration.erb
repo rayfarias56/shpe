@@ -21,6 +21,18 @@
         <%= @event.location %>
       </p>
 
+      <%= form_for :event_user, as: :post, url: event_users_path do |f|  %>
+          <div class="field">
+            <%= f.label :uin %>
+            <br/>
+            <%= f.text_field :uin %>
+          </div>
+          <%= f.hidden_field :event_id, value: @event.id %>
+          <div class="actions">
+            <%= f.submit %>
+          </div>
+
+      <% end %>
 
       <%= link_to 'All Events', events_path %>
     </div>
