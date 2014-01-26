@@ -17,7 +17,9 @@ SampleApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about' , as: :about
   match '/contact', to: 'static_pages#contact', as: :contact
-  match '/events', to: 'static_pages#events', as: :events
+  match '/event_list', to: 'static_pages#events', as: :event_list
+  match '/event_choices', to: 'events#event_choices', as: :event_choices
+  match '/event_registration', to: 'events#event_registration', as: :event_registration
   match '/resources', to: 'static_pages#resources', as: :resources
   match '/members', to: 'static_pages#members', as: :members
   match '/constitution', to: 'static_pages#constitution', as: :constitution

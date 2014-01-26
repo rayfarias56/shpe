@@ -28,7 +28,9 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @event = Event.new
-
+    @name = params[:name]
+    @description = params[:description]
+    @location = params[:location]
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @event }
@@ -47,7 +49,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to event_registration_path(id: @event.id), notice: 'Event was successfully created.' }
         format.json { render json: @event, status: :created, location: @event }
       else
         format.html { render action: "new" }
@@ -82,5 +84,15 @@ class EventsController < ApplicationController
       format.html { redirect_to events_url }
       format.json { head :no_content }
     end
+  end
+
+
+  def event_choices
+    @events = StaticPage.get_events
+  end
+
+  def event_registration
+    @event = Event.find(params[:id])
+
   end
 end

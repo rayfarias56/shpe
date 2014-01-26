@@ -1,0 +1,27 @@
+<% provide(:title, 'Events') %>
+
+<section>
+  <div class="container">
+    <div class="row">
+
+      <div class="span7">
+        <h1 class="event-header">Upcoming Events</h1>
+        <hr/>
+        <% @events.each do |e| %>
+            <h4><strong><i><%= e.summary.to_s %> </i></strong></h4>
+
+            <p><strong>Date: </strong><%= e.start.dateTime.strftime("%A, %B %d, %Y") %> </p>
+
+            <p><strong>Time: </strong><%= e.start.dateTime.strftime("%l:%M%p")+" -"+e.end.dateTime.strftime("%l:%M%p") %> </p>
+
+            <p><strong>Location: </strong><%= e.location.to_s if e.location %> <%= "TBD" if not e.location %> </p>
+
+            <p><strong>Description: </strong><%= e.description if e.description %> <%= "N/A" if not e.description %> </p>
+
+            <%= link_to 'Register', new_event_path(name: e.summary.to_s, description: e.description, location: e.location), class: 'btn'  %>
+            <hr/>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</section>

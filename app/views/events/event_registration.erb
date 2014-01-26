@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="span8 offset3">
+
+      <h1>Event Registration</h1>
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <b>Name:</b>
+        <%= @event.name %>
+      </p>
+
+      <p>
+        <b>Description:</b>
+        <%= @event.description %>
+      </p>
+
+      <p>
+        <b>Location:</b>
+        <%= @event.location %>
+      </p>
+
+
+      <%= link_to 'All Events', events_path %>
+    </div>
+  </div>
+</div>

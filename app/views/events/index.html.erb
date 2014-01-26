@@ -11,6 +11,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
 
 <% @events.each do |event| %>
@@ -20,6 +21,7 @@
     <td><%= event.location %></td>
     <td><%= event.start_time %></td>
     <td><%= event.end_time %></td>
+    <td><%= link_to 'Register', event_registration_path(id: event.id)%></td>
     <td><%= link_to 'Show', event %></td>
     <td><%= link_to 'Edit', edit_event_path(event) if eboard_user?%></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } if eboard_user? %></td>

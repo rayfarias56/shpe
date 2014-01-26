@@ -13,15 +13,15 @@
 
   <div class="field">
     <%= f.label :name %><br />
-    <%= f.text_field :name %>
+    <%= f.text_field :name, value: @name%>
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, value: @description %>
   </div>
   <div class="field">
     <%= f.label :location %><br />
-    <%= f.text_field :location %>
+    <%= f.text_field :location, value: @location %>
   </div>
   <div class="field">
     <%= f.label :start_time %><br />
