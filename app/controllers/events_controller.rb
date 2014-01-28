@@ -104,4 +104,16 @@ class EventsController < ApplicationController
       format.csv  # show.csv.erb
     end
   end
+
+  def leaderboard
+    @users = User.all
+    @board = []
+    for user in @users
+      points =0
+      user.events.map { |e| points += e.value }
+      @board << {name: user.name, id: user.id, points: points}
+    end
+
+    @board.sort! {|x,y| y[:points] <=> x[:points]}
+  end
 end

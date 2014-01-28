@@ -1,0 +1,28 @@
+
+<div class="container">
+  <div class="row">
+    <div class="span8 offset3">
+       <h2>Leaderboard</h2>
+      <table class="table table-striped" id="event_attendance">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+        </thead>
+
+        <% @board.each do |user_hash| %>
+            <tr id="user_attend">
+              <td><%= user_hash[:name] %></td>
+              <td><%= user_hash[:points] %></td>
+
+            </tr>
+        <% end %>
+      </table>
+
+      <%= link_to 'All Events', events_path, class: 'btn' %>
+    </div>
+  </div>
+</div>
+
+
