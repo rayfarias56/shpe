@@ -95,4 +95,9 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id]) if params[:id]
     @event = Event.find(1) unless params[:id]
   end
+
+  def user_attendance
+    @event = Event.find(params[:id])
+    @users = @event.users
+  end
 end
