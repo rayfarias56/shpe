@@ -5,16 +5,17 @@
     <div class="span8 offset3">
       <h2><%= @event.name %>   </h2>
 
-      <table>
+      <table class="table table-striped" id="event_attendance">
+        <thead>
         <tr>
           <th>Name</th>
           <th>Email</th>
           <th>UIN</th>
-
         </tr>
+        </thead>
 
         <% @users.each do |user| %>
-            <tr>
+            <tr id="user_attend">
               <td><%= user.name %></td>
               <td><%= user.email %></td>
               <td><%= user.uin %></td>
