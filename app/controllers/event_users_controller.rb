@@ -9,7 +9,7 @@ class EventUsersController < ApplicationController
         render json: {message: 'Error registering on server', status: 'error'}
       end
     else
-      render json: {message: 'UIN not found', status: 'error'}
+      render json: {message: 'UIN not found. Please create an account.', status: 'error'}
     end
   end
 end
