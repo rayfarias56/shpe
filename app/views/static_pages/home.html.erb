@@ -38,7 +38,7 @@
               <div class="media white-accent no-margin-top">
                 <div class="media-body">
                   <h3 class="media-heading"><%= announcement.title %></h3>
-                  <p><i>Date: <%= announcement.created_at %></i></p>
+                  <p><i> <%= announcement.created_at.to_date.strftime("%m/%d/%Y")  %></i></p>
                   <p><%=  announcement.content.html_safe %></p>
                   <%= link_to "Read more...", announcement %>
                 </div>

@@ -5,7 +5,6 @@
   <thead>
   <tr>
     <th>Name</th>
-    <th>Description</th>
     <th>Location</th>
     <th>Start time</th>
     <th>End time</th>
@@ -20,10 +19,9 @@
 <% @events.each do |event| %>
   <tr>
     <td><%= event.name %></td>
-    <td><%= event.description %></td>
     <td><%= event.location %></td>
-    <td><%= event.start_time %></td>
-    <td><%= event.end_time %></td>
+    <td><%= event.start_time.strftime("%A, %B %d, %Y %l:%M%p") %></td>
+    <td><%= event.end_time.strftime("%A, %B %d, %Y %l:%M%p") %></td>
     <td><%= link_to 'Take Attendance', event_registration_path(id: event.id), class: 'btn'%></td>
     <td><%= link_to 'Show', event, class: 'btn' %></td>
     <td><%= link_to 'Edit', edit_event_path(event), class: 'btn' if eboard_user?%></td>
@@ -41,3 +39,5 @@
 
 
 </div>
+
+
