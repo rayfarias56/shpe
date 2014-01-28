@@ -1,0 +1,10 @@
+<%- headers = ["Id", "Name", "Email", "UIN"] -%>
+<%= CSV.generate_line headers %>
+<%- @users.each do |user| -%>
+<%- row = [ user.id,
+            user.name,
+            user.email,
+            user.uin,
+] -%>
+<%=   CSV.generate_line row %>
+<%- end -%>

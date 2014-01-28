@@ -99,5 +99,9 @@ class EventsController < ApplicationController
   def user_attendance
     @event = Event.find(params[:id])
     @users = @event.users
+    respond_to do |format|
+      format.html # show.html.erb
+      format.csv  # show.csv.erb
+    end
   end
 end

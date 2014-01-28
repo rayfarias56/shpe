@@ -13,6 +13,7 @@
     <th></th>
     <th></th>
     <th></th>
+    <th></th>
   </tr>
   </thead>
 
@@ -28,6 +29,7 @@
     <td><%= link_to 'Edit', edit_event_path(event), class: 'btn' if eboard_user?%></td>
     <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn' if eboard_user? %></td>
     <th><%= link_to 'Attendance', user_attendance_path(event), class: 'btn' %></th>
+    <th><%= link_to 'Attendance CSV', user_attendance_path(event, format: :csv), class: 'btn'%></th>
   </tr>
 <% end %>
 </table>
