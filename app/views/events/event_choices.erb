@@ -18,7 +18,8 @@
 
             <p><strong>Description: </strong><%= e.description if e.description %> <%= "N/A" if not e.description %> </p>
 
-            <%= link_to 'Register', new_event_path(name: e.summary.to_s, description: e.description, location: e.location), class: 'btn'  %>
+            <%= link_to 'Select', new_event_path(name: e.summary.to_s, description: e.description, location: e.location,
+                                                   start_time: e.start.dateTime, end_time: e.end.dateTime ), class: 'btn'  %>
             <hr/>
         <% end %>
       </div>

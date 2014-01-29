@@ -31,6 +31,8 @@ class EventsController < ApplicationController
     @name = params[:name]
     @description = params[:description]
     @location = params[:location]
+    @start_time = params[:start_time]
+    @end_time = params[:end_time]
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @event }
@@ -101,7 +103,9 @@ class EventsController < ApplicationController
     @users = @event.users
     respond_to do |format|
       format.html # show.html.erb
-      format.csv  # show.csv.erb
+      format.csv do
+        response.headers['Content-Disposition'] = 'attachment; filename="' + @event.name + '.csv"'
+      end
     end
   end
 
