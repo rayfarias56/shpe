@@ -109,15 +109,16 @@ class EventsController < ApplicationController
     end
   end
 
+
   def leaderboard
-    @users = User.all
-    @board = []
+    @users = User.find_all_by_company(false)
+    @points = {}
     for user in @users
-      points =0
-      user.events.map { |e| points += e.value }
-      @board << {name: user.name, id: user.id, points: points}
+      score = 0
+      user.events.map { |e| score += e.value }
+      @points[user] = score
     end
 
-    @board.sort! {|x,y| y[:points] <=> x[:points]}
+    @users.sort! {|u1,u2| @points[:u2] <=> @points[:u1]}
   end
 end

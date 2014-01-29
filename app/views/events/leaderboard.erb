@@ -11,10 +11,11 @@
         </tr>
         </thead>
 
-        <% @board.each do |user_hash| %>
+        <% @users.each do |user| %>
+
             <tr id="user_attend">
-              <td><%= user_hash[:name] %></td>
-              <td><%= user_hash[:points] %></td>
+              <td><%= user.name %></td>
+              <td><%= @points[user] %></td>
 
             </tr>
         <% end %>
