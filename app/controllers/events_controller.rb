@@ -119,6 +119,6 @@ class EventsController < ApplicationController
       @points[user] = score
     end
 
-    @users.sort! {|u1,u2| @points[:u2] <=> @points[:u1]}
+    @users.sort! {|u1,u2| @points[u2] <=> @points[u1]}
   end
 end
