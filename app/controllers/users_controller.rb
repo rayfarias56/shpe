@@ -1,12 +1,17 @@
 class UsersController < ApplicationController
   before_filter :signed_in_user, only: [:index,:edit, :update, :destroy,:control_panel]
   before_filter :correct_user,   only: [:edit, :update,:show]
-  before_filter :admin_user, only: [:destroy,:control_panel,:add_admin, :add_eboard, :remove_admin, :remove_eboard]
+  before_filter :admin_user, only: [:destroy,:control_panel, :admin_tools]
   before_filter :company_user , only: [:index, :view_user]
   
   def show
     @user = User.find(params[:id])
     @resume = @user.resume
+    @announcements = @user.announcements
+  end
+
+  def admin_tools
+    @user = User.find(params[:id])
     @announcements = @user.announcements
   end
 

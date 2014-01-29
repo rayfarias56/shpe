@@ -1,26 +1,42 @@
 <% provide(:title, 'All users') %>
 
 <div class="container">
+  <div class="row">
 
-  <div class="span8 center">
-    <h2>All users</h2>
+    <div class="span6 offset3">
+      <div class="row">
+        <h2>Resume Book</h2>
 
-    <%= form_tag '' do %>
-        <%=  select_tag 'major', options_for_select(MAJOR_ARRAY.collect{ |u| [u, u] }), prompt: 'All' %>
-        <%= submit_tag 'Search', class: 'btn btn-primary' %>
-    <% end %>
+        <%= form_tag '' do %>
+            <%= select_tag 'major', options_for_select(MAJOR_ARRAY.collect { |u| [u, u] }), prompt: 'All' %>
+            <%= submit_tag 'Search', class: 'btn btn-primary' %>
+        <% end %>
 
-
-    <% for user in @users %>
-        <div class="span4">
-          <%= link_to user.name, view_user_path(user) %>
+        <div class="span2">
+          <h4> Name </h4>
         </div>
         <div class="span2">
-          <%= user.major %>
+         <h4> Major  </h4>
         </div>
-        <hr>
-    <% end %>
+        <div class="span2">
+          <h4> Resume  </h4>
+        </div>
 
+        <% for user in @users %>
+            <div class="span2">
+              <%= link_to user.name, view_user_path(user) %>
+            </div>
+            <div class="span2">
+              <%= user.major %>
+            </div>
+            <div class="span2">
+              <%= link_to 'Resume',user.resume.pdf.url, class: 'btn' if user.resume %>
+            </div>
+        <% end %>
+      </div>
+
+    </div>
   </div>
+
 </div>
 <br/><br/>

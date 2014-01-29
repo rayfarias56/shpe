@@ -22,6 +22,7 @@ SampleApp::Application.routes.draw do
   match '/event_registration', to: 'events#event_registration', as: :event_registration
   match '/user_attendance/:id', to: 'events#user_attendance', as: :user_attendance
   match '/leaderboard', to: 'events#leaderboard', as: :leaderboard
+  match '/admin_tools/:id', to: 'users#admin_tools', as: :admin_tools
   match '/resources', to: 'static_pages#resources', as: :resources
   match '/members', to: 'static_pages#members', as: :members
   match '/constitution', to: 'static_pages#constitution', as: :constitution
