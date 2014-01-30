@@ -6,6 +6,7 @@
 
       <div class="span7">
         <h1 class="event-header">Upcoming Events</h1>
+
         <hr/>
         <% @events.each do |e| %>
             <h4><strong><i><%= e.summary.to_s %> </i></strong></h4>
@@ -19,6 +20,7 @@
             <p><strong>Description: </strong><%= e.description if e.description %> <%= "N/A" if not e.description %> </p>
             <hr/>
         <% end %>
+        <%= link_to (image_tag 'gc_button.gif'), "http://www.google.com/calendar/render?cid=https%3A%2F%2Fwww.google.com%2Fcalendar%2Ffeeds%2Ff43nbgbtslbe9jou3920okesh0%2540group.calendar.google.com%2Fpublic%2Fbasic"%>
       </div>
     </div>
   </div>
