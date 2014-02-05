@@ -12,27 +12,25 @@
             <%= submit_tag 'Search', class: 'btn btn-primary' %>
         <% end %>
 
-        <div class="span2">
-          <h4> Name </h4>
-        </div>
-        <div class="span2">
-         <h4> Major  </h4>
-        </div>
-        <div class="span2">
-          <h4> Resume  </h4>
-        </div>
+        <table class="table table-striped" id="event_attendance">
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Major</th>
+            <th>Resume</th>
+          </tr>
+          </thead>
 
-        <% for user in @users %>
-            <div class="span2">
-              <%= link_to user.name, view_user_path(user) %>
-            </div>
-            <div class="span2">
-              <%= user.major %>
-            </div>
-            <div class="span2">
-              <%= link_to 'Resume File',user.resume.pdf.url, class: 'btn' if user.resume %>
-            </div>
-        <% end %>
+          <% @users.each do |user| %>
+
+              <tr id="user_attend">
+                <td><%= link_to user.name, view_user_path(user) %></td>
+                <td><%= user.major %></td>
+                <td><%= link_to 'Resume File',user.resume.pdf.url, class: 'btn' if user.resume %></td>
+
+              </tr>
+          <% end %>
+        </table>
       </div>
 
     </div>
@@ -40,3 +38,4 @@
 
 </div>
 <br/><br/>
+
