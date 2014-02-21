@@ -11,12 +11,13 @@
 
 
 
-      <%= link_to "Edit Profile", edit_user_path(current_user), :class => 'btn' %>
+      <%= link_to "Change Profile Info", edit_user_path(current_user), :class => 'btn' %>
       <% if @user.resume %>
           <%= link_to "Change Resume", new_resume_path, :class => 'btn' unless @user.company? %>
       <% else %>
           <%= link_to "Add Resume", new_resume_path, :class => 'btn' unless @user.company? %>
       <% end %>
+      <%= link_to "Settings", user_settings_path(current_user), :class => 'btn' %>
 
       <div class="well">
 
@@ -30,6 +31,7 @@
 
         <p><%= "Phone Number: " + number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number %></p>
         <%= link_to "Resume Link", @resume.pdf.url, class: 'btn' if @resume %>
+        <%= link_to "LinkedIn Profile", @user.linkedin_url, class: 'btn' if @user.linkedin_url %>
 
       </div>
     </div>

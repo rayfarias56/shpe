@@ -12,12 +12,13 @@
             <%= submit_tag 'Search', class: 'btn btn-primary' %>
         <% end %>
 
-        <table class="table table-striped" id="event_attendance">
+        <table class="table table-striped" >
           <thead>
           <tr>
             <th>Name</th>
             <th>Major</th>
             <th>Resume</th>
+            <th>LinkedIn</th>
           </tr>
           </thead>
 
@@ -27,6 +28,7 @@
                 <td><%= link_to user.name, view_user_path(user) %></td>
                 <td><%= user.major %></td>
                 <td><%= link_to 'Resume File',user.resume.pdf.url, class: 'btn' if user.resume %></td>
+                <td><%= link_to "LinkedIn Profile", user.linkedin_url, class: 'btn' if user.linkedin_url %></td>
 
               </tr>
           <% end %>

@@ -1,47 +1,55 @@
 SampleApp::Application.routes.draw do
 
-  get "password_resets/new"
-
+  # Announcements
   resources :announcements
+
+  # Resumes
   resources :resumes
 
-
+  # Users
   resources :users
-  resources :sessions, only: [:new, :create, :destroy]
-  resources :password_resets 
-  
   match '/signup',  to: 'users#new'
+  match '/admin_tools/:id', to: 'users#admin_tools', as: :admin_tools
+  match 'view_user/:id', to: 'users#view_user', as: :view_user
+  match 'users/:id/settings', to: 'users#settings', as: :user_settings
+  match 'users/:id/set_alumnus', to: 'users#set_alumnus', as: :set_alumnus
+
+  # Sessions
+  resources :sessions, only: [:new, :create, :destroy]
   match '/signin',  to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+
+  # Password resets
+  resources :password_resets
+  get "password_resets/new"
   
+  # Static Pages
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about' , as: :about
   match '/sponsor',   to: 'static_pages#sponsor' , as: :sponsor
   match '/contact', to: 'static_pages#contact', as: :contact
   match '/event_list', to: 'static_pages#events', as: :event_list
-  match '/event_choices', to: 'events#event_choices', as: :event_choices
-  match '/event_registration', to: 'events#event_registration', as: :event_registration
-  match '/user_attendance/:id', to: 'events#user_attendance', as: :user_attendance
-  match '/leaderboard', to: 'events#leaderboard', as: :leaderboard
-  match '/admin_tools/:id', to: 'users#admin_tools', as: :admin_tools
   match '/resources', to: 'static_pages#resources', as: :resources
   match '/members', to: 'static_pages#members', as: :members
   match '/constitution', to: 'static_pages#constitution', as: :constitution
   match '/executive_board', to: 'static_pages#execboard', as: :execboard
-  match 'add_admin/:id', to: 'users#add_admin'
-  match 'remove_admin/:id', to: 'users#remove_admin'
 
-  match 'add_eboard/:id', to: 'users#add_eboard'
-  match 'remove_eboard/:id', to: 'users#remove_eboard'
+  # Events
+  resources :events
+  match '/event_choices', to: 'events#event_choices', as: :event_choices
+  match '/event_registration', to: 'events#event_registration', as: :event_registration
+  match '/user_attendance/:id', to: 'events#user_attendance', as: :user_attendance
+  match '/leaderboard', to: 'events#leaderboard', as: :leaderboard
 
-  match 'add_company/:id', to: 'users#add_company'
-  match 'remove_company/:id', to: 'users#remove_company'
 
-  match 'view_user/:id', to: 'users#view_user', as: :view_user
+
+  # Resume Views
   match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
 
-  resources :events
+  # Event Users
   resources :event_users
+
+
   root to: 'static_pages#home'
   ActiveAdmin.routes(self)
 end

@@ -23,6 +23,7 @@
 
       <p><%= "Phone Number: " + number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number %></p>
       <%= link_to "Resume Link", @resume.pdf.url, class: 'btn' if @resume %>
+      <%= link_to "LinkedIn Profile", @user.linkedin_url, class: 'btn' if @user.linkedin_url %>
 
     </div>
     <%= link_to "Back", view_resumes_list_path, class: 'btn' %>
