@@ -421,3 +421,23 @@ input[type=textbox]{
  width: 150%;
  margin-bottom: 30px;
 }
+
+#GoogleCal{
+  margin-left:0px;
+}
+
+#GoogleCal b:nth-child(1),#GoogleCal b:nth-child(4){
+    color:blue;
+}
+
+#GoogleCal b:nth-child(2),#GoogleCal b:nth-child(6){
+    color:red;
+}
+
+#GoogleCal b:nth-child(3){
+    color:yellow;
+}
+
+#GoogleCal b:nth-child(5){
+    color:green;
+}
