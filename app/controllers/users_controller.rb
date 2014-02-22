@@ -78,4 +78,16 @@ class UsersController < ApplicationController
 
   end
 
+  def group_index
+    @group = params[:group]
+    if @group == 'alumni' && current_user.alumnus?
+      @users = User.find_all_by_alumnus(true)
+    elsif @group == 'students' && (current_user.company? || current_user.admin?)
+      @users = User.find_all_by_alumnus_and_company(false,false)
+    else
+      redirect_to root_path
+    end
+
+  end
+
 end

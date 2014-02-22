@@ -7,12 +7,16 @@ SampleApp::Application.routes.draw do
   resources :resumes
 
   # Users
-  resources :users
+  match 'users/group/:group', to: 'users#group_index', as: :group_index
   match '/signup',  to: 'users#new'
   match '/admin_tools/:id', to: 'users#admin_tools', as: :admin_tools
   match 'view_user/:id', to: 'users#view_user', as: :view_user
   match 'users/:id/settings', to: 'users#settings', as: :user_settings
   match 'users/:id/set_alumnus', to: 'users#set_alumnus', as: :set_alumnus
+  resources :users
+
+  # Resume Views
+  match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
 
   # Sessions
   resources :sessions, only: [:new, :create, :destroy]
@@ -43,8 +47,7 @@ SampleApp::Application.routes.draw do
 
 
 
-  # Resume Views
-  match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
+
 
   # Event Users
   resources :event_users
