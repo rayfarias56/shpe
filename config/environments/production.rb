@@ -77,4 +77,6 @@ SampleApp::Application.configure do
       user_name: "shpe.uiuc.org@gmail.com",
       password: "0ok9ij8uh"
   }
+
+  config.action_mailer.default_url_options = { :host => "shpe-uiuc.org" }
 end
