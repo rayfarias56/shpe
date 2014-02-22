@@ -32,7 +32,7 @@
 #
 class User < ActiveRecord::Base
   attr_accessible :email, :name, :password, :password_confirmation,:gpa,:major,:grad_date,:uin,:linkedin_url,
-                  :phone_number, :eboard, :company, :admin , as: [:default ,:admin]
+                  :phone_number, :eboard, :company, :admin , :alumnus, as: [:default ,:admin]
   attr_accessor   :updating_password
 
   has_secure_password
