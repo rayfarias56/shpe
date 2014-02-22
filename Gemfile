@@ -11,6 +11,7 @@ gem 'sqlite3', "~> 1.3.5"
 gem 'google-analytics-rails'
 gem 'activeadmin'
 gem 'google-api-client'
+gem 'exception_notification'
 
 
 # Bundle edge Rails instead:
