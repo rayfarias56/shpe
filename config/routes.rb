@@ -54,7 +54,4 @@ SampleApp::Application.routes.draw do
 
   root to: 'static_pages#home'
   ActiveAdmin.routes(self)
-
-  # Catch unroutable paths and send to the routing error handler
-  match '*a', :to => 'home#routing_error'
 end

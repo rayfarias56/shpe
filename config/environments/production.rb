@@ -79,10 +79,4 @@ SampleApp::Application.configure do
   }
 
   config.action_mailer.default_url_options = { :host => "shpe-uiuc.org" }
-
-
-  config.middleware.use ExceptionNotifier,
-                        :email_prefix => "[shpe-uiuc.org Error Report] ",
-                        :sender_address => %{"SHPE UIUC" <web@shpe-uiuc.org>},
-                        :exception_recipients => %w{seanfreiburg@gmail.com}
 end
