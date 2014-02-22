@@ -15,7 +15,7 @@ SampleApp::Application.configure do
 
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+  config.action_mailer.default_url_options = { :host => "shpe-uiuc.org" }
   config.action_mailer.perform_deliveries = true
 
   # Print deprecation notices to the Rails logger
@@ -36,4 +36,14 @@ SampleApp::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "shpe-uiuc.org",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: "shpe.uiuc.org@gmail.com",
+      password: "0ok9ij8uh"
+  }
 end
