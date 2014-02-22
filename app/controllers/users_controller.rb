@@ -1,7 +1,8 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user
+  before_filter :signed_in_user, except: [:new, :create]
   before_filter :correct_user, only: [:edit, :update, :show]
-  before_filter :admin_user, only: [:destroy, :admin_tools]
+  before_filter :eboard_user, only: [:admin_tools]
+  before_filter :admin_user, only: [:destroy]
   before_filter :company_user, only: [:index, :view_user]
 
   def show
@@ -57,7 +58,6 @@ class UsersController < ApplicationController
   end
 
 
-
   def view_user
     @user = User.find(params[:id])
     @resume = @user.resume
@@ -69,7 +69,7 @@ class UsersController < ApplicationController
   end
 
   def set_alumnus
-    @user =  User.find(params[:id])
+    @user = User.find(params[:id])
     if @user.update_attribute(:alumnus, params[:alumnus])
       flash[:success] = "Settings updated"
       sign_in @user
@@ -81,13 +81,23 @@ class UsersController < ApplicationController
   def group_index
     @group = params[:group]
     if @group == 'alumni' && current_user.alumnus?
-      @users = User.find_all_by_alumnus(true)
-    elsif @group == 'students' && (current_user.company? || current_user.admin?)
-      @users = User.find_all_by_alumnus_and_company(false,false)
+      if  params[:major] && params[:major].present?
+        @users = User.where(company: false, major: params[:major], alumnus: true)
+      else
+        @users = User.find_all_by_alumnus(true)
+      end
+    elsif @group == 'students' && (current_user.company? || current_user.admin? || current_user.eboard?)
+      if  params[:major] && params[:major].present?
+        @users = User.where(company: false, major: params[:major], alumnus: false)
+      else
+        @users = User.find_all_by_alumnus_and_company(false, false)
+      end
     else
       redirect_to root_path
     end
 
   end
 
+
 end
+

@@ -15,8 +15,6 @@ SampleApp::Application.routes.draw do
   match 'users/:id/set_alumnus', to: 'users#set_alumnus', as: :set_alumnus
   resources :users
 
-  # Resume Views
-  match 'view_resumes_list', to: 'resume_views#index', as: :view_resumes_list
 
   # Sessions
   resources :sessions, only: [:new, :create, :destroy]
