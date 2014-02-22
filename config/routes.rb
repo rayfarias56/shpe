@@ -23,7 +23,8 @@ SampleApp::Application.routes.draw do
 
   # Password resets
   resources :password_resets
-  get "password_resets/new"
+  get "password_resets/new" , as: :new_password_reset
+
   
   # Static Pages
   match '/help',    to: 'static_pages#help'
