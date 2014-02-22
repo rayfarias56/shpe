@@ -10,7 +10,6 @@ class UserMailer < ActionMailer::Base
 
   def password_reset(user)
     @user = user
-    @from = 'no-reply@shpe-uiuc.org'
     mail :to => user.email,  :subject => "Password Reset"
   end
 
