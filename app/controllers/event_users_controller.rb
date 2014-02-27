@@ -1,4 +1,6 @@
 class EventUsersController < ApplicationController
+  before_filter :signed_in_user
+  before_filter :eboard_user
 
   def create
     user = User.find_by_uin(params[:uin])

@@ -12,10 +12,10 @@
 
       <% if @user.admin? %>
           <%= link_to 'Admin Panel', admin_root_path, :class => 'btn btn-primary' %>
-
-          <%= link_to 'Take Event Attendence', event_choices_path, class: 'btn' %>
-          <%= link_to 'All Events', events_path, class: 'btn' %>
       <% end %>
+      <%= link_to "View Resumes", group_index_path('students'), class: 'btn' %>
+      <%= link_to 'Take Event Attendence', event_choices_path, class: 'btn' %>
+      <%= link_to 'All Events', events_path, class: 'btn' %>
 
 
       <% if @user.admin? or @user.eboard? %>
@@ -25,7 +25,8 @@
 
           <div class="span6">
             <h1>Your Announcements</h1>
-            <%= link_to 'Add Announcement', new_announcement_path, class: 'btn' %>
+            <%= link_to 'All Announcements', announcements_path, class: 'btn' %>
+            <%= link_to 'Add Announcement', new_announcement_path, class: 'btn btn-success' %>
 
             <% if @announcements.nil? || @announcements.empty? %>
                 <div class="well">
@@ -46,6 +47,7 @@
             <% end %>
           </div>
           </div>
+
 
       <% end %>
 

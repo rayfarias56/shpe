@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_filter :signed_in_user, except:  [:index,:show]
-  before_filter :eboard_user, except:  [:index,:show]
+  before_filter :signed_in_user
+  before_filter :eboard_user
 
   # GET /events
   # GET /events.json

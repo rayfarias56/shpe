@@ -1,0 +1,24 @@
+<% provide(:title, @user.name + ' settings') %>
+
+<div class="container">
+  <div class="row">
+    <div class="span6 offset3">
+
+       <h1>Settings</h1> <hr><br>
+      <% if @user.alumnus? %>
+          <%= link_to 'Make yourself a student', set_alumnus_path(@user,alumnus: false), class: 'btn' %>
+
+      <% else %>
+          <%= link_to 'Make yourself an alumnus', set_alumnus_path(@user,alumnus:true), class: 'btn' %>
+      <% end %>
+
+      <br><br>
+      <%= link_to 'Back to Profile', @user, class: 'btn' %>
+
+    </div>
+
+
+  </div>
+
+
+</div>

@@ -67,4 +67,16 @@ SampleApp::Application.configure do
 
   # replace this with your tracker code
   GA.tracker = "UA-42868605-1"
+
+  config.action_mailer.smtp_settings = {
+      address: "smtp.gmail.com",
+      port: 587,
+      domain: "shpe-uiuc.org",
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: "shpe.uiuc.org@gmail.com",
+      password: "0ok9ij8uh"
+  }
+
+  config.action_mailer.default_url_options = { :host => "shpe-uiuc.org" }
 end
