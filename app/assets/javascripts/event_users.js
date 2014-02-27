@@ -39,7 +39,7 @@ $(document).ready(function () {
                             $('#infoModal').modal('show').delay(1250).queue(function (next) {
                                 $('#UINinput').val('');
                                 $('#infoModal').modal('hide');
-                                next();
+                                next(); 
                             });
                         }
                     }
