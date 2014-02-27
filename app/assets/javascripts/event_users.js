@@ -5,7 +5,7 @@ $(document).ready(function () {
             if ($('#UINinput').val() == ";E?") {
                 $('#swipeMessage').text('Please Swipe Card Again.')
                 $('#swipeMessage').removeClass().addClass('Error');
-                $('#infoModal').modal('show').delay(2500).queue(function (next) {
+                $('#infoModal').modal('show').delay(1250).queue(function (next) {
                     $('#UINinput').val('');
                     $('#infoModal').modal('hide');
                     next();
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
                             $('#swipeMessage').html('Thanks ' +'<span id="name">' + result.name + '</span>'+ '. You have been marked as attended.')
                             $('#swipeMessage').removeClass().addClass('Success');
-                            $('#infoModal').modal('show').delay(2500).queue(function (next) {
+                            $('#infoModal').modal('show').delay(1250).queue(function (next) {
                                 $('#UINinput').val('');
                                 $('#infoModal').modal('hide');
                                 next();
@@ -36,7 +36,7 @@ $(document).ready(function () {
                         else{
                             $('#swipeMessage').text(result.message)
                             $('#swipeMessage').removeClass().addClass('Error');
-                            $('#infoModal').modal('show').delay(2500).queue(function (next) {
+                            $('#infoModal').modal('show').delay(1250).queue(function (next) {
                                 $('#UINinput').val('');
                                 $('#infoModal').modal('hide');
                                 next();
