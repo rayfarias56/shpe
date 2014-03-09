@@ -26,14 +26,13 @@
         <%= link_to "LinkedIn Profile", @user.linkedin_url, class: 'btn' if @user.linkedin_url %>
 
       </div>
-
-      <embed src="<%= @resume.pdf.url %>" width="550" height="500">
+      <% if @resume %>
+          <embed src="<%= @resume.pdf.url %>" width="550" height="500">
+      <% end %>
       </embed>
       <br>
       <br>
-      <%= link_to "Back", view_resumes_list_path, class: 'btn' %>
     </div>
-
 
 
   </div>
