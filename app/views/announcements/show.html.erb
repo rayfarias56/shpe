@@ -1,21 +1,24 @@
 <div class="container">
 
-<p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="span6 offset4">
+      <%= render 'shared/announcement', announcement: @announcement %>
+
+      <p id="notice"><%= notice %></p>
 
 
+    </div>
+  </div>
 
-<p>
-  <b>Title:</b>
-  <%= @announcement.title %>
-</p>
-
-<p>
-  <b>Content:</b>
-  <%= @announcement.content %>
-</p>
-
-
-<%= link_to 'Edit', edit_announcement_path(@announcement) , class: 'btn' if signed_in? && (admin_user? || eboard_user?)%>
+  <div class="row">
+    <div class="span8 offset4">
+      <%= link_to 'Edit', edit_announcement_path(@announcement) , class: 'btn' if elevated_user? %>
+<%= link_to 'Remove', @announcement, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' if elevated_user? %>
+      <%= link_to 'Back to All Announcements', announcements_path, class: 'btn' %>
+    </div>
+  </div>
 
 
 </div>
+
+

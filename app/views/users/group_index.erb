@@ -1,0 +1,5 @@
+<% if (current_user.company? || current_user.admin? || current_user.eboard?) && @group == 'students' %>
+    <%= render 'company_index', users: @users %>
+<% else %>
+    <%= render 'alumni_index', users: @users %>
+<% end %>

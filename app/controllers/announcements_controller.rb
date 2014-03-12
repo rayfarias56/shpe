@@ -1,7 +1,6 @@
 class AnnouncementsController < ApplicationController
   before_filter :signed_in_user, except:  [:index,:show]
   before_filter :eboard_user, except:  [:index,:show]
-  before_filter :admin_user, except:  [:index,:show]
   # GET /announcements
   # GET /announcements.json
   def index
@@ -48,8 +47,8 @@ class AnnouncementsController < ApplicationController
 
     respond_to do |format|
       if @announcement.save
-        format.html { redirect_to current_user, notice: 'Announcement was successfully created.' }
-        format.json { render json: current_user, status: :created, location: @announcement }
+        format.html { redirect_to announcements_url, notice: 'Announcement was successfully created.' }
+        format.json { render json: @announcement, status: :created, location: @announcement }
       else
         format.html { render action: "new" }
         format.json { render json: @announcement.errors, status: :unprocessable_entity }

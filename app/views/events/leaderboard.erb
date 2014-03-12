@@ -1,0 +1,29 @@
+
+<div class="container">
+  <div class="row">
+    <div class="span8 offset3">
+       <h2>Leaderboard</h2>
+      <table class="table table-striped" id="event_attendance">
+        <thead>
+        <tr>
+          <th>Name</th>
+          <th>Points</th>
+        </tr>
+        </thead>
+
+        <% @users.each do |user| %>
+
+            <tr id="user_attend">
+              <td><%= user.name %></td>
+              <td><%= @points[user] %></td>
+
+            </tr>
+        <% end %>
+      </table>
+
+      <%= link_to 'All Events', events_path, class: 'btn' %>
+    </div>
+  </div>
+</div>
+
+

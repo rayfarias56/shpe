@@ -1,18 +1,43 @@
 <% provide(:title, 'All users') %>
 
 <div class="container">
-  <div class="span6 center">
-    <h2>All users</h2>
+  <div class="row">
 
-    <% for user in @users %>
-        <li>
-          <%= link_to user.name, view_user_path(user) %>
+    <div class="span6 offset3">
+      <div class="row">
+        <h2>Resume Book</h2>
 
-        </li>
-        <hr>
+        <%= form_tag '' do %>
+            <%= select_tag 'major', options_for_select(MAJOR_ARRAY.collect { |u| [u, u] }), prompt: 'All' %>
+            <%= submit_tag 'Search', class: 'btn btn-primary' %>
+        <% end %>
 
+        <table class="table table-striped" >
+          <thead>
+          <tr>
+            <th>Name</th>
+            <th>Major</th>
+            <th>Resume</th>
+            <th>LinkedIn</th>
+          </tr>
+          </thead>
 
-    <% end %>
+          <% @users.each do |user| %>
 
+              <tr id="user_attend">
+                <td><%= link_to user.name, view_user_path(user) %></td>
+                <td><%= user.major %></td>
+                <td><%= link_to 'Resume File',user.resume.pdf.url, class: 'btn' if user.resume %></td>
+                <td><%= link_to "LinkedIn Profile", user.linkedin_url, class: 'btn' if user.linkedin_url %></td>
+
+              </tr>
+          <% end %>
+        </table>
+      </div>
+
+    </div>
   </div>
+
 </div>
+<br/><br/>
+

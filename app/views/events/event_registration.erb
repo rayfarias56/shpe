@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="span8 offset3">
+
+      <h1>Event Attendance</h1>
+
+      <p id="notice"><%= notice %></p>
+
+      <p>
+        <b>Name:</b>
+        <%= @event.name %>
+      </p>
+
+      <p>
+        <b>Description:</b>
+        <%= @event.description %>
+      </p>
+
+      <p>
+        <b>Location:</b>
+        <%= @event.location %>
+      </p>
+
+      <form>
+        <input id="UINinput" type="textbox" placeholder="Please Swipe Card" />
+      </form>
+      <div id="infoModal" class="modal hide fade">
+        <div class="modal-body">
+          <div id="swipeMessage"></div>
+        </div>
+      </div>
+
+
+      <%= link_to 'All Events', events_path, class: 'btn' %>
+    </div>
+  </div>
+</div>
+
+
+

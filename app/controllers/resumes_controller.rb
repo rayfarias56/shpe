@@ -1,4 +1,6 @@
 class ResumesController < ApplicationController
+  before_filter :signed_in_user
+
   # GET /resumes
   # GET /resumes.json
   def index

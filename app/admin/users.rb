@@ -12,6 +12,7 @@ ActiveAdmin.register User do
       f.input :admin
       f.input :eboard
       f.input :company
+      f.input :alumnus
     end
     f.actions
   end

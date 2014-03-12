@@ -25,13 +25,13 @@ class ApplicationController < ActionController::Base
   helper_method :admin_user?
 
   def eboard_user?
-    current_user && (current_user.eboard? || current_user.admin?)
+    current_user && current_user.eboard?
   end
 
   helper_method :eboard_user?
 
   def company_user
-    redirect_to(root_path) unless current_user.company?
+    redirect_to(root_path) unless current_user.company? || current_user.admin?
   end
 
   def authenticate_admin!
@@ -43,5 +43,9 @@ class ApplicationController < ActionController::Base
     redirect_to(root_path) unless current_user.eboard? || current_user.admin?
   end
 
+  def elevated_user?
+    current_user && (current_user.eboard? or current_user.admin?)
+  end
+  helper_method :elevated_user?
 
 end

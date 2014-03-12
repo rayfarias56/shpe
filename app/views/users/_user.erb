@@ -1,0 +1,44 @@
+<% provide(:title, @user.name) %>
+
+<div class="container">
+  <div class="row">
+    <div class="span6 offset3">
+
+      <h1>
+        <%= @user.name %>
+
+      </h1>
+
+
+
+      <%= link_to "Change Profile Info", edit_user_path(current_user), :class => 'btn' %>
+      <% if @user.resume %>
+          <%= link_to "Change Resume", new_resume_path, :class => 'btn'  %>
+      <% else %>
+          <%= link_to "Add Resume", new_resume_path, :class => 'btn' %>
+      <% end %>
+      <%= link_to 'View other alumni', group_index_path('alumni'), class: 'btn btn-primary' if @user.alumnus? %>
+      <div class="well">
+
+        <p><%= "GPA: " + @user.gpa.to_s if @user.gpa %></p>
+
+        <p><%= "Major: " + @user.major if @user.major %></p>
+
+        <p><%= "UIN: " + @user.uin.to_s if @user.uin %></p>
+
+        <p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
+
+        <p><%= "Phone Number: " + number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number %></p>
+        <%= link_to "Resume Link", @resume.pdf.url, class: 'btn' if @resume %>
+        <%= link_to "LinkedIn Profile", @user.linkedin_url, class: 'btn' if @user.linkedin_url %>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+
+
+</div>

@@ -1,34 +1,41 @@
 <% provide(:title, @user.name) %>
 
 <div class="container">
+  <div class="row">
 
-  <div class="span4">
+    <div class="span6 offset3">
 
-    <h1>
-      <%= @user.name %>
+      <h1>
+        <%= @user.name %>
 
-    </h1>
+      </h1>
 
 
-    <div class="well">
+      <div class="well">
 
-      <p><%= "GPA: " + @user.gpa.to_s if @user.gpa %></p>
+        <p><%= "GPA: " + @user.gpa.to_s if @user.gpa %></p>
 
-      <p><%= "Major: " + @user.major if @user.major %></p>
+        <p><%= "Major: " + @user.major if @user.major %></p>
 
-      <p><%= "UIN: " + @user.uin.to_s if @user.uin %></p>
+        <p><%= "UIN: " + @user.uin.to_s if @user.uin %></p>
 
-      <p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
+        <p><%= "Grad Date: " + @user.grad_date.to_s if @user.grad_date %>
 
-      <p><%= "Phone Number: " + number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number %></p>
-      <%= link_to "Resume Link", @resume.pdf.url, class: 'btn' if @resume %>
+        <p><%= "Phone Number: " + number_to_phone(@user.phone_number, :area_code => true) if @user.phone_number %></p>
+        <%= link_to "Resume Link", @resume.pdf.url, class: 'btn' if @resume %>
+        <%= link_to "LinkedIn Profile", @user.linkedin_url, class: 'btn' if @user.linkedin_url %>
 
+      </div>
+
+      <embed src="<%= @resume.pdf.url %>" width="550" height="500">
+      </embed>
+      <br>
+      <br>
+      <%= link_to "Back", view_resumes_list_path, class: 'btn' %>
     </div>
-    <%= link_to "Back", view_resumes_list_path, class: 'btn' %>
+
+
+
   </div>
-
-
-
-
 
 </div>
