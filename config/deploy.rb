@@ -20,6 +20,7 @@ set :deploy_via, :remote_cache
 after "deploy", "deploy:cleanup" # keep only the last 5 releases
 after "deploy:update_code", "deploy:migrate"
 after "deploy:cleanup", "deploy:seed"
+after :deploy, 'deploy:notify_rollbar'
 
 set :scm, "git"
 set :scm_verbose, true
@@ -42,5 +43,16 @@ namespace :deploy do
   task :restart, :roles => :app, :except => { :no_release => true } do
     run "#{try_sudo} touch #{File.join(current_path,'tmp','restart.txt')}" #restarts nginx
   end
+
+  task :notify_rollbar do
+    on roles(:app) do |h|
+      revision = `git log -n 1 --pretty=format:"%H"`
+      local_user = `whoami`
+      rollbar_token = '6b622b10cd074f69a56d4c8049e13e1c'
+      rails_env = fetch(:rails_env, 'production')
+      execute "curl https://api.rollbar.com/api/1/deploy/ -F access_token=#{rollbar_token} -F environment=#{rails_env} -F revision=#{revision} -F local_username=#{local_user} >/dev/null 2>&1", :once => true
+    end
+  end
+
 end
 
