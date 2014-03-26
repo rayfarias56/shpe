@@ -13,6 +13,7 @@ ActiveAdmin.register User do
       f.input :eboard
       f.input :company
       f.input :alumnus
+      f.input :linkedin_url
     end
     f.actions
   end
