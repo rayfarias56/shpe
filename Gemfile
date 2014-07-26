@@ -1,17 +1,17 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
-gem "bootstrap-sass",  "2.3.2.1"
+gem 'bootstrap-sass',  '2.3.2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 
 
-gem "paperclip", "~> 3.0"
-gem 'sqlite3', "~> 1.3.5"
+gem 'paperclip', '~> 3.0'
+gem 'sqlite3', '~> 1.3.5'
 gem 'google-analytics-rails'
 gem 'activeadmin'
 gem 'google-api-client'
-gem 'rollbar'
+gem 'rollbar', '>= 1.0.0'
 
 
 # Bundle edge Rails instead:
@@ -23,8 +23,8 @@ group :development, :test do
   gem 'annotate', '2.5.0'
   gem 'capistrano'
   gem 'pry'
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
 
 
 end
