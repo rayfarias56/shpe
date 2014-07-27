@@ -3,6 +3,10 @@
 
 
 
+ul.nav.pull-right{
+  margin-top: 31px;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -19,10 +23,6 @@
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-.nav .pull-right{
-  margin-top: 31px;
 }
 
 /*start class utilities*/
