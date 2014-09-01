@@ -3,6 +3,10 @@
 
 
 
+ul.nav.pull-right{
+  margin-top: 31px;
+}
+
 .video-container {
     position: relative;
     padding-bottom: 56.25%;
@@ -36,6 +40,18 @@
 
 .white-accent {
   background: white !important;
+}
+
+#tagline{
+  font-size: 12px;
+}
+
+.navbar .brand{
+  padding: 10px 20px 0px;
+}
+
+#paypal{
+  margin-top: 20px;
 }
 
 .border {
@@ -394,7 +410,7 @@ h1, h2, h3, h4, h5, h6, p {
 /* Corporate sponsorship styling end */
 
 
-/* Brian's shit */
+/* Card reader functionality CSS */
 #infoModal .Error{
   text-align: center;
   font-size: 24px;
@@ -424,6 +440,7 @@ input[type=textbox]{
 
 #GoogleCal{
   margin-left:0px;
+  background-color:#A7A7A7;
 }
 
 #GoogleCal b:nth-child(1),#GoogleCal b:nth-child(4){
