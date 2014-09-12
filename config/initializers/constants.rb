@@ -17,3 +17,21 @@ MAJOR_ARRAY = [
 
 OAUTH_YAML_PATH = 'config/google-api/google-api.yaml'
 
+
+EXEC_BOARD = {
+    president: 'Ruben Robles',
+    external_vice_president: 'Gabe Velarde',
+    internal_vice_president: 'Fidel Trejo',
+    secretary: 'Hannah Hoffman',
+    treasurer: 'Omar Joya',
+    membership_chair: 'Ydelise Valencia',
+    academic_excellence_chair: 'Aaron Fuster',
+    high_school_outreach_chair: 'Francisco Garcia',
+    student_advisor: 'Cesar V. Martinez'   ,
+    technical_chair: 'Ricardo Gonzalez',
+    community_service_chair: 'Sara Rothe',
+    marketing_chair: 'Marcus Edwards'
+
+}
+
+
