@@ -11,7 +11,7 @@ class UsersController < ApplicationController
   end
 
   def admin_tools
-    @user = User.find(params[:id])
+    @user = current_user
     @announcements = @user.announcements
   end
 
@@ -19,15 +19,32 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+
+  def create_company user
+    @user = user
+    @user.company = true
+    if @user.save
+      flash[:success] = "Successfully created company user"
+      redirect_to admin_tools_path
+    else
+      render 'new'
+    end
+  end
+
   def create
     @user = User.new(params[:user])
     @user.updating_password = true
-    if @user.save
-      sign_in @user
-      flash[:success] = "Welcome to your profile!"
-      redirect_to @user
+    if current_user && current_user.admin?
+
+      create_company @user
     else
-      render 'new'
+      if @user.save
+        sign_in @user
+        flash[:success] = "Welcome to your profile!"
+        redirect_to @user
+      else
+        render 'new'
+      end
     end
   end
 

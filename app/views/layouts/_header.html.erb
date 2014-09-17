@@ -45,7 +45,7 @@
             </li>
             <% if current_user.admin? or current_user.eboard? %>
                 <li>
-                  <%= link_to 'ADMIN TOOLS', admin_tools_path(current_user) %>
+                  <%= link_to 'ADMIN TOOLS', admin_tools_path %>
                 </li>
             <% end %>
             <li>

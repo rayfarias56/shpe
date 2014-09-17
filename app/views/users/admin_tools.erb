@@ -16,6 +16,7 @@
       <%= link_to "View Resumes", group_index_path('students'), class: 'btn' %>
       <%= link_to 'Take Event Attendence', event_choices_path, class: 'btn' %>
       <%= link_to 'All Events', events_path, class: 'btn' %>
+      <%= link_to 'Create Company User', new_user_path, class: 'btn' %>
 
 
       <% if @user.admin? or @user.eboard? %>
