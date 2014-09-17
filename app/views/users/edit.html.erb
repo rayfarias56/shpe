@@ -11,7 +11,7 @@
       <%= form_for(@user) do |f| %>
 
 
-          <% if current_user && current_user.admin? %>
+          <% if current_user.company? %>
               <%= render 'company_fields', f: f %>
 
 
