@@ -5,9 +5,17 @@
     <div class="span9 center">
       <h1>Sign up</h1>
       <%= form_for(@user) do |f| %>
-        <%= render 'fields', f: f %>
-      
-        <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+
+          <% if current_user && current_user.admin? %>
+              <%= render 'company_fields', f: f %>
+
+              <%= f.submit "Create company account", class: "btn btn-large btn-primary" %>
+
+          <% else %>
+              <%= render 'fields', f: f %>
+
+              <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
+          <% end %>
       <% end %>
     </div>
   </div>

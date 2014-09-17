@@ -49,11 +49,11 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: VALID_EMAIL_REGEX }, uniqueness: { case_sensitive: false }
   validates :password, presence: true, length: { minimum: 6}, if: :should_validate_password?
   validates :password_confirmation, presence: true, if: :should_validate_password?
-  validates :major, presence: true
-  validates :grad_date, presence: true
-  validates :uin, presence: true, length: {is: 9}, uniqueness:true, :numericality => true
-  validates :phone_number, presence: true, length: {is: 10, :message => "should be 10 characters with no dashes"} , :numericality => true
-  validates :gpa, :inclusion => { :in => 0..4, :message => "is not in the valid range" } , :numericality => true
+  validates :major, presence: true, :unless => :company
+  validates :grad_date, presence: true , :unless => :company
+  validates :uin, presence: true, length: {is: 9}, uniqueness:true, :numericality => true  , :unless => :company
+  validates :phone_number, presence: true, length: {is: 10, :message => "should be 10 characters with no dashes"} , :numericality => true , :unless => :company
+  validates :gpa, :inclusion => { :in => 0..4, :message => "is not in the valid range" } , :numericality => true , :unless => :company
 
   def send_password_reset
     generate_token(:password_reset_token)
@@ -76,6 +76,8 @@ class User < ActiveRecord::Base
   def create_remember_token
     self.remember_token = SecureRandom.urlsafe_base64
   end
+
+
 
 
 end
