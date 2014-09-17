@@ -9,7 +9,7 @@ SampleApp::Application.routes.draw do
   # Users
   match 'users/group/:group', to: 'users#group_index', as: :group_index
   match '/signup',  to: 'users#new'
-  match '/admin_tools/:id', to: 'users#admin_tools', as: :admin_tools
+  match '/admin_tools', to: 'users#admin_tools', as: :admin_tools
   match 'view_user/:id', to: 'users#view_user', as: :view_user
   match 'users/:id/settings', to: 'users#settings', as: :user_settings
   match 'users/:id/set_alumnus', to: 'users#set_alumnus', as: :set_alumnus
