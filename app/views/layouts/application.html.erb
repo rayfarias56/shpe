@@ -6,10 +6,11 @@
 		<%= csrf_meta_tags %>
         <%= analytics_init if Rails.env.production? %>
 		<%= favicon_link_tag 'favicon.ico' %>
-    	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;user-scalable=no;"/> #Disables Zoom
+    	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;user-scalable=no;"/><!-- #Disables Zoom -->
     	<meta name="HandheldFriendly" content="True"/>
-        <meta name="msapplication-config" content="none"/> #To fix browserconfig.xml issue
-    	<link rel="apple-touch-icon" href="/assets/webclip.png"/> #Icon for Webkit Devices
+        <meta name="msapplication-config" content="none"/><!-- #To fix browserconfig.xml issue -->
+
+    	<link rel="apple-touch-icon" href="/assets/webclip.png"/><!-- #Icon for Webkit Devices-->
 
 		<%= render 'layouts/shim' %>
 	</head>
