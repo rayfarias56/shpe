@@ -23,11 +23,11 @@ cd shpe
 chmod 777 setup/setup_shpe_dev.sh
 
 
-.setup/setup_shpe_dev.sh
+setup/setup_shpe_dev.sh
 
 
 
-Test by going to 0.0.0.0:3000 in your browser.
+Test by going to 0.0.0.0:3000 in your browser. You should see the shpe website load!
 
 
 Contact Sean Freiburg(seanfreiburg@gmail.com) for support.
