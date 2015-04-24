@@ -11,14 +11,16 @@ sudo apt-get install nodejs -y
 #install rvm and ruby
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 source ~/.rvm/scripts/rvm 
-source ~/.rvm/scripts/rvm >> .bashrc
+echo "" >> ~/.bashrc
+echo "# Auto-Generated source for RVM" >> ~/.bashrc
+echo "source ~/.rvm/scripts/rvm" >> ~/.bashrc
 rvm install 2.0
 rvm use 2.0 --default
 ruby -v
 
 #Set up repo
 ssh-keyscan github.com >> ~/.ssh/known_hosts
-sudo gem install bundler
+gem install bundler
 bundle install --without production staging
 rake db:create
 rake db:migrate
