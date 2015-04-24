@@ -15,11 +15,20 @@ If you see an issue, file it under issues. Keeping track of fixes will keep us m
 Run these commands on Ubuntu
 
 git clone git@github.com:seanfreiburg/shpe.git
+
+
 cd shpe
-chmod 777 setup_shpe_dev.sh
-./setup_shpe_dev.sh
+
+
+chmod 777 setup/setup_shpe_dev.sh
+
+
+.setup/setup_shpe_dev.sh
+
+
 
 Test by going to 0.0.0.0:3000 in your browser.
+
 
 Contact Sean Freiburg(seanfreiburg@gmail.com) for support.
 
