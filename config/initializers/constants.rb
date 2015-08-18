@@ -19,19 +19,18 @@ OAUTH_YAML_PATH = 'config/google-api/google-api.yaml'
 
 
 EXEC_BOARD = {
-    president: 'Ruben Robles',
-    external_vice_president: 'Gabe Velarde',
-    internal_vice_president: 'Fidel Trejo',
-    secretary: 'Hannah Hoffman',
-    treasurer: 'Omar Joya',
-    membership_chair: 'Ydelise Valencia',
-    academic_excellence_chair: 'Aaron Fuster',
-    high_school_outreach_chair: 'Francisco Garcia',
-    student_advisor: 'Cesar V. Martinez'   ,
-    technical_chair: 'Ricardo Gonzalez',
-    community_service_chair: 'Sara Rothe',
-    marketing_chair: 'Marcus Edwards'
-
+    president: 'Gabriel Velarde',
+    external_vice_president: 'Sal Ramierez',
+    internal_vice_president: 'Francisco Garcia',
+    secretary: 'Perla Morales',
+    treasurer: 'Kevin Zhang',
+    membership_chair: 'Marissa Villafuerte',
+    academic_excellence_chair: 'Rudy Juarez',
+    high_school_outreach_chair: 'Ramon Zarate',
+    student_advisor: 'Sara Rothe',
+    technical_chair: 'Ernesto Garcia',
+    community_service_chair: 'Denise Salinas',
+    publicity_chair: 'Omar Joya',
+    graduate_ambassador: 'Jesus Sotelo',
+    rldc_chair: 'Karla Rivero',
 }
-
-
