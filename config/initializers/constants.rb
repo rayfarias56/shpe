@@ -20,7 +20,7 @@ OAUTH_YAML_PATH = 'config/google-api/google-api.yaml'
 
 EXEC_BOARD = {
     president: 'Gabriel Velarde',
-    external_vice_president: 'Sal Ramierez',
+    external_vice_president: 'Sal Ramirez',
     internal_vice_president: 'Francisco Garcia',
     secretary: 'Perla Morales',
     treasurer: 'Kevin Zhang',
