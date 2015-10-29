@@ -14,7 +14,7 @@ If you see an issue, file it under issues. Keeping track of fixes will keep us m
 
 Run these commands on Ubuntu
 
-git clone git@github.com:seanfreiburg/shpe.git
+git clone git@github.com:rayfarias56/shpe.git
 
 
 cd shpe
