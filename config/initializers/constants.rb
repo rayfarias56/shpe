@@ -28,7 +28,7 @@ EXEC_BOARD = {
     academic_excellence_chair: 'Rudy Juarez',
     high_school_outreach_chair: 'Ramon Zarate',
     student_advisor: 'Sara Rothe',
-    technical_chair: 'Ernesto Garcia',
+    technical_chair: 'Edwin Lira',
     community_service_chair: 'Denise Salinas',
     publicity_chair: 'Omar Joya',
     graduate_ambassador: 'Jesus Sotelo',
