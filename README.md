@@ -6,36 +6,44 @@ This is the source for the rails based shpe website. There are two focuses of th
   2) Provide a useful and attractive website for SHPE|UIUC. 
   
 ##### Table of Contents  
-1) [New Devs Start Here](#new_devs)  
+
+| 1) [New Devs Start Here](#new_devs)
+| .. a) [Setting up a Linux VM](#linux_vm)
+| .. b) [An Introduction to using the Terminal](#terminal_intro)  
+| .. b) [Setting up GIT](#git_setup)
+| .. b) [SSH and GIT](#ssh_git)
+| .. b) [An Intro to Rails](#rails_intro)
+| 2) [Setting up this Repository](#repo_setup)
+| 3) [Attention Devs](#dev_note)
 
 
-# New Devs Start Here 
+# New Devs Start Here <a name="new_devs"/> 
 
 Although you're free to use whatever tools and dev enviornments you'd like, the SHPE web dev committee will only support a small number of dev enviornments in order to simplifiy the process. 
 
-## Setting up a Linux VM
+## Setting up a Linux VM <a name="linux_vm"/> 
 
 Linux and MacOS will be supported by the web dev committee. Windows has its fair share of problems with Rails that of course can be solved, but to avoid the hassle those with windows machines should set up a virtual machine (for more on windows/rails: https://www.quora.com/Is-it-a-bad-idea-to-use-Ruby-on-Rails). First you should choose and download the ISO (a virtual cd image) of the OS you'd like. Its suggested you download either Ubuntu OS (http://www.ubuntu.com/) or Linux Mint (http://www.linuxmint.com/). You can find a guide on how to setup a virtual machine with that operating system here: http://www.psychocats.net/ubuntu/virtualbox.
 
-## An Introduction to using the Terminal
+## An Introduction to using the Terminal <a name="terminal_intro"/> 
 
 You may not have ever used a commandline before. If so you can go through a brief introduction here: http://learnpythonthehardway.org/book/appendixa.html. Which will get you used to using a terminal to navigate your computer. 
 
 Additionally you'll need to understand two more commands. "$ sudo" will ask for your password (for the machine) and give you "root" access. Root is advanced admin privlieges. You'll need this to use "$ apt-get" which is a package manager that allows you to install additionall software packages. You'll use these as so: "$ sudo apt-get install [package-name]". 
 
-## Setting up GIT
+## Setting up GIT <a name="git_setup"/> 
 
 We realize that some of you may be completely new to git and that it may seem daunting at first. To get you started you should read and follow along with chatper one from this book: https://git-scm.com/book/en/v2. Most important is to do 1.5 and 1.6 which will install and setup GIT for you. 
 
-## SSH and GIT
+## SSH and GIT <a name="ssh_git"/> 
 
 In order to authenticate to GitHub and make a copy of a repository you'll need to use "$ git clone [url]" which can be doone either through https or ssh. If you clone through https you can cache your password (see here: https://help.github.com/articles/caching-your-github-password-in-git/). If you connect through ssh you'll need to generate SSH keys: https://help.github.com/articles/generating-ssh-keys/. 
 
-## An Intro to Rails
+## An Intro to Rails <a name="rails_intro"/> 
 
 For a wonderful introduction to Rails you should look at Hartl's book: https://www.railstutorial.org/book/. As is stated in the book it's advised you use the provided cloud platform to work through the book. Furthermore, it is suggested that you work through Chapter 6 and then pick up a small content/style related bug that the current PM can pick out for you. Then, before working on any database/sign-in related issues you should work through Chapter 6-12.
 
-# Setting up this Repository
+# Setting up this Repository <a name="repo_setup"/> 
 
 Open a terminal and navigate to where you would like to store your copy of the project. Then clone the project using either: 
 
@@ -58,10 +66,8 @@ Test by going to 0.0.0.0:3000 (localhost, i.e. your computer, port 3000) in your
 Contact Sean Freiburg(seanfreiburg@gmail.com) or Ray Farias (rayfarias56@gmail.com) for support.
 
 
-# Attention Devs
+# Attention Devs <a name="dev_note"/> 
 
 Please commit to develop. Merging of branches and releases will be controlled by the lead developer on the project.
 
-### PLEASE PLEASE PLEASE
-
-If you see an issue, file it under issues. Keeping track of fixes will keep us much more organized.
+##### PLEASE PLEASE PLEASE If you see an issue, file it under issues. Keeping track of fixes will keep us much more organized.
