@@ -38,7 +38,7 @@ We realize that some of you may be completely new to git and that it may seem da
 
 ## SSH and GIT <a name="ssh_git"/> 
 
-In order to authenticate to GitHub and make a copy of a repository you'll need to use "$ git clone [url]" which can be doone either through https or ssh. If you clone through https you can cache your password (see here: https://help.github.com/articles/caching-your-github-password-in-git/). If you connect through ssh you'll need to generate SSH keys: https://help.github.com/articles/generating-ssh-keys/. 
+In order to authenticate to GitHub and make a copy of a repository you'll need to use "$ git clone [url]" which can be done either through https or ssh. If you clone through https you can cache your password (see here: https://help.github.com/articles/caching-your-github-password-in-git/). If you connect through ssh you'll need to generate SSH keys: https://help.github.com/articles/generating-ssh-keys/. 
 
 ## An Intro to Rails <a name="rails_intro"/> 
 
