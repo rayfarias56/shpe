@@ -8,13 +8,13 @@ This is the source for the rails based shpe website. There are two focuses of th
 ------------------------------------------------------
 ### Table of Contents  
 1) [New Devs Start Here](#new_devs)
-  a) [Setting up a Linux VM](#linux_vm)
-  b) [An Introduction to using the Terminal](#terminal_intro)
-  c) [Setting up GIT](#git_setup)
-  d) [SSH and GIT](#ssh_git)
-  e) [An Intro to Rails](#rails_intro)
-2) [Setting up this Repository](#repo_setup)
-3) [Attention Devs](#dev_note)
+2) [Setting up a Linux VM](#linux_vm)
+3) [An Introduction to using the Terminal](#terminal_intro)
+4) [Setting up GIT](#git_setup)
+5) [SSH and GIT](#ssh_git)
+6) [An Intro to Rails](#rails_intro)
+7) [Setting up this Repository](#repo_setup)
+8) [Attention Devs](#dev_note)
 ------------------------------------------------------
 
 # New Devs Start Here <a name="new_devs"/> 
