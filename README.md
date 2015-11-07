@@ -15,6 +15,7 @@ ___
   5. [An Intro to Rails](#rails_intro)
 2. [Setting up this Repository](#repo_setup)
 3. [Attention Devs](#dev_note)
+
 ___
 
 # New Devs Start Here <a name="new_devs"/> 
