@@ -64,6 +64,15 @@ The setup script sets up necessary dependencies, node.js, Rails, RVM, Ruby, crea
 
 Test by going to 0.0.0.0:3000 (localhost, i.e. your computer, port 3000) in your browser. You should see the shpe website load!
 
+ctrl-c to close the dev server
+
+Now lets create a local branch to work on.  
+$ git branch --track develop origin/develop
+$ git checkout develop
+
+And then we will change your settings so that you only push your develop branch to the repository when you're finished adding changes. 
+$ git config --global push.default upstream
+
 Contact Sean Freiburg(seanfreiburg@gmail.com) or Ray Farias (rayfarias56@gmail.com) for support.
 
 
