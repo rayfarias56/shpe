@@ -6,14 +6,6 @@ This is the source for the rails based shpe website. There are two focuses of th
   2) Provide a useful and attractive website for SHPE|UIUC. 
   
 ##### Table of Contents  
-#rcorners2 {
-    border-radius: 25px;
-    border: 2px solid #73AD21;
-    padding: 20px; 
-    width: 200px;
-    height: 150px; 
-}
-<div style="border-radius:25px;border: 2px solid #0066FF;padding: 20px;">
 1) [New Devs Start Here](#new_devs)
  .. a) [Setting up a Linux VM](#linux_vm)
  .. b) [An Introduction to using the Terminal](#terminal_intro)  
@@ -22,7 +14,6 @@ This is the source for the rails based shpe website. There are two focuses of th
  .. b) [An Intro to Rails](#rails_intro)
 2) [Setting up this Repository](#repo_setup)
 3) [Attention Devs](#dev_note)
-</div>
 
 # New Devs Start Here <a name="new_devs"/> 
 
