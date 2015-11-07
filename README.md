@@ -5,15 +5,17 @@ This is the source for the rails based shpe website. There are two focuses of th
   1) To improve the technical skills of those who join SHPE's website development committee. To this end we will follow industry standards in the interest of learning and becoming better professional candidates. This includes scrum/sprint, branching, code reviews, and continous integration.
   2) Provide a useful and attractive website for SHPE|UIUC. 
   
-##### Table of Contents  
+------------------------------------------------------
+### Table of Contents  
 1) [New Devs Start Here](#new_devs)
- .. a) [Setting up a Linux VM](#linux_vm)
- .. b) [An Introduction to using the Terminal](#terminal_intro)  
- .. b) [Setting up GIT](#git_setup)
- .. b) [SSH and GIT](#ssh_git)
- .. b) [An Intro to Rails](#rails_intro)
+  a) [Setting up a Linux VM](#linux_vm)
+  b) [An Introduction to using the Terminal](#terminal_intro)
+  c) [Setting up GIT](#git_setup)
+  d) [SSH and GIT](#ssh_git)
+  e) [An Intro to Rails](#rails_intro)
 2) [Setting up this Repository](#repo_setup)
 3) [Attention Devs](#dev_note)
+------------------------------------------------------
 
 # New Devs Start Here <a name="new_devs"/> 
 
