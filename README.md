@@ -1,16 +1,12 @@
-# SHPE-UIUC Website
+# SHPE|UIUC Website
 
-The new rails based website. We will follow industry standards in the interest of learning and becoming better professional candidates.
+This is the source for the rails based shpe website. There are two focuses of this project. 
+  1) To improve the technical skills of those who join SHPE's website development committee. To this end we will follow industry standards in the interest of learning and becoming better professional candidates. This includes scrum/sprint, branching, code reviews, and continous integration.
+  2) Provide a useful and attractive website for SHPE|UIUC. 
 
-# Attention Devs
+# New Devs Start Here:
 
-Please commit to develop. Merging of branches and releases will be controlled by the lead developer on the project.
-
-# PLEASE PLEASE PLEASE
-
-If you see an issue, file it under issues. Keeping track of fixes will keep us much more organized.
-
-#Install
+## Installing Linux
 
 Run these commands on Ubuntu
 
@@ -32,4 +28,10 @@ Test by going to 0.0.0.0:3000 in your browser. You should see the shpe website l
 
 Contact Sean Freiburg(seanfreiburg@gmail.com) for support.
 
+# Attention Devs
 
+Please commit to develop. Merging of branches and releases will be controlled by the lead developer on the project.
+
+# PLEASE PLEASE PLEASE
+
+If you see an issue, file it under issues. Keeping track of fixes will keep us much more organized.
