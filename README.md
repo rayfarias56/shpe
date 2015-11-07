@@ -1,5 +1,5 @@
 # SHPE|UIUC Website Introduction
-### Current Project Manager: Raymond Farias (rayfarias56@gmail.com)
+#### Current Project Manager: Raymond Farias (rayfarias56@gmail.com)
 
 This is the source for the rails based shpe website. There are two focuses of this project. 
   1) To improve the technical skills of those who join SHPE's website development committee. To this end we will follow industry standards in the interest of learning and becoming better professional candidates. This includes scrum/sprint, branching, code reviews, and continous integration.
@@ -9,7 +9,7 @@ This is the source for the rails based shpe website. There are two focuses of th
 1) [New Devs Start Here](#new_devs)  
 
 
-<a name="new_devs"/> # New Devs Start Here:
+# New Devs Start Here 
 
 Although you're free to use whatever tools and dev enviornments you'd like, the SHPE web dev committee will only support a small number of dev enviornments in order to simplifiy the process. 
 
@@ -17,7 +17,7 @@ Although you're free to use whatever tools and dev enviornments you'd like, the 
 
 Linux and MacOS will be supported by the web dev committee. Windows has its fair share of problems with Rails that of course can be solved, but to avoid the hassle those with windows machines should set up a virtual machine (for more on windows/rails: https://www.quora.com/Is-it-a-bad-idea-to-use-Ruby-on-Rails). First you should choose and download the ISO (a virtual cd image) of the OS you'd like. Its suggested you download either Ubuntu OS (http://www.ubuntu.com/) or Linux Mint (http://www.linuxmint.com/). You can find a guide on how to setup a virtual machine with that operating system here: http://www.psychocats.net/ubuntu/virtualbox.
 
-## An Introduction to the commandline
+## An Introduction to using the Terminal
 
 You may not have ever used a commandline before. If so you can go through a brief introduction here: http://learnpythonthehardway.org/book/appendixa.html. Which will get you used to using a terminal to navigate your computer. 
 
