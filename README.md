@@ -2,8 +2,8 @@
 #### Current Project Manager: Raymond Farias (rayfarias56@gmail.com)
 
 This is the source for the rails based shpe website. There are two focuses of this project. 
-  1) To improve the technical skills of those who join SHPE's website development committee. To this end we will follow industry standards in the interest of learning and becoming better professional candidates. This includes scrum/sprint, branching, code reviews, and continous integration.
-  2) Provide a useful and attractive website for SHPE|UIUC. 
+  1. To improve the technical skills of those who join SHPE's website development committee. To this end we will follow industry standards in the interest of learning and becoming better professional candidates. This includes scrum/sprint, branching, code reviews, and continous integration.
+  2. Provide a useful and attractive website for SHPE|UIUC. 
   
 ___
 ### Table of Contents  
