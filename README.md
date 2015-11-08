@@ -57,7 +57,9 @@ $ git clone https://github.com/rayfarias56/shpe.git
 Then to move into the SHPE folder, allow execute permissions on the setup script and then run the project's setup script execute the following three commands. 
 
 $ cd shpe
+
 $ chmod 777 setup/setup_shpe_dev.sh
+
 $ setup/setup_shpe_dev.sh
 
 The setup script sets up necessary dependencies, node.js, Rails, RVM, Ruby, creates and seeds a development datebase and then starts a test server with "$ rails s". 
