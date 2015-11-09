@@ -13,6 +13,7 @@ ___
   3. [Setting up GIT](#git_setup)
   4. [SSH and GIT](#ssh_git)
   5. [An Intro to Rails](#rails_intro)
+  6. [Zenhub](#zenhub)
 2. [Setting up this Repository](#repo_setup)
 3. [Attention Devs](#dev_note)
 
@@ -34,7 +35,7 @@ Additionally you'll need to understand two more commands. "$ sudo" will ask for 
 
 ## Setting up GIT <a name="git_setup"/> 
 
-We realize that some of you may be completely new to git and that it may seem daunting at first. To get you started you should read and follow along with chatper one from this book: https://git-scm.com/book/en/v2. Most important is to do 1.5 and 1.6 which will install and setup GIT for you. 
+We realize that some of you may be completely new to git and that it may seem daunting at first. To get you started you should read and follow along with chatper one from this book: https://git-scm.com/book/en/v2. Most important is to do sections 1.5 and 1.6 which will install and setup GIT for you. 
 
 ## SSH and GIT <a name="ssh_git"/> 
 
@@ -43,6 +44,10 @@ In order to authenticate to GitHub and make a copy of a repository you'll need t
 ## An Intro to Rails <a name="rails_intro"/> 
 
 For a wonderful introduction to Rails you should look at Hartl's book: https://www.railstutorial.org/book/. As is stated in the book it's advised you use the provided cloud platform to work through the book. Furthermore, it is suggested that you work through Chapter 6 and then pick up a small content/style related bug that the current PM can pick out for you. Then, before working on any database/sign-in related issues you should work through Chapter 6-12.
+
+## ZenHub <a name="zenhub"/> 
+
+The web dev committee uses ZenHub as a project management tool. This tool allows us to assign work more similiarly to a Sprint format. You'll simply need to install a Chrome extension (and use chrome) from this website https://www.zenhub.io/. Then visit this repository again. From there you'll see new pages such as Boards and Burndown on the right hand side. 
 
 # Setting up this Repository <a name="repo_setup"/> 
 
@@ -69,10 +74,13 @@ Test by going to 0.0.0.0:3000 (localhost, i.e. your computer, port 3000) in your
 ctrl-c to close the dev server
 
 Now lets create a local branch to work on.  
+
 $ git branch --track develop origin/develop
+
 $ git checkout develop
 
 And then we will change your settings so that you only push your develop branch to the repository when you're finished adding changes. 
+
 $ git config --global push.default upstream
 
 Contact Sean Freiburg(seanfreiburg@gmail.com) or Ray Farias (rayfarias56@gmail.com) for support.
