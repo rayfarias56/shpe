@@ -39,6 +39,7 @@ SampleApp::Application.routes.draw do
   match '/outreach', to: 'static_pages#outreach', as: :outreach
   match '/history', to: 'static_pages#history', as: :history
   match '/faq', to: 'static_pages#faq', as: :faq
+  match '/newsletters', to: 'static_pages#newsletter', as: :newsletter
   
   # Committees
   match '/committee_meeting_times', to: 'static_pages#committee_meeting_times', as: :committee_meeting_times
@@ -51,6 +52,7 @@ SampleApp::Application.routes.draw do
   match '/community_service', to: 'static_pages#community_service', as: :community_service
   match '/outreach', to: 'static_pages#outreach', as: :outreach
   match '/technical', to: 'static_pages#technical', as: :technical
+  match 'student_advisory', to: 'static_pages#student_advisory', as: :student_advisory
 
   # Events
   resources :events
