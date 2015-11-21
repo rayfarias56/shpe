@@ -1,7 +1,11 @@
+// Styles here will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-
+.text-underline {
+  text-decoration: underline;
+}
 
 ul.nav.pull-right{
   margin-top: 31px;
