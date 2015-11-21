@@ -15,19 +15,20 @@
 		<%= render 'layouts/shim' %>
 	</head>
 	<body>
-		<%= render 'layouts/header' %>
-          <div class="container">
-			    <% flash.each do |key, value| %>
-                    <div class="<%= flash_class(key) %>">
-				        <%= value %>
-                    </div>
-          
-			    <% end %>
+    <div id="wrap">
+		  <%= render 'layouts/header' %>
+      <div class="container">
+		    <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+			      <%= value %>
           </div>
-			    <%= yield %>
-
+		    <% end %>
+      </div>
+			<%= yield %>
+      <div id="push" ></div>
+    </div>
 		<%= render 'layouts/footer' %>
 	</body>
-    <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "application" %>
 </html>
 
