@@ -1,81 +1,60 @@
-<section>
+<% provide(:title, 'Outreach Committee') %>
+<section class="grey-accent">
       <div class="container">
         <div class="row">
-          <div class="span8 offset2">
-            <h3 class="text-center">Outreach</h3>
-            <img src="http://placehold.it/300x300" alt="helping others collage">
+          <div class="span6"><h1>High School Outreach</h1></div>
+          <div class="span6 text-right"><h4>Ramon Zarate</br><a href="mailto:shpe.uiuc.outreach@gmail.com">shpe.uiuc.outreach@gmail.com</a></h4></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="span12">
+            <div class="pull-left" style="margin-right: 30px;">
+             <div id="committeeCarousel" class="carousel slide" style="width: 400px; margin-bottom:10px;">
+            <ol class="carousel-indicators">
+              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="1"></li>
+              <li data-target="#committeeCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item">
+                <%=image_tag("Chrysanthemum.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Lighthouse.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Desert.jpg", alt: "Example Image")%>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+        <div class="text-center">
+            <h3>Meeting Time: Sundays at 4:00pm</h3>
+            <h3>Meeting Location: EH B608</h3>
+            <hr/>
+        </div>
             <p>
-              SHPE has been built on a solid outreach foundation since 1993. From establishing HSV and ICE programs to teaming up with Marshall Elementary for a Pen Pals program, we have tried to do our best to shape young students into the leaders of tomorrow. Every day, we as an organization and as individuals have the potential to change a life and we take that privilege seriously. Here is a spotlight on a few of the efforts of SHPE UIUC:
+              SHPE Outreach has had a long history of fostering STEM awareness in High Schools. Bringing in students from across the country and a broad range of socioeconomic classes to experience the life of a U of I engineering student. We also have a broad array of SHPE members visit High Schools and bring STEM to students in the local Champaign-Urbana. The Shadow program brings together a High Schooler and an Undergraduate student, and lets the High School student follow and get experience in college life. 
             </p>
-          </div>
+            <br/><hr>
+            <h2 class="text-center">Programs</h2>
+            <hr><br/>
+            <!-- <img src="http://placehold.it/300x300" alt="helping others collage"> -->
+            <h3>High School Visitation (HSV)</h3>
+              <p>
+                High school visitation is one of SHPE's defining programs, bringing more and more young latinos into the areas of STEM.We bring high school students to U of I and show them exactly what its like to be an engineering student. We have them do experiments and challanges. A lot of the time these students return to the U of I and become fully fledged engineers. The Fall HSV mainly focuses on underpriviliged and at risk youths in the state of Illinois. The Spring HSV has everyone who got accepted into the University of Illinois come and take a look at the university.  
+              </p>
+            <h3>Visiting High Schools</h3>
+              <p>
+                Visiting High Schools has been a great way of spreading STEM awareness. Every year several SHPE members go out to High Schools across Urbana-Champaign and demo several experiments to get the students interested in Science and Engineering. 
+              </p>  
+            <h3>Shadow Program</h3>
+              <p>
+                Much like Shadow Programs with companies, the SHPE shadow program take a High School student and pairs them with a University student who takes them through their day showing them what its like being an engineering student. 
+              </p>  
         </div>
-        <div class="row">
-          <div class="span8 offset2">
-            <h3 class="text-center">High School Visitation (HSV)</h3>
-            <img src="http://placehold.it/300x300" alt="helping others collage">
-            <p>Description of what HSV is about and testimonials from past HSV achievers.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="span3 offset1">
-            <blockquote>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>HSV Kid - <cite title="Source Title">Spring HSV 2009</cite></small>
-            </blockquote>
-          </div>
-          <div class="span3">
-            <blockquote>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>HSV Kid - <cite title="Source Title">Spring HSV 2009</cite></small>
-            </blockquote>
-          </div>
-          <div class="span3">
-            <blockquote>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-              <small>HSV Kid - <cite title="Source Title">Spring HSV 2009</cite></small>
-            </blockquote>
-          </div>
-        </div>
-        <div class="row">
-          <div class="span8 offset2">
-            <h3 class="text-center">What ICE stands for haha (ICE)</h3>
-            <img src="http://placehold.it/300x300" alt="helping others collage">
-            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="span8 offset2">
-            <h3 class="text-center">What EI squared stands for haha (EI<sup>2</sup>)</h3>
-            <img src="http://placehold.it/300x300" alt="helping others collage">
-            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="span8 offset2">
-            <h3 class="text-center">Noche de Ciencias</h3>
-            <img src="http://placehold.it/300x300" alt="helping others collage">
-            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="span8 offset2">
-            <h3 class="text-center">SHPE Junior Chapter</h3>
-            <img src="http://placehold.it/300x300" alt="shpe junior chapter">
-            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="span8 offset2">
-            <h3 class="text-center">Marshall Elementary & Pen Pals</h3>
-            <img src="http://placehold.it/300x300" alt="Marshall Elementary Pen Pals">
-            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="span8 offset2">
-            <h4>Interested?</h4>
-            <p>If you would like to participate in any of these or our other programs, please contact our <a href="mailto:outreach@shpe-uiuc.org">Outreach Chair</a> for more information!</p>
-          </div>
-        </div>
-      </div>
     </section>
