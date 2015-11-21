@@ -96,6 +96,8 @@
 						
 					   </tbody>
 				</table>
+
+			 <p class="text-center">Built by <%= link_to 'Sean Freiburg', 'http://www.seanfreiburg.com' %></p>
 			</div>
  		 </div>
   </div>
