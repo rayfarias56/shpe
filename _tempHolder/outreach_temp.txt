@@ -1,0 +1,69 @@
+        <div class="row">
+          <div class="span8 offset2">
+            <h4 class="text-center">How has HSV impacted you?</h4>
+            <p>/* Ramon wants to put a video answering the question*/</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span3 offset1">
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>HSV Kid - <cite title="Source Title">Spring HSV 2009</cite></small>
+            </blockquote>
+          </div>
+          <div class="span3">
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>HSV Kid - <cite title="Source Title">Spring HSV 2009</cite></small>
+            </blockquote>
+          </div>
+          <div class="span3">
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>HSV Kid - <cite title="Source Title">Spring HSV 2009</cite></small>
+            </blockquote>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h2 class="text-center">What ICE stands for haha (ICE)</h2>
+            <img src="http://placehold.it/300x300" alt="helping others collage">
+            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h2 class="text-center">What EI squared stands for haha (EI<sup>2</sup>)</h2>
+            <img src="http://placehold.it/300x300" alt="helping others collage">
+            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h2 class="text-center">Noche de Ciencias</h2>
+            <img src="http://placehold.it/300x300" alt="helping others collage">
+            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h2 class="text-center">SHPE Junior Chapter</h2>
+            <img src="http://placehold.it/300x300" alt="shpe junior chapter">
+            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h2 class="text-center">Marshall Elementary & Pen Pals</h2>
+            <img src="http://placehold.it/300x300" alt="Marshall Elementary Pen Pals">
+            <p>Description of our passion for helping youths become interested in STEM related fields.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="span8 offset2">
+            <h4>Interested?</h4>
+            <p>If you would like to participate in any of these or our other programs, please contact our <a href="mailto:outreach@shpe-uiuc.org">Outreach Chair</a> for more information!</p>
+          </div>
+        </div>
+<===============================================>
+SHPE has been built on a solid outreach foundation since 1993. From establishing HSV and ICE programs to teaming up with Marshall Elementary for a Pen Pals program, we have tried to do our best to shape young students into the leaders of tomorrow. Every day, we as an organization and as individuals have the potential to change a life and we take that privilege seriously. Here is a spotlight on a few of the efforts of SHPE UIUC:
