@@ -1,2 +1,50 @@
-<h1>StaticPages#technical</h1>
-<p>Find me in app/views/static_pages/technical.html.erb</p>
+<% provide(:title, 'Outreach Committee') %>
+<section class="grey-accent">
+      <div class="container">
+        <div class="row">
+          <div class="span6"><h1>Technical Committee</h1></div>
+          <div class="span6 text-right"><h4>Edwin Lira</br><a href="mailto:shpe.uiuc.technicalchair@gmail.com">shpe.uiuc.technicalchair@gmail.com</a></h4></div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="span12">
+            <div class="pull-left" style="margin-right: 30px;">
+             <div id="committeeCarousel" class="carousel slide" style="width: 400px; margin-bottom:10px;">
+            <ol class="carousel-indicators">
+              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="1"></li>
+              <li data-target="#committeeCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item">
+                <%=image_tag("Chrysanthemum.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Lighthouse.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Desert.jpg", alt: "Example Image")%>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+        <div class="text-center">
+            <h3>Meeting Time: Sundays at 1:00pm</h3>
+            <h3>Meeting Location: ECEB Open Lab</h3>
+            <hr/>
+        </div>
+            <p>
+          	SHPE's Technical committee was founded with the purpose of exposing Engineers to real world problems and projects. Each year SHPE's Technical committee takes on on multiple projects from the Jerry Sanders Design Competition to smaller Engineering Open House exhibits. The technical Committe is where a lot of students get their first taste of hands on engineering that will server them well in their careers. 
+            <br/><br/>
+            <!-- <img src="http://placehold.it/300x300" alt="helping others collage"> -->
+              
+            The Technical Committee is currently working on 4 projects this year. The projects will be displayed for the Engineering Open House, EOH, at the University of Illinois. During the EOH, the projects will be displayed in the Mechanical Engineering Building.   
+          	<br/><br/>
+            The first project is that of a mechanically programmable robot, Heron Robot, which was inspired by Heron of Alexandria. We have already built the first prototype in order to show the proof of concept. The first robot was mainly built with wood. There were some components that were made out of HIPS plastic and acrylic. The parts were manufactured mainly by using the wood shop equipment - miter saw, table saw, and drill press - in the Mechanical Engineering Laboratory. We are currently working on fixing a few issues that the first prototype brought to light. The first problem is the traction between the wheels and the floor is not high enough to do advanced movements, such as turning the robot with both the wheels turning in different directions. Another issue is with manufacturing the robot with tighter tolerances. The next Heron Robot will be made with mainly HIPS Plastic and acrylic. The parts will be manufactured, by using the 3D printers and the laser cutters, in the Mechanical Engineering Laboratory. This will ensure that the parts have smaller tolerances. Metal shafts, shaft holders, and bearings have been bought in order to improve the frictional losses of the previous Heron Robot.  
+            </p>   
+        </div>
+    </section>
