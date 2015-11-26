@@ -1,29 +1,8 @@
 <% provide(:title, 'Events') %>
+<section class="grey-accent">
 
-<section>
-  <div class="container">
-    <div class="row">
+<p class="text-center">
+<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showCalendars=0&amp;mode=WEEK&amp;height=600&amp;wkst=1&amp;hl=en&amp;bgcolor=%23FFFFFF&amp;src=f43nbgbtslbe9jou3920okesh0%40group.calendar.google.com&amp;color=%2329527A&amp;ctz=America%2FChicago" style="border-width:0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+</p>
 
-      <div class="span7">
-        <h1 class="event-header">Upcoming Events</h1>
-
-        <hr/>
-        <% @events.each do |e| %>
-            <h4><strong><i><%= e.summary.to_s %> </i></strong></h4>
-
-            <p><strong><%= if e.start.date then "Dates: " else "Date: " end %></strong><%= e.start.date_time.strftime("%A, %B %d, %Y") if e.start.date_time %> <%= DateTime.parse(e.start.date).strftime("%A, %B %d, %Y") +" - " + DateTime.parse(e.end.date).strftime("%A, %B %d, %Y") if not e.start.date_time %></p>
-
-            <p><strong>Time: </strong><%= e.start.date_time.strftime("%l:%M%p")+" -"+e.end.date_time.strftime("%l:%M%p")if e.start.date_time  %><%= "All Day" if not e.start.date_time%> </p>
-
-            <p><strong>Location: </strong><%= e.location.to_s if e.location %> <%= "TBD" if not e.location %> </p>
-
-            <p><strong>Description: </strong><%= e.description if e.description %> <%= "N/A" if not e.description %> </p>
-            <hr/>
-        <% end %>
-        <a class="btn btn-inverse" id="GoogleCal" href="http://www.google.com/calendar/render?cid=https%3A%2F%2Fwww.google.com%2Fcalendar%2Ffeeds%2Ff43nbgbtslbe9jou3920okesh0%2540group.calendar.google.com%2Fpublic%2Fbasic">
-        Add to <b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b> Calendar
-        </a>
-      </div>
-    </div>
-  </div>
 </section>
