@@ -3,11 +3,6 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-// Table center text properly
-.table th.text-center {
-  text-align: center;
-}
-
 // Custom Header Drop Down Style
 .navbar .pull-right > li > .dropdown-menu.custom-dropdown, 
 .navbar .nav > li > .dropdown-menu.pull-right {
@@ -282,7 +277,7 @@ hr {
 section {
   padding-top: 20px;
   padding-bottom: 20px;
-  background: #f2f2f2;
+  background: #f4f4f4;
 }
 
 .main-info-nav {
@@ -306,6 +301,12 @@ section {
 footer {
   color: white;
   background: #34495E;
+  //padding-top: 15px;
+}
+
+.footer-logo {
+  //padding-top: 20px;
+  //padding-bottom: 10px;
 }
 
 .get-connected {
@@ -501,27 +502,4 @@ input[type=textbox]{
   display:block;
   margin-left:auto;
   margin-right:auto;
-}
-
-/* Sticky footer styles
--------------------------------------------------- */
-html,
-body {
-  height: 100%;
-  /* The html and body elements cannot have any padding or margin. */
-}
-
-/* Wrapper for page content to push down footer */
-#wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  /* Negative indent footer by it's height */
-  margin: 0 auto -160px;
-}
-
-/* Set the fixed height of the footer here */
-#push, #footer {
-  /* Don't forget to change wrap's negative margin */
-  height: 160px;
 }

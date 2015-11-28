@@ -21,23 +21,82 @@
     </div> -->
     <div class="nav-collapse collapse">
       <ul class="nav pull-right">
-        <li class="current-page">
+        <li>
           <%= link_to 'HOME', root_path %>
         </li>
-        <li>
-          <%= link_to 'ABOUT', about_path %>
-        </li>
-        <li>
-          <%= link_to 'SPONSOR', sponsor_path %>
-        </li>
-        <li>
-          <%= link_to 'MEMBERS', members_path %>
-        </li>
+        <li class="dropdown current-page"> <!-- Begin Chapter Info -->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            CHAPTER INFO <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu custom-dropdown">
+            <li>
+              <%= link_to 'About SHPE', about_path %>
+            </li>
+            <li>
+              <%= link_to 'Membership Info', members_path %>
+            </li>
+            <li>
+              <%= link_to 'Executive Board', execboard_path %>
+            </li>
+            <li>
+              <%= link_to 'Constitution', constitution_path %>
+            </li>
+            <li>
+              <%= link_to 'History', history_path %>
+            </li>
+            <li>
+              <%= link_to 'Recent Newsletters', newsletter_path %>
+            </li>
+            <li>
+              <%= link_to 'FAQ', faq_path %>
+            </li>
+          </ul>
+        </li> <!-- End Committees -->
+        <li class="dropdown current-page"> <!-- Begin Committees -->
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+            COMMITTEES <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu custom-dropdown">
+            <li>
+              <%= link_to '*** Committee Meeting Times ***', committee_meeting_times_path %>
+            </li>
+            <li>
+              <%= link_to 'External', external_path %>
+            </li>
+            <li>
+              <%= link_to 'Round Table', round_table_path %>
+            </li>
+            <li>
+              <%= link_to 'Fundraising', fundraising_path %>
+            </li>
+            <li>
+              <%= link_to 'MemberSHPE', membershpe_path %>
+            </li>
+            <li>
+              <%= link_to 'WebDev', webdev_path %>
+            </li>
+            <li>
+              <%= link_to 'Community Service', community_service_path %>
+            </li>
+            <li>
+              <%= link_to 'Outreach', outreach_path %>
+            </li>
+            <li>
+              <%= link_to 'Technical', technical_path %>
+            </li>
+            <li>
+              <%= link_to 'Student Advisory', student_advisory_path %>
+            </li>
+          </ul>
+        </li> <!-- End Committees -->
         <li>
           <%= link_to 'EVENTS', event_list_path %>
         </li>
         <li>
-          <%= link_to 'RESOURCES', resources_path %>
+          <%= link_to 'SPONSORSHIP', sponsor_path %>
+        </li>
+        <li>
+          <%= link_to 'CONTACT', contact_path %>
         </li>
         <% if signed_in? %>
             <li>
@@ -63,4 +122,3 @@
     </div>
   </div>
 </header>
-
