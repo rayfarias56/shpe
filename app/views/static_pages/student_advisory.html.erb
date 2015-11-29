@@ -1,2 +1,96 @@
-<h1>StaticPages#student_advisory</h1>
-<p>Find me in app/views/static_pages/student_advisory.html.erb</p>
+<% provide(:title, 'Student Advisory') %>
+<section class="grey-accent">
+  <div class="container">
+    <div class="row">
+      <div class="span6"><h1>Student Advising Committee</h1></div>
+      <div class="span6 text-right"><h3>Sara Rothe<br/>(shpe.uiuc.advisor@gmail.com)</h3></div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="span12">
+        <div class="pull-left" style="margin-right: 30px;">
+          <div id="committeeCarousel" class="carousel slide" style="width: 400px; margin-bottom:10px;">
+            <ol class="carousel-indicators">
+              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="1"></li>
+              <li data-target="#committeeCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item">
+                <%=image_tag("Chrysanthemum.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Lighthouse.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Desert.jpg", alt: "Example Image")%>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+          <div class="text-center">
+            <h3>Meeting Time: TBD</h3>
+            <h3>Meeting Location: TBD</h3>
+            <hr/>
+          </div>
+
+          <p style="font-size: 16px">
+The Student Advising Committee works to create bonds between the different classes and a support system to encourage our members to succeed in all areas of engineering.<br/><br/>
+
+
+          </p>
+      </div>
+    </div>
+			<div class="row">
+			
+				
+				<table class="table table-bordered">
+					    <thead>
+						<tr>
+						<th class="text-center">Other Representatives</th>
+						</tr>
+					    </thead>
+
+					    <tbody>
+						<tr>
+						<td>Roundtable Student Advisor</td>
+						<td>Jennifer Hurrtado</td>
+						<td>jhurtad2@illinois.edu</td>
+						</tr>
+
+        					<tr>
+						<td>Senior Representative</td>
+						<td>Gabe Velarde</td>
+						<td>shpe.uiuc.president@gmail.com</td>
+						</tr>
+
+						<tr>
+						<td>Junior Representative</td>
+						<td>Eddie Vizcaino</td>
+						<td>vizcain2@illinois.edu</td>
+						</tr>
+
+						<tr>
+						<td>Sophmore Representative</td>
+						<td>TBD</td>
+						<td>TBD</td>
+						</tr>
+	
+						<tr>
+						<td>Freshman Representative</td>
+						<td>Alexis Montoya</td>
+						<td>amonto7@illinois.edu</td>
+						</tr>
+
+						
+					   </tbody>
+				</table>
+			</div>
+ 		 </div>	
+  </div>
+
+</section>
