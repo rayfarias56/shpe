@@ -36,7 +36,7 @@ SampleApp::Application.configure do
 
   # Don't compile assets (needed for Capistrano enviornment)
   # In reality 'false' compiles, but doesn't compress (in the Cap env)
-  config.assets.compile = false
+  # config.assets.compile = false
 
   # Expands the lines which load the assets
   config.assets.debug = true
