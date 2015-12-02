@@ -1,2 +1,50 @@
-<h1>StaticPages#fundraising</h1>
-<p>Find me in app/views/static_pages/fundraising.html.erb</p>
+<% provide(:title, 'Fundraising Committee') %>
+<section class="grey-accent">
+  <div class="container">
+    <div class="row">
+      <div class="span6"><h1>Fundraising Committee</h1></div>
+      <div class="span6 text-right"><h4>Kevin Zhang<br/><a href="mailto: treasurer.shpe.uiuc@gmail.com">treasurer.shpe.uiuc@gmail.com</a></h4></div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="span12">
+        <div class="pull-left" style="margin-right: 30px;">
+          <div id="committeeCarousel" class="carousel slide" style="width: 400px; margin-bottom:10px;">
+            <ol class="carousel-indicators">
+              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="1"></li>
+              <li data-target="#committeeCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="active item">
+                <%=image_tag("Chrysanthemum.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Lighthouse.jpg", alt: "Example Image")%>
+              </div>
+              <div class="item">
+                <%=image_tag("Desert.jpg", alt: "Example Image")%>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+          <div class="text-center">
+            <h3>Meeting Time: Mondays at 5:00pm</h3>
+            <!-- cries about non-military time -->
+            <h3>Meeting Location: SHPE Office (EH 103A)</h3>
+            <hr/>
+          </div>
+
+          <p style="font-size: 16px">
+The Fundraising committee is dedicated to generating funds withing the University. We plan and execute all kinds of fundraisers from selling tamales on the quad to working a concession stand at ILLINI basketball home games. We're looking to do new kinds of fundraisers all the time and we currently have a inter-society broomball tournament in the works.<br/><br/>
+
+The funds generated from our sales go to various applications. Some fundraisers will be for various charities and some will be for ourselves. We use the funds to purchase equipment for the office or necessities for other committees. Our fundraising can also go towards subsidizing end of the year SHPE gear. We are always accepting new members with new ideas so if you want to help make SHPE great, have a lot of fun, or want cheaper SHPE gear then drop by and see what we are about.<br/><br/>
+          </p>
+      </div>
+    </div>
+  </div>
+</section>
