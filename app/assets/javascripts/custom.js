@@ -19,3 +19,4 @@ $(document).on('click click.dropdown.data-api', function(e) {
     return $("ul.dropdown-menu:not(.multiselect-container)").css("display", "none");
   }
 });
+// End hacky bootstrap mobile drop-down fix.
