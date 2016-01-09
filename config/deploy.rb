@@ -24,7 +24,7 @@ after :deploy, 'deploy:notify_rollbar'
 
 set :scm, "git"
 set :scm_verbose, true
-set :repository, "git@github.com:seanfreiburg/shpe.git"
+set :repository, "git@github.com:rayfarias/shpe.git"
 
 
 default_run_options[:pty] = true # Must be set for the password prompt from git to work
