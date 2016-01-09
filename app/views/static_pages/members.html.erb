@@ -1,244 +1,54 @@
 <% provide(:title, 'Members') %>
-
-
-<section>
-  <div class="container">
-    <div class="row">
-      <div class="span8 offset2">
-        <h3 class="text-center">General Chapter Meeting Information</h3>
-
-        <p>
-          Executive Board meetings open to general members every Sunday from 3:00pm-4:00pm in Engineering Hall room 112.
-        </p>
-
-        <p>
-          Freshmen Round Table meetings every Sunday from 4:00pm-5:00pm in Engineering Hall room 106.
-        </p>
-      </div>
-    </div>
-    <div class="row">
-      <div class="span8 offset2">
-        <h3 class="text-center">Membership Details</h3>
-
-        <p>You gain membership points for attending events. The person with the most points at the end of the year wins
-          a prize.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
 <section>
 <div class="container">
-<div class="row">
-  <div class="span8 offset2">
-    <h3 class="text-center">Mission Statement</h3>
-
-    <p>
-      SHPE changes lives by empowering the Hispanic community to realize their fullest potential and impacts the world
-      through STEM awareness, access, support and development.
-    </p>
-    <hr>
-    <h3 class="text-center">Vision</h3>
-
-    <p>
-      SHPE's vision is a world where Hispanics are highly valued and influential as the leading innovators, scientists,
-      mathematicians and engineers.
-    </p>
-    <hr>
+  <div class="row">
+    <div class="span8 offset2">
+      <hr/>
+      <h2 class="text-center">Chapter Meeting Information</h2>
+      <hr/>
+      <b>Executive Board meetings:</b> open to general members every Sunday from 3:00pm-4:00pm in Engineering Hall room 112.<br/>
+      <b>New Member Round Table meetings:</b> every Sunday from 5:00pm-6:00pm in Engineering Hall room 106.</h4>
+      <br/><br/>
+      Members are encouraged to stay active by joining one of our many committees. For a list of all committees, their heads, and meeting times see the <%= link_to "Meeting Times Page", committee_meeting_times_path %>
+      <br/><br/>
+      <hr/>
+      <h2 class="text-center">Membership Details</h2>
+      <hr/>
+      <p>
+      <b>All requirements towards membership will conform to the Board of Trustee's policies regarding non-discrimination on the basis of race, religion, sex, or national origin. Any member may be expelled from the organization if 51% the active membership votes for his/her expulsion.</b>
+      <br/><br/>
+      <i>The following is a summary of information found within the <%= link_to "Constitution", constitution_path %>.</i>
+      <br/><br/>
+      <b class="text-underline">Honorary Members</b>
+      <br/>
+      Honorary membership status is offered to a person by vote of the elected board or by two-thirds consent of active membership. The title can be offered only to people who attend another university or is an interested high school student. Honorary members are allowed to join committees, hold committee positions, and attend general body meetings.
+      <br/><br/>
+      <b class="text-underline">Members</b>
+      <br/>
+      Members are UIUC students who have interest in SHPE. Members must maintain good academic standing. Members are allowed to join committees, hold committee positions, and attend general body meetings.
+      <br/><br/>
+      <b class="text-underline">Full-Members</b>
+      <br/>
+      Full membership will be limited to UIUCs full-time students (graduate or undergraduate). A full-member is a person who has paid chapter dues, has declared a major and must maintain good academic standing. Full members are allowed to join committees, hold committee positions, attend general body meetings, and are allowed to win chapter prizes.
+      <br/><br/>
+      <b class="text-underline">Active-Members</b>
+      <br/>
+      Active-Members are full-members who have paid national dues and have attended at least 5 chapter events, no more than 3 of which can be socials. Active-members have all the rights full-member has, may vote for and run for elected positions, and can also receive reimbursements. 
+      <br/><br/>
+      <b class="text-underline">Alumni</b>
+      <br/>
+      Alumni are people who have at some point held active-membership within the chapter for several semesters and have a degree from UIUC. Active members are allowed to attend any chapter events an active-member can and may receive reimbursements.
+      <br/><br/>
+      </p>
+      <br/>
+      <hr/>
+      <h2 class="text-center">Membership Competition</h2>
+      <hr/>
+      <p>
+      Full-members and active-members may compete in a competition within the chapter to see who is the most active. For information on the points and prizes see the <%= link_to "MemberSHPE page", membershpe_path %>, whose committee hosts the competition.
+      </p>
+      <br/>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="span8 offset2">
-    <h3 class="text-center">Meet the Executive Board</h3>
-  </div>
-</div>
-<!-- start of exec board row1 -->
-<div class="exec-board">
-  <div class="row-fluid">
-    <ul class="thumbnails">
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:president] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:president] %></h4>
-            <h6>President</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.president@gmail.com">shpe.uiuc.president@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:internal_vice_president] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:internal_vice_president] %></h4>
-            <h6>Internal Vice President</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.vp.internal@gmail.com">shpe.uiuc.vp.internal@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:external_vice_president] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:external_vice_president] %></h4>
-            <h6>External Vice President</h6>
-
-            <p>Email: <a href="mailto:exec.shpe.uiuc@gmail.com">exec.shpe.uiuc@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <!-- end of exec board row1 -->
-  <!-- start of exec board row2 -->
-  <div class="row-fluid">
-    <ul class="thumbnails">
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:treasurer]%>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:treasurer] %></h4>
-            <h6>Treasurer</h6>
-
-            <p>Email: <a href="mailto:treasurer.shpe.uiuc@gmail.com">treasurer.shpe.uiuc@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:secretary] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:secretary] %></h4>
-            <h6>Secretary</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.secretary@gmail.com">shpe.uiuc.secretary@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image  EXEC_BOARD[:membership_chair] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:membership_chair] %></h4>
-            <h6>MemberSHPE Director</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.membership@gmail.com">shpe.uiuc.membership@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <!-- end of exec board row2 -->
-  <!-- start of exec board row3 -->
-  <div class="row-fluid">
-    <ul class="thumbnails">
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:publicity_chair]  %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:publicity_chair] %></h4>
-            <h6>Marketing</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.marketing@gmail.com">shpe.uiuc.marketing@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:community_service_chair] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:community_service_chair] %></h4>
-            <h6>Community Service Chair</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.service@gmail.com">shpe.uiuc.service@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:high_school_outreach_chair] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:high_school_outreach_chair] %></h4>
-            <h6>High School Outreach Chair</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.outreach@gmail.com">shpe.uiuc.outreach@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <!-- end of exec board row3 -->
-  <!-- start of exec board row4 -->
-  <div class="row-fluid">
-    <ul class="thumbnails">
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:academic_excellence_chair] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:academic_excellence_chair] %></h4>
-            <h6>Academic Excellence</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.academic@gmail.com">shpe.uiuc.academic@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:student_advisor] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:student_advisor] %></h4>
-            <h6>Student Advisor</h6>
-
-            <p>Email: <a href="mailto:advisor@shpe-uiuc.org">advisor@shpe-uiuc.org</a></p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:technical_chair] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:technical_chair] %></h4>
-            <h6>Technical Chair</h6>
-
-            <p>Email: <a href="mailto:shpe.uiuc.technicalchair@gmail.com">shpe.uiuc.technicalchair@gmail.com</a></p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <!-- end of exec board row4 -->
-  <!-- start of exec board row5 -->
-  <div class="row-fluid">
-    <ul class="thumbnails">
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:graduate_ambassador] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:graduate_ambassador] %></h4>
-            <h6>Graduate Ambassador</h6>
-
-            <p>Email: N/A</p>
-          </div>
-        </div>
-      </li>
-      <li class="span4">
-        <div class="thumbnail">
-          <%= exec_image EXEC_BOARD[:rldc_chair] %>
-          <div class="caption">
-            <h4><%= EXEC_BOARD[:rldc_chair] %></h4>
-            <h6>RLDC Chair</h6>
-
-            <p>Email: <a href="mailto:kcriver2@illinois.edu">kcriver2@illinois.edu</a></p>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <!-- end of exec board row5 -->
-</div>
-
 </div>
 </section>
