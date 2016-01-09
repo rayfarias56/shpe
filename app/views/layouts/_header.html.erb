@@ -5,20 +5,12 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
     </a>
-    <!-- TODO: needs to be one pic -->
     <a href="<%= root_path %>">
       <%= image_tag "shpe-header.png", :size => '100x100', :class => 'pull-left' %>
-      <!-- <img src="img/shpe-logo-transparent.png" height="100px" width="100px" class="pull-left" /> -->
     </a>
     <a class="brand" href="<%= root_path %>">
       <p>Society of Hispanic Professional Engineers<br>SHPE|UIUC<br><em id="tagline">Changing Lives... Empowering Communities... Impacting the World...</em></p>
     </a>
-    <!-- the correct way how to do it:  -->
-    <!-- <div class="brand">
-      <a href="#">
-        <img src="img/shpe-header.png" height="150px" width="150px" class="pull-left" />
-      </a>
-    </div> -->
     <div class="nav-collapse collapse">
       <ul class="nav pull-right">
         <li>
@@ -48,10 +40,13 @@
               <%= link_to 'Recent Newsletters', newsletter_path %>
             </li>
             <li>
+              <%= link_to 'Resources', resources_path %>
+            </li>
+            <li>
               <%= link_to 'FAQ', faq_path %>
             </li>
           </ul>
-        </li> <!-- End Committees -->
+        </li> <!-- End Chapter Info -->
         <li class="dropdown current-page"> <!-- Begin Committees -->
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             COMMITTEES <b class="caret"></b>
