@@ -1,96 +1,72 @@
 <% provide(:title, 'Web Dev Committee') %>
 <section class="grey-accent">
-  <div class="container">
-    <div class="row">
-      		<div class="span6"><h1>Web Dev Committee</h1></div>
-      		<div class="span6 text-right"><h4>Raymond Farias</br>
-        		<a href="mailto:shpe.uiuc.webmaster@gmail.com">shpe.uiuc.Webmaster@gmail.com</a>
-      		</h4>
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <h1>WebDev Committee</h1>
+    </div>
+    <div class="span6 text-right pull-right">
+      <h4>Raymond Farias</br>
+        <a href="mailto:shpe.uiuc.webmaster@gmail.com">shpe.uiuc.webmaster@gmail.com</a>
+      </h4>
 		</div>
-    </div>
-
-    <hr>
-   	 <div class="row">
-      		<div class="span12">
-       		 <div class="pull-left" style="margin-right: 30px;">
-        	  <div id="committeeCarousel" class="carousel slide" style="width: 400px; margin-bottom:10px;">
-           		 <ol class="carousel-indicators">
-            		  <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
-            		  <li data-target="#committeeCarousel" data-slide-to="1"></li>
-            		  <li data-target="#committeeCarousel" data-slide-to="2"></li>
-           		 </ol>
-           	 <!-- Carousel items -->
-           	 <div class="carousel-inner">
-           		   <div class="active item">
-            		    <%=image_tag("Chrysanthemum.jpg", alt: "Example Image")%>
-            		  </div>
-
-                	 <div class="item">
-               			 <%=image_tag("Lighthouse.jpg", alt: "Example Image")%>
-              		</div>
-
-          	        <div class="item">
-          		      <%=image_tag("Desert.jpg", alt: "Example Image")%>
-                        </div>
-           	 </div>
-           	 <!-- Carousel nav -->
-           	 <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
-           	 <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
-          </div>
-        </div>
-          <div class="text-center">
-            <h3>Meeting Time: Thursdays at 5:00pm</h3>
-            <h3>Meeting Location: 106 B3 EH</h3>
-            <hr/>
-          </div>
-
-          <p style="font-size: 16px">
-		The Web Dev Committee works on the very website you are looking at right now.<br/><br/>
-
-		In 2013, an effort to redesign the website was launched by Sean Freiburg, Brian Hauger, and Pablo Zavala .<br/><br>
-          </p>
-     	 </div>
-
-    </div>
-		<div class="row">
-			
-
-				<table class="table table-bordered">
-					    <thead>
-						<tr>
-						<th class="text-center">Developers</th>
-						</tr>
-					    </thead>
-
-					    <tbody>
-						<tr>
-						<td>Brian Hauger</td>
-						<td><%= link_to 'Sean Freiburg', 'http://www.seanfreiburg.com' %></td>
-						<td>Pablo Zavala</td>
-						</tr>
-
-        					<tr>
-						<td>Raymond Farias</td>
-						<td>Cesar Vinny Martinez</td>
-						<td>Christina Lopez</td>
-						</tr>
-
-						<tr>
-						<td>Victoria Chandler</td>
-						<td>Santiago Gutierrez</td>
-						<td>Jesus Fernandez</td>
-						</tr>
-
-						<tr>
-						<td>Bernardo Vargas</td>
-						<td>Alexander Layton</td>
-						<td>Enrique Lauriano</td>
-						</tr>
-
-						
-					   </tbody>
-				</table>
-			</div>
- 		 </div>
   </div>
+  <hr>
+  <div class="row">
+    <div class="span12">
+      <div class="pull-left" style="margin-right: 20px;margin-bottom: 15px;">
+        <%=image_tag("web_dev.jpg", size:"400x400", alt: "Web Dev Logo")%>
+      </div>
+      <div class="text-center">
+        <h3><strong>Meeting Time:</strong><br/>Thursdays at 5-7pm</h3>
+        <h3><strong>Meeting Location:</strong><br/>EH 106B3</h3>
+        <hr/>
+      </div>
+      <p style="font-size: 16px">
+        If you're looking to add web-development to your list of skills, observe how web-development is done, or are simply an experienced web developer looking to help with SHPE|UIUC's website then this is the committee for you. The Web Dev Committee works to meet the internet-driven, technological needs of SHPE|UIUC's e-board and general body. This often is in the form of updates to this website with new features or complete redesigns. 
+      </p>
+      <p style="font-size: 16px">
+        Yet, we turn this work into a learning experience for the tech-oriented members of SHPE|UIUC. We require no experience from an interested member. In fact, the committee has a wealth of resources to take someone from novice computer user to full-developer in one school year's time. 
+      </p>
+      <p style="font-size: 16px">
+        Through the committee you'll gain experience that can be applied to a career in web development. The committee follows professional level practices to give our members practical experience. The Web Dev committee uses Github as a repository, code review system, and an issue tracker. Futhermore, our meetings are half Agile/Scrum and half teaching. Also, the website is built on the Rails Framework, currently one of the most popular web application frameworks.
+      </p>
+      <p style="font-size: 16px">
+        To join, contact the lead developer, Raymond Farias, at <a href="mailto:shpe.uiuc.webmaster@gmail.com">shpe.uiuc.webmaster@gmail.com</a> or simply show up to the next committee meeting. The lead developer will then give you access to the Github repository and get information necessary from you to decide how you'll start learning/developing. 
+      </p>
+    </div>
+  </div>
+  <br/>
+	<div class="row">
+    <div class="span12">
+  		<table class="table table-bordered condensed" id="webdev_developers_table">
+        <caption id="webdev_developers_caption">
+          <h3>Developer Credits <i>(in order of first joined)</i></h3>
+        </caption>
+        <tbody>
+          <tr>
+            <td><%= link_to 'Sean Freiburg', 'http://www.seanfreiburg.com' %> [Mentor]</td>
+  				  <td>Brian Hauger [Mentor]</td>
+  				  <td>Pablo Zavala [Inactive]</td>
+  				</tr>
+          <tr>
+  				  <td>Cesar Vinny Martinez [Inactive]</td>
+  				  <td>Christina Lopez [Inactive]</td>
+            <td>Raymond Farias [Lead Developer]</td>
+  				</tr>
+          <tr>
+    				<td>Victoria Chandler [Developer]</td>
+            <td>Bernardo Vargas [Developer]</td>
+            <td>Alexander Layton [Developer]</td>
+  				</tr>
+  				<tr>
+    				<td>Santiago Gutierrez [Developer]</td>
+            <td>Jesus Fernandez [Developer]</td>
+    				<td>Enrique Lauriano [Student]</td>
+  				</tr>
+        </tbody>
+  		</table>
+    </div>
+	</div>
+</div>
 </section>
