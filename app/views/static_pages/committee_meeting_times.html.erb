@@ -1,5 +1,5 @@
 <% provide(:title, 'Meeting Times') %>
-<section>
+<section class=" committee-page">
 <div class="container">
   <ul class="media-list">
     <li class="media">
@@ -12,10 +12,11 @@
           The External Committee is responsible for...
         </p>
         <p>
-          <strong>Chairs:</strong> Sal Ramirez (Head)
+          <strong>Chair:</strong> Sal Ramirez (Head)
           <br/>
           <strong>Meetings:</strong>
-          <br/><br/>
+          <br/>
+          <br/>
           <%= link_to 'More Info >>', external_path %>
         </p>
       </div>
@@ -31,10 +32,11 @@
           The Round Table is responsible for...
         </p>
         <p>
-          <strong>Chairs:</strong>
+          <strong>Chair:</strong>
           <br/>
           <strong>Meetings:</strong>
-          <br/><br/>
+          <br/>
+          <br/>
           <%= link_to 'More Info >>', round_table_path %>
         </p>
       </div>
@@ -46,15 +48,14 @@
       </div>
       <div class="media-body">
         <h3 class="media-heading">Fundraising Committee</h3>
+        <p><i>
+          The Fundraising is in charge planning fundraisers. The proceeds of these fundraisers are either donated to a charity or fund SHPE|UIUC's various prorgrams. <%= link_to 'More Info >>', fundraising_path %>
+        </i></p>
         <p>
-          The Fundraising is responsible for...
-        </p>
-        <p>
-          <strong>Chairs:</strong>
+          <strong>Chair:</strong> Kevin Zhang
+          (<a href="mailto: treasurer.shpe.uiuc@gmail.com">treasurer.shpe.uiuc@gmail.com</a>)
           <br/>
-          <strong>Meetings:</strong>
-          <br/><br/>
-          <%= link_to 'More Info >>', fundraising_path %>
+          <strong>Meetings:</strong> Mondays at 5:00pm in the SHPE Office (EH 103A)          
         </p>
       </div>
     </li>
@@ -69,10 +70,11 @@
           The MemberSHPE Committee is responsible for...
         </p>
         <p>
-          <strong>Chairs:</strong>
+          <strong>Chair:</strong>
           <br/>
           <strong>Meetings:</strong>
-          <br/><br/>
+          <br/>
+          <br/>
           <%= link_to 'More Info >>', membershpe_path %>
         </p>
       </div>
@@ -86,9 +88,10 @@
         <h3 class="media-heading">Web Dev Committee</h3>
         <p><i>
           The Web Dev Committee is in charge of adding features and maintaining the website you see before you. No experience is required to join. Using the SHPE|UIUC website the committee teaches its members professional web development skills and gives its members a place to practice and develop together. <%= link_to 'More Info >>', webdev_path %>
-        </i></p>
+         </i></p>
         <p>
-          <strong>Chairs:</strong> Raymond Farias (Head)
+          <strong>Chair:</strong> Raymond Farias 
+          (<a href="mailto:shpe.uiuc.webmaster@gmail.com">shpe.uiuc.webmaster@gmail.com</a>)
           <br/>
           <strong>Meetings:</strong>Thursdays 5pm-7pm, in EH
         </p>
@@ -105,10 +108,11 @@
           The Round Table is responsible for...
         </p>
         <p>
-          <strong>Chairs:</strong>
+          <strong>Chair:</strong>
           <br/>
           <strong>Meetings:</strong>
-          <br/><br/>
+          <br/>
+          <br/>
           <%= link_to 'More Info >>', community_service_path %>
         </p>
       </div>
@@ -124,29 +128,31 @@
           The Outreach Committee organizes SHPE|UIUC programs that aim to motivate minority students to pursue a higher education and increase the quantity of minorities in STEM fields. <%= link_to 'More Info >>', outreach_path %>
         </i></p>
         <p>
-          <strong>Chairs:</strong> Ramon Zarate (Head)
+          <strong>Chair:</strong> Ramon Zarate
+          (<a href="mailto:shpe.uiuc.outreach@gmail.com">shpe.uiuc.outreach@gmail.com</a>)
           <br/>
           <strong>Meetings:</strong> Sundays at 4pm-5pm, in EH 106B8
-          
         </p>
       </div>
     </li>
     <hr/>
     <li class="media">
       <div class="pull-left" href="#">
-        <%= image_tag "exec_board/blank-person.jpg", :class=> 'media-object'%>
+        <%= image_tag "logos/committees/technical.jpg", :size=>'187x187', :class=> 'media-object'%>
       </div>
       <div class="media-body">
         <h3 class="media-heading">Technical Committee</h3>
-        <p>
-          The Round Table is responsible for...
-        </p>
-        <p>
-          <strong>Chairs:</strong>
-          <br/>
-          <strong>Meetings:</strong>
-          <br/><br/>
+        <p><i>
+          Each year SHPE|UIUC's Technical Committee takes on multiple technical projects, such as robots and quadcopters, to submit to the Jerry Sanders Design Competition or UIUC's Engineering Open House. Through these projects we expose our membership to solving real world problems and design challenges.
           <%= link_to 'More Info >>', technical_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> Ernesto Garcia
+          (<a href="mailto:shpe.uiuc.technicalchair@gmail.com">shpe.uiuc.technicalchair@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Sundays at 1:00pm in ECEB Open Lab
+          <br/>
+          <br/>
         </p>
       </div>
     </li>
@@ -161,10 +167,11 @@
           The Round Table is responsible for...
         </p>
         <p>
-          <strong>Chairs:</strong>
+          <strong>Chair:</strong>
           <br/>
           <strong>Meetings:</strong>
-          <br/><br/>
+          <br/>
+          <br/>
           <%= link_to 'More Info >>', student_advisory_path %>
         </p>
       </div>

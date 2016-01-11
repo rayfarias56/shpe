@@ -3,11 +3,6 @@
 @import "bootstrap";
 @import "bootstrap-responsive";
 
-// Table center text properly
-.table th.text-center {
-  text-align: center;
-}
-
 // Custom Header Drop Down Style
 .navbar .pull-right > li > .dropdown-menu.custom-dropdown, 
 .navbar .nav > li > .dropdown-menu.pull-right {
@@ -555,4 +550,9 @@ body {
 
 .outreach-carousel > .carousel-inner > .item h4 {
   text-align: center;
+}
+
+// Table center text properly
+.table th.text-center, .table tr td.text-center {
+  text-align: center; 
 }
