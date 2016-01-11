@@ -6,7 +6,6 @@
       </div>
       <div class="span6">
         <h2>SHPE</h2>
-
         <h3>Changing lives by empowering the Hispanic community to realize their fullest potential and impacting the
           world through STEM awareness, access, support and development.</h3>
         <%= link_to 'Learn More', about_path, class: 'btn btn-info btn-large pull-right' %>
@@ -35,21 +34,17 @@
           </li>
         </ul>
         <div class="border white-back">
-
           <%= render 'shared/announcements', announcements: @announcements %>
-          <div class="media white-accent no-margin-top">
-            <%= link_to 'All Announcements', announcements_path , class: 'btn btn-primary'%>
-          </div>
-
-
-          <!-- choose this or pagination for article loading -->
-          <hr class="no-margin-bottom">
-          <a href="#">
-            <div class="row">
-
+            <div class="media white-accent no-margin-top">
+              <%= link_to 'All Announcements', announcements_path , class: 'btn btn-primary'%>
             </div>
-          </a>
-          <!-- <hr class="no-margin-top"> -->
+            <!-- choose this or pagination for article loading -->
+            <hr class="no-margin-bottom">
+            <a href="#">
+              <div class="row">
+              </div>
+            </a>
+            <!-- <hr class="no-margin-top"> -->
         </div>
         <!-- we can choose pagination when we get db set up -->
         <!-- <div class="pagination">
@@ -63,7 +58,6 @@
             <li><a href="#">Next</a></li>
           </ul>
         </div> -->
-
       </div>
       <div class="span4 side-widgets">
         <!-- start of email-rss widget -->
@@ -73,19 +67,14 @@
           <h4><i class="icon-envelope"></i> Email</h4>
           <h4><i class="icon-envelope"></i> RSS</h4>
         </div> -->
-
         <!-- start of email widget -->
         <div class="widget span4">
           <h4 class="text-center btn-info">Email Newsletter</h4>
-
           <div class="widget-inside">
-
-
             <form action="http://shpe-uiuc.us7.list-manage.com/subscribe/post?u=d159baac801e8be7862676536&amp;id=1eec253102" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <fieldset>
                 <legend>Subscribe to our mailing list</legend>
                 <label for="EMAIL">Email Address:</label>
-
                 <div class="input-append">
                   <input type="email" value="" name="EMAIL" class="email" placeholder="email address" required>
                   <button class="btn btn-primary" type="submit" name="subscribe">Subscribe</button>
@@ -95,7 +84,6 @@
           </div>
         </div>
         <!-- end of email widget -->
-
         <!-- start of rss widget -->
         <!--<div class="widget span4">
           <h4 class="text-center btn-info"><i class="icon-rss"></i> RSS</h4>
@@ -105,7 +93,6 @@
           </div>
         </div> -->
         <!-- end of rss widget -->
-
         <!-- start of donate widget -->
         <!--
         <div class="widget span4 donate">
@@ -118,21 +105,18 @@
           </div>
         </div> -->
         <!-- end of donate widget -->
-
         <!-- start of socialize widget -->
         <!-- TODO: add better social icons -->
         <div class="widget span4">
           <h4 class="text-center btn-info">Social</h4>
-
           <div class="widget-inside socialize">
             <%= link_to (image_tag 'picons40.png', class: 'social googleplus'), 'https://plus.google.com/105151305791451975622' %>
-            <%= link_to (image_tag 'picons03.png', class: 'social twitter'), 'https://twitter.com/SHPE_UIUC' %>
-            <%= link_to (image_tag 'picons06.png', class: 'social facebook'), 'https://www.facebook.com/shpe.uiuc' %>
+              <%= link_to (image_tag 'picons03.png', class: 'social twitter'), 'https://twitter.com/SHPE_UIUC' %>
+                <%= link_to (image_tag 'picons06.png', class: 'social facebook'), 'https://www.facebook.com/shpe.uiuc' %>
           </div>
         </div>
         <!-- end of socialize widget -->
       </div>
-
     </div>
 </section>
 <section class="sponsors">
