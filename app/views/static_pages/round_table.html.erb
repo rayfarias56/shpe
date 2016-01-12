@@ -1,2 +1,60 @@
-<h1>StaticPages#round_table</h1>
-<p>Find me in app/views/static_pages/round_table.html.erb</p>
+<% provide(:title, 'Community Service') %>
+<section class="committee-page">
+  <div class="container">
+    <div class="row">
+      <div class="span6"><h1>Roundtable</h1></div>
+      <div class="span6 text-right">
+        <h4>
+          <%= EXEC_BOARD[:internal_vice_president] %>
+          <br/>
+          <a href="mailto:shpe.uiuc.vp.internal@gmail.com">shpe.uiuc.vp.internal@gmail.com</a>
+        </h4>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="span12">
+        <div class="pull-left" style="margin-right: 30px;">
+          <div id="committeeCarousel" class="membershpe-carousel carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="item active ">
+                <%=image_tag("roundtable/rt_election_2015.png", alt: "Elected RT")%>
+                <div class="carousel-caption">
+                  <h4>RT Board 2015-2016</h4>
+                </div>
+              </div>
+              <div class="item">
+                <%=image_tag("roundtable/tamale_fundraising_2015.png", alt: "RT Tamale Fundraiser")%>
+                <div class="carousel-caption">
+                  <h4>RT Tamale Fundraiser</h4>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3><b>Meeting Time:</b> Sundays at 5PM</h3>
+          <h3><b>Meeting Location:</b> EH 106B6</h3>
+          <hr/>
+          <h4> 
+            <b>Internal VP Co-Chair</b> Sergio Navar<br/> 
+            <b>RT Internal VP</b> Tony Calles<br/> 
+          </h4>
+          <hr/>
+        </div>
+        <p>
+          The Roundtable (RT) was created in the 1993-94 year in order to develop new SHPE members into leaders of the organization. The RT works by creating a microcosm of the chapter. It is composed of mainly freshman but is open to any new members. The committee then elects its own e-board. Elected RT members then work closely with their executive board counterparts to gain further insight and complete tasks assigned to them monthly. Throughout the school year, members of the RT, elected or not, think of and plan multiple events focused around SHPE's <%= link_to 'five pillars', about_path %> (Academics, Community Outreach, Chapter Development, Leadership and Professional Development). Examples of events the RT might organize are fundraisers, socials, and the chapter's annual date auction and family vist day. Through exposure to the way the eboard works and how events are planned the RT introduces new members to SHPE, its programs, and how to become a leader within SHPE.
+        </p>
+        <br/>
+      </div>
+    </div>
+  </div>
+</section>

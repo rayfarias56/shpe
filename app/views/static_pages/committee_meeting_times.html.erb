@@ -24,20 +24,18 @@
     <hr/>
     <li class="media">
       <div class="pull-left">
-        <%= image_tag "exec_board/blank-person.jpg", :class=> 'media-object'%>
+        <%= image_tag "logos/committees/roundtable.png", :size=>'187x187', :class=> 'media-object'%>
       </div>
       <div class="media-body">
         <h3 class="media-heading">Round Table</h3>
+        <p><i>
+          The Roundtable is composed of mainly freshman but is open to any new members. The Roundtable is geared towards introducing new members to SHPE and its programs while also giving new members a chance to plan events in order to learn to become SHPE leaders. <%= link_to 'More Info >>', round_table_path %>
+        </i></p>
         <p>
-          The Round Table is responsible for...
-        </p>
-        <p>
-          <strong>Chair:</strong>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:internal_vice_president] %>
+          (<a href="mailto:shpe.uiuc.vp.internal@gmail.com">shpe.uiuc.vp.internal@gmail.com</a>)
           <br/>
-          <strong>Meetings:</strong>
-          <br/>
-          <br/>
-          <%= link_to 'More Info >>', round_table_path %>
+          <strong>Meetings:</strong> Sundays at 5pm, in EH 106B6
         </p>
       </div>
     </li>
@@ -55,7 +53,7 @@
           <strong>Chair:</strong> Kevin Zhang
           (<a href="mailto: treasurer.shpe.uiuc@gmail.com">treasurer.shpe.uiuc@gmail.com</a>)
           <br/>
-          <strong>Meetings:</strong> Mondays at 5:00pm in the SHPE Office (EH 103A)          
+          <strong>Meetings:</strong> Mondays at 5pm, in the SHPE Office (EH 103A)          
         </p>
       </div>
     </li>
@@ -73,7 +71,7 @@
           <strong>Chair:</strong> Marissa Villafuerte
           (<a href="mailto:shpe.uiuc.membership@gmail.com">shpe.uiuc.membership@gmail.com</a>)
           <br/>
-          <strong>Meetings:</strong> Tuesdays at 6:30pm in EH 103A
+          <strong>Meetings:</strong> Tuesdays at 6:30pm, in EH 103A
         </p>
       </div>
     </li>
