@@ -1,30 +1,67 @@
 <% provide(:title, 'MemberSHPE') %>
-<section>
+<section class="committee-page">
   <div class="container">
     <div class="row">
       <div class="span6"><h1>MemberSHPE</h1></div>
-      <div class="span6 text-right"><h4>Marissa Villafuerte<br/>shpe.uiuc.membership@gmail.com</h4></div>
+      <div class="span6 text-right">
+        <h4>
+          Marissa Villafuerte
+          <br/>
+          <a href="mailto:shpe.uiuc.membership@gmail.com">shpe.uiuc.membership@gmail.com</a>
+        
+        </h4>
+      </div>
     </div>
     <hr>
     <div class="row">
       <div class="span12">
         <div class="pull-left" style="margin-right: 30px;">
-          <div id="committeeCarousel" class="carousel slide" style="width: 400px; margin-bottom:10px;">
+          <div id="committeeCarousel" class="membershpe-carousel carousel slide">
             <ol class="carousel-indicators">
               <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
               <li data-target="#committeeCarousel" data-slide-to="1"></li>
               <li data-target="#committeeCarousel" data-slide-to="2"></li>
+              <li data-target="#committeeCarousel" data-slide-to="3" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="4"></li>
+              <li data-target="#committeeCarousel" data-slide-to="5"></li>
             </ol>
             <!-- Carousel items -->
             <div class="carousel-inner">
-              <div class="active item">
-                <%=image_tag("Chrysanthemum.jpg", alt: "Example Image")%>
+              <div class="item active ">
+                <%=image_tag("membershpe/PartnerSHPE_Volleyball_2015.jpg", alt: "PartnerSHPE Volleyball")%>
+                <div class="carousel-caption">
+                  <h4>PartnerSHPE Volleyball</h4>
+                </div>
               </div>
               <div class="item">
-                <%=image_tag("Lighthouse.jpg", alt: "Example Image")%>
+                <%=image_tag("membershpe/corn_maze_2015.jpg", alt: "Corn Maze Social")%>
+                <div class="carousel-caption">
+                  <h4>Corn Maze Social</h4>
+                </div>
               </div>
               <div class="item">
-                <%=image_tag("Desert.jpg", alt: "Example Image")%>
+                <%=image_tag("membershpe/fiesta2015.jpg", alt: "Fiesta")%>
+                <div class="carousel-caption">
+                  <h4>SHPE Fiesta</h4>
+                </div>
+              </div>
+              <div class="item">
+                <%=image_tag("membershpe/ice_skating_2015.jpg", alt: "Ice Skating")%>
+                <div class="carousel-caption">
+                  <h4>Ice Skating Social</h4>
+                </div>
+              </div>
+              <div class="item">
+                <%=image_tag("membershpe/paintballing_2014.jpg", alt: "SHPE Paintballing")%>
+                <div class="carousel-caption">
+                  <h4>SHPE Paintballing</h4>
+                </div>
+              </div>
+              <div class="item">
+                <%=image_tag("membershpe/secret_santa_2015.jpg", alt: "Secrent Santa")%>
+                <div class="carousel-caption">
+                  <h4>Secrent Santa</h4>
+                </div>
               </div>
             </div>
             <!-- Carousel nav -->
@@ -33,29 +70,49 @@
           </div>
         </div>
 	      <div class="text-center">
-	        <h3><b>Meeting Time:</b> Tuesdays at 5:15pm</h3>
-            <h3><b>Meeting Location:</b> 103 EH</h3>
+	        <h3><b>Meeting Time:</b> Tuesdays at 6:30pm</h3>
+            <h3><b>Meeting Location:</b> EH 103A</h3>
             <hr/>
-            <h4><b>Social Chair</b> - Joel Sandoval <br/> 
-            <b>PartnerSHPE Chair</b> - Ray Muro</h4>
+            <h4> 
+              <b>Social Chair</b> - Joel Sandoval<br/> 
+              <b>PartnerSHPE Chair</b> - Ray Muro<br/> 
+              <b>Round Table Counterpart</b> - Michel Gomez
+            </h4>
             <hr/>
 	      </div>
 				<p>
-				As Membershpe Director I am in charge of organizing social activities<br/>
-
-				Activities in Membershpe include planning intramurals, parties, barbeques, and trips.<br/>
-
-				We anticipate any conflicts and make sure preventative measures are in place; such as under age drinking, safety issues, and obeying all University policies.<br/>
-
-				Head and attend all social events coordinated.<br/>
-
-				Work with publicity to advertise events for increasing awareness of SHPE-socials on campus.<br/>
-
-				In charge of maintaining a list of membership status, and responsible for heading the Membership Challenge.<br/>
-
-				Responsible for the implementation of the PartnerSHPE mentoring program to ensure members have a mentor.<br/><br/>
-
+          The MemberSHPE Committee is in charge of tracking membership status records, coordinating SHPE|UIUC's internal mentor program (PartnerSHPE), and organizing social activities. Our efforts promote a strong sense of familia and build lasting memories for our organization's members.
         </p>
+        <p>
+          A lot goes into planning a social and we need committee members to help. Besides thinking of new and creative socials we need to work around budgets and ensure preventative measures are in place for the saftey of the organization and its membership. Underage drinking is not acceptable at any SHPE|UIUC sponsored event and it is important that our socials conform to all of the University's policies. 
+        </p>
+        <br/>
+        <hr>
+        <h2 class="text-center">Programs</h2>
+        <hr>
+        <h3>Socials</h3>
+        <p>
+          We are committed to retaining members and making sure everyone feels like part of the SHPE familia. Social events are planned by the social committee to be as inclusive and as fun as possible. Some past events include: BBQs, potlucks, study lockdowns, movie night, and fiestas. Annual tradtional events include: a visit to Hardy's Reinder Ranch for their fall corn maze, a Thanksgiving dinner (hosted before winter break), a Christmas gift exchange, a Christmas gingerbread house making and spring paintballing. By getting involved, you too can be a part of planning SHPE’s next great event. Make sure to check the <%= link_to 'Facebook General Body Page', 'https://www.facebook.com/shpe.uiuc' %> for upcoming SHPE social events!
+        </p>
+        <h3>PartnerSHPE</h3>
+        <p>
+          The PartnerSHPE program works to aid its underclassmen members in finding meaningful upperclassmen mentors to help guide them in their academic and professional development. The program is a competition in which each mentor/mentee team gains points in order to win a prize at the end of the school year. To earn points, a mentor and mentee team must participate in activities together such as studying together, attending PartnerSHPE Socials together, or attending career fairs together. These moments must have photographic evidence to gain the points associated with them.
+        </p>
+        <p> 
+          More information about the PartnerSHPE Challenge Rules can be found 
+          <%= link_to 'HERE', 'https://docs.google.com/document/d/1XGL_5_jxW6FklaE1p0ok5YKVnVzwDjrGEhhYxc5ZP_o/edit?usp=sharing' %>
+        </p>
+        <p>
+          Please contact the social chair if you are interested in becoming a mentor or a mentee.
+        </p>
+        <h3>MemberSHPE Challenge</h3>
+        <p>
+          SHPE UIUC loves having our members actively involved in our chapter. We pride ourselves in making sure our members are well rounded academically and professionally. We reward those members which are the most active in all SHPE events dealing with academics, professional development, community service, and chapter development. The top three most active members win a prize at the end of the school year.
+        </p>
+        <p>
+          Breakdown of the MemberSHPE Challenge Point System can be found <%= link_to 'HERE', 'https://docs.google.com/document/d/1TxtF5WerqofwpGpY34IJebwOGcxBV5xDUsoq2LjMQJs/edit?usp=sharing ' %>
+        </p>
+        <br/>
       </div>
     </div>
   </div>

@@ -1,2 +1,96 @@
-<h1>StaticPages#community_service</h1>
-<p>Find me in app/views/static_pages/community_service.html.erb</p>
+<% provide(:title, 'Community Service') %>
+<section class="committee-page">
+  <div class="container">
+    <div class="row">
+      <div class="span6"><h1>Community Service</h1></div>
+      <div class="span6 text-right">
+        <h4>
+          Denise Salinas
+          <br/>
+          <a href="mailto:shpe.uiuc.service@gmail.com">shpe.uiuc.service@gmail.com</a>
+        </h4>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="span12">
+        <div class="pull-left" style="margin-right: 30px;">
+          <div id="committeeCarousel" class="membershpe-carousel carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="1"></li>
+              <li data-target="#committeeCarousel" data-slide-to="2"></li>
+              <li data-target="#committeeCarousel" data-slide-to="3" class="active"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="item active ">
+                <%=image_tag("community/habitat.jpg", alt: "Habitat for Humanity")%>
+                <div class="carousel-caption">
+                  <h4>Habitat for Humanity</h4>
+                </div>
+              </div>
+              <div class="item">
+                <%=image_tag("community/noche.jpg", alt: "Noche de Ciencias")%>
+                <div class="carousel-caption">
+                  <h4>Noche de Ciencias</h4>
+                </div>
+              </div>
+              <div class="item">
+                <%=image_tag("community/penpals.jpg", alt: "Penpals Visit")%>
+                <div class="carousel-caption">
+                  <h4>SHPE Penpals</h4>
+                </div>
+              </div>
+              <div class="item">
+                <%=image_tag("community/shpejr.jpg", alt: "SHPE Jr.")%>
+                <div class="carousel-caption">
+                  <h4>SHPE Jr.</h4>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3><b>Meeting Time:</b> Mondays at 6pm in EH 106B3</h3>
+          <h3><b>Meeting Location:</b> EH 106B3</h3>
+          <hr/>
+        </div>
+        <p>
+          <i>“The best way to find yourself is to lose yourself in the service of others.”</i>-Mahatma Gandhi
+        </p>
+        <p>
+          SHPE|UIUC Community Service Committee is a great way to not only get involved in SHPE but strive towards our goal of bettering the hispanic community. SHPE strives to change lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support and development. SHPE|UIUC Community Service accomplishes this through the variety of programs it hosts at all pre-college levels. In addition, SHPE|UIUC realizes the importance in giving back to the community that provides the chapter with so much. There is always room for anyone looking to make an impact so feel free to come by any committee meetings in Engineering Hall 106B3 on Mondays at 6pm. We are always looking for new projects so free to share any opportunities you may know about in the community. Any questions can be sent to <a href="mailto:shpe.uiuc.service@gmail.com">shpe.uiuc.service@gmail.com</a>
+        </p>
+        <br/>
+        <hr>
+        <h2 class="text-center">Programs</h2>
+        <hr>
+        <h3>SHPE Jr.</h3>
+        <p>
+          SHPE Jr. is a mini-SHPE chapter hosted at Urbana High School. This chapter is made up of a group of students from all grade levels. SHPE collaborates with these students to get them prepared to be functioning and respected members of society by hosting different workshops and demonstrations with them such as resume workshops and visits to campus. Not only do we seek to teach these students what SHPE is all about but we realize the importance in foster a true connection with them that continues even after they’ve graduated high school. 
+        </p>
+        <h3>SHPE and Friends Pen Pal Program</h3>
+        <p>
+          The SHPE and Friends Pen Pal Program is a Pen Pal program with students from A.O. Marshall Elementary in Joliet, IL. Started by Cesar Martinez and Karina Zurita, this is a thriving pen pal program in which SHPE partners with other organizations to write to first grade students. Since its development, the program has continued to grow in popularity and SHPE|UIUC has had the honor of assisting other organizations in starting up their own program. In addition writing biweekly letters, Pen pals also visit the students in Joliet during the holiday season to share a thanksgiving feast with them, accompany them on a trip to the Museum of Science and industry, and additionally bus the pen pals and their families down to the University of Illinois Campus for Pen Pal Visit Day. During this day, the chapter hosts various demonstrations for the kids to get them excited in STEM and for the parents, host presentations on financial aid as well as a question and answer panel with students from the College of Engineering.
+        </p>
+        <h3>Noche De Ciencias </h3>
+        <p>
+          Noche De Ciencias is a organization wide event held by all SHPE chapters around the nation. SHPE|UIUC targets hispanic families in the Urbana-Champaign Area and provides them with valuable information regarding college, and why parents should encourage their child to strive for education beyond high school. Valuable information is provided to parents regarding the steps their child should be taking to make college an attainable goal and students are given insight to all the amazing things STEM careers have the potential to do. 
+        </p>
+        <h3>Wesley Food Pantry</h3>
+        <p>
+          In addition to outreach, SHPE|UIUC also realizes the importance of giving back to the community and those who may not be as fortunate. One of the ways we do that is through a great resource in the community, the Wesley Food Pantry. There, volunteers can donate their time every third Thursday of the month and help the food pantry run smoothly. 
+        </p>
+        <h3>Habitat for Humanity Spring Break Trip</h3>
+        <p>
+          SHPE|UIUC does not only give back locally but nationally as well. Partnering up with Engineering Council, many of our members go on this service trip and help families in need of a home get a roof over their heads. Past locations include Dade City and Pensacola, Florida as well as St. John’s Island, South Carolina. Seeing a home be built from the foundation up is an incredibly unique moment but meeting the families who will be living in the homes the volunteers are building is a priceless experience.
+        </p>
+        <br/>
+      </div>
+    </div>
+  </div>
+</section>

@@ -547,8 +547,13 @@ body {
   height: 400px;
   width: 500px;
 }
+.membershpe-carousel > .carousel-inner > .item > img {
+  height: 400px;
+  width: 500px;
+}
 
-.outreach-carousel > .carousel-inner > .item h4 {
+.outreach-carousel > .carousel-inner > .item h4, 
+    .membershpe-carousel  > .carousel-inner > .item h4 {
   text-align: center;
 }
 
