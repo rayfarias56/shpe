@@ -20,7 +20,7 @@ OAUTH_YAML_PATH = 'config/google-api/google-api.yaml'
 
 EXEC_BOARD = {
     president: 'Gabriel Velarde',
-    external_vice_president: 'Sal Ramirez',
+    external_vice_president: 'Alia Mumtaz',
     internal_vice_president: 'Francisco Garcia',
     secretary: 'Perla Morales',
     treasurer: 'Kevin Zhang',
@@ -28,7 +28,7 @@ EXEC_BOARD = {
     academic_excellence_chair: 'Rudy Juarez',
     high_school_outreach_chair: 'Ramon Zarate',
     student_advisor: 'Sara Rothe',
-    technical_chair: 'Edwin Lira',
+    technical_chair: 'Ernesto Garcia',
     community_service_chair: 'Denise Salinas',
     publicity_chair: 'Omar Joya',
     graduate_ambassador: 'Jesus Sotelo',
