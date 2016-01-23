@@ -1,55 +1,33 @@
 <% provide(:title, 'External Committee') %>
 <section class="grey-accent">
-  <div class="container">
-    <div class="row">
-      <div class="span6"><h1>External Committee</h1></div>
-      <div class="span6 text-right"><h4>Sal Ramirez<br/><a href="mailto: shpe.uiuc.external@gmail.com">shpe.uiuc.external@gmail.com</a></h4></div>
-    </div>
-    <hr>
-    <div class="row">
-      <div class="span12">
-        <div class="pull-left" style="margin-right: 30px;">
-          <div id="committeeCarousel" class="carousel slide" style="width: 400px; margin-bottom:10px;">
-            <ol class="carousel-indicators">
-              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
-              <li data-target="#committeeCarousel" data-slide-to="1"></li>
-              <li data-target="#committeeCarousel" data-slide-to="2"></li>
-            </ol>
-            <!-- Carousel items -->
-            <div class="carousel-inner">
-              <div class="active item">
-                <%=image_tag("Chrysanthemum.jpg", alt: "Example Image")%>
-              </div>
-              <div class="item">
-                <%=image_tag("Lighthouse.jpg", alt: "Example Image")%>
-              </div>
-              <div class="item">
-                <%=image_tag("Desert.jpg", alt: "Example Image")%>
-              </div>
-            </div>
-            <!-- Carousel nav -->
-            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
-            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
-          </div>
-        </div>
-          <div class="text-center">
-            <h3>Meeting Time: Thursdays at 4:00pm</h3>
-            <h3>Meeting Location: 1200 EH</h3>
-            <hr/>
-          </div>
-
-          <p style="font-size: 16px">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam varius imperdiet ipsum, ut ultrices dolor feugiat nec. Proin a tortor sed justo finibus egestas sit amet vel quam. Donec non ante ornare, venenatis orci a, fermentum nibh. Phasellus nec pretium nibh. Sed non velit nulla. Suspendisse dignissim imperdiet massa nec pharetra. Sed porta elit sit amet lectus tempus, id consequat nulla aliquet.<br/><br/>
-
-Pellentesque vulputate venenatis justo, eu mollis ipsum mollis quis. Sed eleifend nulla in ex convallis aliquet. Vivamus vehicula felis vitae egestas semper. Vivamus et urna eu est ultrices convallis. Sed feugiat interdum bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur in volutpat justo, id finibus felis. Quisque sit amet mi odio.<br/><br/>
-
-Donec congue, justo vel vulputate scelerisque, eros nibh interdum quam, sit amet malesuada orci orci vel velit. Fusce vitae ex libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus eget lectus ac magna pharetra efficitur id eu turpis. Mauris eu egestas felis, in porttitor ligula. Quisque felis dui, tincidunt eu vulputate sed, dictum id odio. Nulla dapibus vel justo posuere convallis. Integer id libero eu diam eleifend consequat sit amet quis enim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. In posuere est eros, vitae elementum massa lobortis sit amet. Nulla vehicula pretium urna, vel eleifend lacus mattis et. Nunc finibus dui in tortor venenatis cursus.<br/><br/>
-
-Curabitur vestibulum, lacus eget finibus eleifend, lectus sem mattis erat, tincidunt luctus neque felis sit amet nulla. Sed mollis ipsum sed malesuada gravida. Sed accumsan sapien vitae consectetur congue. Donec finibus tellus sapien, sed porta ligula lobortis eget. Morbi quis tristique ante. Aliquam scelerisque fringilla urna vitae congue. Aliquam pretium risus a dui dapibus hendrerit. Pellentesque vitae sem id nisi aliquet eleifend. Donec tempus felis velit, sed fermentum tellus molestie eu. In porta tincidunt diam non porttitor. Nulla varius, enim mattis mattis convallis, mi nibh rutrum urna, vel accumsan orci ipsum id massa. Sed molestie quis erat et elementum. Cras eleifend libero at iaculis fermentum.<br/><br/>
-
-Nunc eu tempor sem, a lobortis ligula. Integer in turpis nisl. Vestibulum id elit sit amet tellus hendrerit ultricies. Suspendisse non finibus nunc. Maecenas id dui non lorem commodo cursus. Praesent rhoncus dui a odio luctus rutrum. Quisque sit amet tristique nibh, in accumsan purus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus quis blandit nisi. Quisque ligula tellus, convallis id imperdiet vel, accumsan sed ipsum. Sed purus erat, egestas ut pretium tristique, commodo sit amet neque.<br/><br/>
-          </p>
-      </div>
+<div class="container">
+  <div class="row">
+    <div class="span6">
+      <h1>External Committee</h1></div>
+    <div class="span6 text-right">
+      <h4><%= EXEC_BOARD[:external_vice_president] %><br/>
+      <a href="mailto: shpe.uiuc.external@gmail.com">shpe.uiuc.external@gmail.com</a></h4>
     </div>
   </div>
+  <hr>
+  <div class="row">
+    <div class="span12">
+      <div class="pull-left" style="margin-right: 20px;">
+        <%=image_tag("external/conference.jpg", size:"600x400", alt: "National Conference")%>
+      </div>
+      <div class="text-center">
+        <h3><b>Meeting Time:</b> N/A</h3>
+        <h3><b>Meeting Location:</b> N/A</h3>
+        <hr/>
+      </div>
+      <p>
+        The External committee helps members develop the professional skills they need to obtain and excel at the internship, research, or full time position they want. It is in charge of building and maintaining relationships with top engineering companies, so our members can have the opportunity to interact with corporate representatives through various events. 
+      </p>
+      <p>
+        The committee organizes many events throughout the year, such as corporate sponsored general body meetings, company socials, and professional workshops to improve resumes and interviewing skills. The committee is responsible for obtaining sponsorship for our society from different corporations. It also invites our alumni to continue to be involved in our chapter through events like the Fall Tailgate and the End of Year Banquet.
+      </p>
+    </div>
+  </div>
+</div>
+<br/><br/><br/><br/><br/><br/><br/><br/>
 </section>

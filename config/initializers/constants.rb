@@ -33,4 +33,5 @@ EXEC_BOARD = {
     publicity_chair: 'Omar Joya',
     graduate_ambassador: 'Jesus Sotelo',
     rldc_chair: 'Karla Rivero',
+    lead_developer: 'Raymond Farias',
 }
