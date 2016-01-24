@@ -1,29 +1,44 @@
 <% provide(:title, 'Events') %>
-
 <section>
-  <div class="container">
-    <div class="row">
+<div class="container">
+  <div class="row">
+    <div class="span8 offset2">
+      <h1 class="event-header">Upcoming Events 
+        <div class="pull-right">
+          <a class="btn btn-inverse" id="GoogleCal" href="http://www.google.com/calendar/render?cid=https%3A%2F%2Fwww.google.com%2Fcalendar%2Ffeeds%2Ff43nbgbtslbe9jou3920okesh0%2540group.calendar.google.com%2Fpublic%2Fbasic">
+            Add to <b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b> Calendar
+          </a>
+        </div>
+      </h1>
 
-      <div class="span7">
-        <h1 class="event-header">Upcoming Events</h1>
-
+      <hr/>
+      <% @events.each do |e| %>
+        <h4><strong><i><%= e.summary.to_s %> </i></strong></h4>
+        <p><strong><%= if e.start.date then "Dates: " else "Date: " end %></strong>
+        <%= e.start.date_time.strftime("%A, %B %d, %Y") if e.start.date_time %>
+        <%= 
+          DateTime.parse(e.start.date).strftime("%A, %B %d, %Y") + " - " +
+              DateTime.parse(e.end.date).strftime("%A, %B %d, %Y") if not e.start.date_time
+        %>
+        </p>
+        <p>
+          <strong>Time: </strong>
+          <%= e.start.date_time.strftime("%l:%M%p")+" -"+e.end.date_time.strftime("%l:%M%p")if e.start.date_time  %>
+          <%= "All Day" if not e.start.date_time%>
+        </p>
+        <p>
+          <strong>Location: </strong>
+          <%= e.location.to_s if e.location %>
+          <%= "TBD" if not e.location %>
+        </p>
+        <p>
+          <strong>Description: </strong>
+          <%= e.description if e.description %>
+          <%= "N/A" if not e.description %>
+        </p>
         <hr/>
-        <% @events.each do |e| %>
-            <h4><strong><i><%= e.summary.to_s %> </i></strong></h4>
-
-            <p><strong><%= if e.start.date then "Dates: " else "Date: " end %></strong><%= e.start.date_time.strftime("%A, %B %d, %Y") if e.start.date_time %> <%= DateTime.parse(e.start.date).strftime("%A, %B %d, %Y") +" - " + DateTime.parse(e.end.date).strftime("%A, %B %d, %Y") if not e.start.date_time %></p>
-
-            <p><strong>Time: </strong><%= e.start.date_time.strftime("%l:%M%p")+" -"+e.end.date_time.strftime("%l:%M%p")if e.start.date_time  %><%= "All Day" if not e.start.date_time%> </p>
-
-            <p><strong>Location: </strong><%= e.location.to_s if e.location %> <%= "TBD" if not e.location %> </p>
-
-            <p><strong>Description: </strong><%= e.description if e.description %> <%= "N/A" if not e.description %> </p>
-            <hr/>
-        <% end %>
-        <a class="btn btn-inverse" id="GoogleCal" href="http://www.google.com/calendar/render?cid=https%3A%2F%2Fwww.google.com%2Fcalendar%2Ffeeds%2Ff43nbgbtslbe9jou3920okesh0%2540group.calendar.google.com%2Fpublic%2Fbasic">
-        Add to <b>G</b><b>o</b><b>o</b><b>g</b><b>l</b><b>e</b> Calendar
-        </a>
-      </div>
+      <% end %>
     </div>
   </div>
+</div>
 </section>

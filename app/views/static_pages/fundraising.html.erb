@@ -1,0 +1,55 @@
+<% provide(:title, 'Fundraising Committee') %>
+<section class="grey-accent committee-page">
+  <div class="container">
+    <div class="row">
+      <div class="span6">
+        <h1>Fundraising Committee</h1></div>
+      <div class="span6 text-right">
+        <h4>Kevin Zhang<br/>
+        <a href="mailto: treasurer.shpe.uiuc@gmail.com">treasurer.shpe.uiuc@gmail.com</a>
+      </h4>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="span12">
+        <div class="pull-left" style="margin-right: 30px;">
+          <div id="committeeCarousel" class="fundraising-carousel carousel slide">
+            <ol class="carousel-indicators">
+              <li data-target="#committeeCarousel" data-slide-to="0" class="active"></li>
+              <li data-target="#committeeCarousel" data-slide-to="1"></li>
+            </ol>
+            <!-- Carousel items -->
+            <div class="carousel-inner">
+              <div class="item active ">
+                <%=image_tag("fundraising/tamales.jpg", alt: "Tamale Sale")%>
+              </div>
+              <div class="item">
+                <%=image_tag("fundraising/other_tamales.jpg", alt: "Another Tamale Sale")%>
+              </div>
+            </div>
+            <!-- Carousel nav -->
+            <a class="carousel-control left" href="#committeeCarousel" data-slide="prev">&lsaquo;</a>
+            <a class="carousel-control right" href="#committeeCarousel" data-slide="next">&rsaquo;</a>
+          </div>
+        </div>
+        <div class="text-center">
+          <h3><strong>Meeting Time:</strong> Mondays at 5:00pm</h3>
+          <h3><strong>Meeting Location:</strong> SHPE Office (EH 103A)</h3>
+          <hr/>
+        </div>
+        <p>
+          The Fundraising committee is dedicated to generating funds within the University. We plan and execute all kinds of fundraisers from selling tamales on the quad to working a concession stand at ILLINI basketball home games. We're looking to do new kinds of fundraisers all the time so if you have any ideas feel free to come share your ideas.
+        </p>
+        <p>
+          The funds generated from our sales go towards various SHPE|UIUC endeavors. Some fundraisers will have their proceeds donated to a charity and some will be kept to fund SHPE|UIUC. We use the funds to purchase equipment for the office or necessities for other committees. Other committees depend on corporate sponsors and our fundraising so they can run their programs or activites such as the chapter's HSV Program or to host this website. Also, our fundraising is sometimes used to subsidize SHPE|UIUC gear or conference travel. We are always accepting new members with new ideas so if you want to help make SHPE great, have a lot of fun, or want cheaper SHPE gear then drop by our next meeting and see what we are about.
+        </p>
+        <p>
+          If you're interested in this committee don’t hesitate to contact the treasurer for more details at <a href="mailto: treasurer.shpe.uiuc@gmail.com">treasurer.shpe.uiuc@gmail.com</a>
+        </p>
+        <!-- Avoid sticky-footer-background-color-issues by extending "content" -->
+        <br/><br/><br/><br/><br/><br/><br/><br/>
+      </div>
+    </div>
+  </div>
+</section>

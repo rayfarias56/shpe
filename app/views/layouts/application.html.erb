@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title><%= full_title(yield(:title)) %></title>
-		<%= stylesheet_link_tag    "application", media: "all" %>
-		<%= csrf_meta_tags %>
-        <%= analytics_init if Rails.env.production? %>
-		<%= favicon_link_tag 'favicon.ico' %>
-    	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;user-scalable=no;"/><!-- #Disables Zoom -->
-    	<meta name="HandheldFriendly" content="True"/>
-        <meta name="msapplication-config" content="none"/><!-- #To fix browserconfig.xml issue -->
-
-    	<link rel="apple-touch-icon" href="/assets/webclip.png"/><!-- #Icon for Webkit Devices-->
-
-		<%= render 'layouts/shim' %>
-	</head>
-	<body>
-		<%= render 'layouts/header' %>
-          <div class="container">
-			    <% flash.each do |key, value| %>
-                    <div class="<%= flash_class(key) %>">
-				        <%= value %>
-                    </div>
-          
-			    <% end %>
+<head>
+  <title>
+    <%= full_title(yield(:title)) %>
+  </title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= csrf_meta_tags %>
+  <%= analytics_init if Rails.env.production? %>
+  <%= favicon_link_tag 'favicon.ico' %>
+  <!-- #Disables Zoom -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="HandheldFriendly" content="True" />
+  <!-- #To fix browserconfig.xml issue -->
+  <meta name="msapplication-config" content="none" />
+  <!-- #Icon for Webkit Devices-->
+  <link rel="apple-touch-icon" href="/assets/webclip.png" />
+  <%= render 'layouts/shim' %>
+</head>
+<body>
+  <div id="wrap">
+    <%= render 'layouts/header' %>
+      <div class="container">
+        <% flash.each do |key, value| %>
+          <div class="<%= flash_class(key) %>">
+            <%= value %>
           </div>
-			    <%= yield %>
-
-			<%= render 'layouts/footer' %>
-	</body>
-    <%= javascript_include_tag "application" %>
+        <% end %>
+      </div>
+      <%= yield %>
+      <div id="push" ></div>
+    </div>
+    <%= render 'layouts/footer' %>
+    </body>
+  <%= javascript_include_tag "application" %>
 </html>
-

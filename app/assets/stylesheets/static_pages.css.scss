@@ -1,3 +1,235 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.exec-board {
+    .thumbnail {
+        background-color: white;
+    }
+}
+
+.newsletter {
+    padding: 0px;
+    margin: 0px;
+    background-image: url(http://i.imgur.com/ESFhskW.gif);
+    background-repeat: repeat-y no-repeat;
+    background-position: top center;
+    background-color: #3d4852;
+
+
+    a:link, a:visited{
+        color: #f47f24;
+        color: rgb(244,127,36);
+        text-decoration: underline;
+    }
+
+    a.orangeLink:hover, a:active{
+        color: #3994b5;
+        text-decoration: underline;
+    }
+
+    td.date{
+        background-image: url(http://i.imgur.com/61yE7tB.gif);
+        background-repeat: repeat-y no-repeat;
+        background-position: top center;
+        background-color: #f2f8fa;
+    }
+
+    img{
+        display: block;
+        padding: 0;
+        border: 0 none;
+        margin: 0;
+    }
+
+    img.inline{
+        display: inline;
+        vertical-align: middle;
+    }
+
+    .texttopbottom p{
+        font-family: Verdana, Arial;
+        color: #8d9ca4;
+        font-size: 10px;
+        margin: 0;
+        text-align:center;
+    }
+
+    p.month{
+        color: #4dc8da;
+        font-family: Arial, Helvetica;
+        font-size: 12px;
+        line-height: 12px;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    p.year{
+        color: #b4ebf3;
+        font-family: 'Arial Black', Arial, Helvetica;
+        font-size: 18px;
+        line-height: 18px;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1{
+        color: #ffffff;
+        font-family: 'Arial Black', Arial, Helvetica;
+        font-size: 48px;
+        line-height: 39px;
+        margin: 0;
+        padding: 0;
+        text-shadow: 0px 0px 1px #1b5362;
+    }
+
+    .whitecol h2{
+        color: #003c7d !important;
+        //color: rgb(0, 60, 125) !important;
+        font-family: Arial, Helvetica;
+        text-align: left;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 25px;
+        margin: 0 0 18px 0;
+    }
+
+    .whitecol h3{
+        color: #003c7d !important;
+        //color: rgb(0, 60, 125) !important;
+        font-family: Arial, Helvetica;
+        text-align: left;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0 0 6px 0;
+        padding: 6px 0 0 0;
+    }
+        
+    .whitecol p{
+        color: #555555 !important;
+        font-family: Verdana, Arial;
+        text-align: left;
+        font-size: 11px;
+        line-height: 18px;
+        margin: 0 0 8px 0;
+    }
+
+    .whitecol ul, .whitecol ol{padding: 0;margin: 20px 0 10px 20px;}
+
+    .whitecol ul{list-style-image: url(http://i.imgur.com/4NG0tD7.png);}
+
+    .whitecol ol{padding: 0;margin: 20px 0 10px 20px;}
+
+    .whitecol ul li, .whitecol ol li{
+        color: #003c7d !important;
+        //color: rgb(0, 60, 125) !important;
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        line-height: 18px;
+        padding: 3px 0 10px 0;
+        border-top: 1px dotted #9c9c93;
+    }
+
+    .bluecol h2{
+        color: #003c7d !important;
+        //color: rgb(0, 60, 125) !important;
+        font-family: 'Arial Black', Arial, Helvetica;
+        text-align: left;
+        text-transform: uppercase;
+        font-size: 11px;
+        line-height: 30px;
+        margin: 0;
+    }
+
+    .bluecol h3{
+        color: #648d97 !important;
+        font-family: Arial, Helvetica;
+        text-align: left;
+        font-weight: bold;
+        font-size: 12px;
+        margin: 0 0 6px 0;
+        padding: 6px 0 0 0;
+    }
+
+    .bluecol p{
+        color: #636c6a;
+        font-family: Verdana, Arial;
+        text-align: left;
+        font-size: 11px;
+        line-height: 18px;
+        margin: 0 0 8px 0;
+    }
+
+    .bluecol ul li, .bluecol ol li{
+        color: #636c6a;
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        line-height: 18px;
+        padding:0 0 10px 0;
+    }
+
+    .bluecol a:link, .bluecol a:visited{
+        //color: rgb(244, 127, 36);
+        color: #f47f24;
+        text-decoration: none;
+    }
+
+    .bluecol a:hover, .bluecol a:active{
+        //color: rgb(244, 127, 36);
+        color: #f47f24;
+        text-decoration: underline;
+    }
+
+    .bluecol table.thisissue td{
+        border-bottom: 1px dotted #9c9c93;
+    }
+
+    .bluecol table.thisissue td{
+        color: #636c6a;
+        font-family: Verdana, Arial;
+        font-size: 11px;
+        padding: 5px 0 5px 0;
+    }
+
+    .bluecol table.thisissue a:link, .bluecol table.thisissue a:visited{
+        color: #636c6a;
+        text-decoration: none;
+    }
+
+    .bluecol table.thisissue a:hover, .bluecol table.thisissue a:active{
+        color: #fe494f;
+        text-decoration: underline;
+    }
+
+    .border{
+        border-bottom: 1px dotted #9c9c93;
+        padding-bottom:15px;
+    }
+
+    .backtotop{
+        font-size: 11px;
+        line-height: 24px;
+    }
+
+    .backtotop a{
+        background: url(http://i.imgur.com/BD32Cax.png) top right no-repeat;
+        padding: 0 17px 0 0;
+        font-family: Verdana, Arial;
+    }
+
+    .backtotop a:link, .backtotop a:visited{
+        color: #92afb6;
+        text-decoration: none;
+    }
+
+    .backtotop a:hover, .backtotop a:active{
+        color: rgb(244,127,36);
+        text-decoration: none;
+        background-position: bottom right;
+    }
+
+    .mb-editor-button{
+        display: inline;
+    }
+}

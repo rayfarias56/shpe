@@ -36,6 +36,23 @@ SampleApp::Application.routes.draw do
   match '/members', to: 'static_pages#members', as: :members
   match '/constitution', to: 'static_pages#constitution', as: :constitution
   match '/executive_board', to: 'static_pages#execboard', as: :execboard
+  match '/outreach', to: 'static_pages#outreach', as: :outreach
+  match '/history', to: 'static_pages#history', as: :history
+  match '/faq', to: 'static_pages#faq', as: :faq
+  match '/newsletters', to: 'static_pages#newsletter', as: :newsletter
+  
+  # Committees
+  match '/committee_meeting_times', to: 'static_pages#committee_meeting_times', as: :committee_meeting_times
+  match '/external', to: 'static_pages#external', as: :external
+  match '/round_table', to: 'static_pages#round_table', as: :round_table
+  match '/fundraising', to: 'static_pages#fundraising', as: :fundraising
+  match '/membershpe', to: 'static_pages#membershpe', as: :membershpe
+  match '/publicity', to: 'static_pages#publicity', as: :publicity
+  match '/webdev', to: 'static_pages#webdev', as: :webdev
+  match '/community_service', to: 'static_pages#community_service', as: :community_service
+  match '/outreach', to: 'static_pages#outreach', as: :outreach
+  match '/technical', to: 'static_pages#technical', as: :technical
+  match 'student_advisory', to: 'static_pages#student_advisory', as: :student_advisory
 
   # Events
   resources :events

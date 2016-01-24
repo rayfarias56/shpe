@@ -1,0 +1,173 @@
+<% provide(:title, 'Meeting Times') %>
+<section class="committee-page">
+<div class="container">
+  <ul class="media-list">
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/external.jpg", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">External Committee</h3>
+        <p><i>
+          The External committee is in charge of building and maintaining relationships with top engineering companies, so our members can have the opportunity to interact with corporate representatives through various events. The committee is also responsible for obtaining sponsorship for our society from different corporations and managing connections and events for our Alumni. <%= link_to 'More Info >>', external_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:external_vice_president] %>
+          (<a href="mailto:shpe.uiuc.vp.internal@gmail.com">exec.shpe.uiuc@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Mondays at 7pm, in the SHPE Office (EH 103A)
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/roundtable.png", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">Round Table</h3>
+        <p><i>
+          The Roundtable is composed of mainly freshman but is open to any new members. The Roundtable is geared towards introducing new members to SHPE and its programs while also giving new members a chance to plan events in order to learn to become SHPE leaders. <%= link_to 'More Info >>', round_table_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:internal_vice_president] %>
+          (<a href="mailto:shpe.uiuc.vp.internal@gmail.com">shpe.uiuc.vp.internal@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Sundays at 5pm, in EH 106B6
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/fundraising.jpg", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">Fundraising Committee</h3>
+        <p><i>
+          The Fundraising is in charge planning fundraisers. The proceeds of these fundraisers are either donated to a charity or fund SHPE|UIUC's various prorgrams. <%= link_to 'More Info >>', fundraising_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:treasurer] %>
+          (<a href="mailto: treasurer.shpe.uiuc@gmail.com">treasurer.shpe.uiuc@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Mondays at 5pm, in the SHPE Office (EH 103A)          
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/membershpe.jpg", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">MemberSHPE Committee</h3>
+        <p><i>
+          The MemberSHPE Committee is in charge of tracking membership status records, coordinating SHPE|UIUC's internal mentor program (PartnerSHPE), and organizing social activities. Our efforts promote a strong sense of familia and build lasting memories for our organization's members. <%= link_to 'More Info >>', membershpe_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:membership_chair] %>
+          (<a href="mailto:shpe.uiuc.membership@gmail.com">shpe.uiuc.membership@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Tuesdays at 6:30pm, in EH 103A
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/web_dev.jpg", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">Web Dev Committee</h3>
+        <p><i>
+          The Web Dev Committee is in charge of adding features and maintaining the website you see before you. No experience is required to join. Using the SHPE|UIUC website the committee teaches its members professional web development skills and gives its members a place to practice and develop together. <%= link_to 'More Info >>', webdev_path %>
+         </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:lead_developer] %> 
+          (<a href="mailto:shpe.uiuc.webmaster@gmail.com">shpe.uiuc.webmaster@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong>Thursdays 5pm-7pm, in EH
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/community.jpg", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">Community Service Committee</h3>
+        <p><i>
+          SHPE strives to change lives by empowering the Hispanic community to realize its fullest potential and to impact the world through STEM awareness, access, support and development. The Community Service Committee accomplishes this through a variety of programs it hosts at all pre-college levels. In addition, SHPE|UIUC realizes the importance in giving back to the community that provides the chapter with so much and does so through charities and service programs. <%= link_to 'More Info >>', community_service_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:community_service_chair] %>
+          (<a href="mailto:shpe.uiuc.service@gmail.com">shpe.uiuc.service@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Mondays at 6pm in EH 106B3
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/outreach.jpg", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">Outreach Committee</h3>
+        <p><i>
+          The Outreach Committee organizes SHPE|UIUC programs that aim to motivate minority students to pursue a higher education and increase the quantity of minorities in STEM fields. <%= link_to 'More Info >>', outreach_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:high_school_outreach_chair] %>
+          (<a href="mailto:shpe.uiuc.outreach@gmail.com">shpe.uiuc.outreach@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Sundays at 4pm-5pm, in EH 106B8
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "logos/committees/technical.jpg", :size=>'187x187', :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">Technical Committee</h3>
+        <p><i>
+          Each year SHPE|UIUC's Technical Committee takes on multiple technical projects, such as robots and quadcopters, to submit to the Jerry Sanders Design Competition or UIUC's Engineering Open House. Through these projects we expose our membership to solving real world problems and design challenges.
+          <%= link_to 'More Info >>', technical_path %>
+        </i></p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:technical_chair] %>
+          (<a href="mailto:shpe.uiuc.technicalchair@gmail.com">shpe.uiuc.technicalchair@gmail.com</a>)
+          <br/>
+          <strong>Meetings:</strong> Sundays at 1:00pm in ECEB Open Lab
+          <br/>
+          <br/>
+        </p>
+      </div>
+    </li>
+    <hr/>
+    <li class="media">
+      <div class="pull-left">
+        <%= image_tag "exec_board/blank-person.jpg", :class=> 'media-object'%>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading">Student Advisory Committee</h3>
+        <p>
+          The Round Table is responsible for...
+        </p>
+        <p>
+          <strong>Chair:</strong> <%= EXEC_BOARD[:student_advisor] %>
+          <br/>
+          <strong>Meetings:</strong>
+          <br/>
+          <br/>
+          <%= link_to 'More Info >>', student_advisory_path %>
+        </p>
+      </div>
+    </li>
+  </ul>
+</div>
+</section>
