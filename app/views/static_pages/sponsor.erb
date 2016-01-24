@@ -1,28 +1,52 @@
 <% provide(:title, 'Sponsor') %>
-
 <section>
-  <div class="container">
-    <div class="row">
+<div class="container">
+  <div class="row">
     <h1>Sponsorship Info</h1>
+  </div>
+  <div class="row">
     <hr/>
-    <div id="sponsor_container">
-
-      <h3 id="h3sponsor">How SHPE Changes Lives</h3>
-       <div class="tab-pane video-container" id="documentary">
-      <iframe id="iframe" width="640" height="360" src="//www.youtube.com/embed/6XnfUOeNKLQ?autoplay=0&amp;hd=1&amp;wmode=opaque" frameborder="0" allowfullscreen></iframe>
-      </div>
-
-      <h3 id="h3sponsor">Detailed Sponsorship Information</h3>
-      <div class="tab-pane video-container" id="documentary">
-        <embed src="<%= asset_path('sponsorship_info.pdf') %>" width="750" height="1000">
-      </div>
-      <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="ENHSKLYKFY4CW">
-        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-      </form>
-    </div>
+  </div>
+  <div class="row" style="font-size: 16px">
+    <p>
+      <b>Our Mission:</b> To change lives by empowering the Hispanic community to realize their fullest potential and impact the world through STEM awareness, access, support and development
+    </p>
+    <p>
+      Our members strive to change lives by excelling in academics, heavy community involvement, as well as personal and professional development.
+    </p>
+    <p>
+      SHPE|UIUC has a diverse pool of talent from one of the best engineering curriculums in the nation. Most members are bilingual and have had technical and leadership experience. As one of the largests engineering societies on campus, SHPE|UIUC has developed a great environment that allows for successful engineers to go out into the corporate world and be an asset to any company.
+    </p>
+    <p>
+      Every year, corporate representatives speak to our members through a variety of events such as workshops or company sponsored General Body Meetings. Companies typically speak to the students about an area of professional development, and then speak to members about the various opportunities their company has to offer.
+    </p>
+    <p>
+      Please take a look at our quick introductory video and sponsorship packet to get a better idea of what SHPE is all about and ways to become involved.
+    </p>
+    <p>
+      If you have any questions or want to set up an event. feel free to contact our external vice president,
+      <%= EXEC_BOARD[:external_vice_president] %>, at exec.shpe.uiuc@gmail.com.
+    </p>
+  </div>
+  <div class="row">
+    <h3 id="h3sponsor">How SHPE Changes Lives</h3>
+    <div class="tab-pane video-container" id="documentary">
+      <iframe width="560" height="315" frameborder="0" src="https://www.youtube.com/embed/vlVMqBAt4ZA" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
+  <div class="row">
+    <h3 id="h3sponsor">Detailed Sponsorship Information</h3>
+    <center>
+      <div class="tab-pane" id="documentary">
+      <embed src="<%= asset_path('sponsorship_info_2015.pdf') %>" width="900px" height="725px">
+    </div>
+    </center>
+  </div>
+</div>
 </section>
+<!-- <form id="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+    <input type="hidden" name="cmd" value="_s-xclick">
+    <input type="hidden" name="hosted_button_id" value="ENHSKLYKFY4CW">
+    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form> -->
