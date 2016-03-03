@@ -16,7 +16,7 @@
   </tr>
   </thead>
 
-<% @events.each do |event| %>
+<% @events.reverse_each do |event| %>
   <tr>
     <td><%= event.name %></td>
     <td><%= event.location %></td>
