@@ -1,6 +1,6 @@
 <div class="container">
 <h1>Listing events</h1>
-
+<%= will_paginate @events %>
 <table class="table table-striped">
   <thead>
   <tr>
@@ -31,7 +31,7 @@
   </tr>
 <% end %>
 </table>
-
+<%= will_paginate @events %>
 <br />
 
 <%= link_to 'New Event', new_event_path, class: 'btn' if eboard_user? %>
