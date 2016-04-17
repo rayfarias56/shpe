@@ -1,5 +1,9 @@
 SampleApp::Application.routes.draw do
 
+  get "committees/new"
+
+  get "committees/edit"
+
   # Announcements
   resources :announcements
 
@@ -25,7 +29,7 @@ SampleApp::Application.routes.draw do
   resources :password_resets
   get "password_resets/new" , as: :new_password_reset
 
-  
+
   # Static Pages
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about' , as: :about
@@ -40,8 +44,10 @@ SampleApp::Application.routes.draw do
   match '/history', to: 'static_pages#history', as: :history
   match '/faq', to: 'static_pages#faq', as: :faq
   match '/newsletters', to: 'static_pages#newsletter', as: :newsletter
-  
+
   # Committees
+  get 'create_committee' => 'committee#new'
+  get 'edit_committee' => 'committee#edit'
   match '/committee_meeting_times', to: 'static_pages#committee_meeting_times', as: :committee_meeting_times
   match '/external', to: 'static_pages#external', as: :external
   match '/round_table', to: 'static_pages#round_table', as: :round_table
