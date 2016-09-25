@@ -29,8 +29,8 @@ EXEC_BOARD = {
     high_school_outreach_chair: 'Xavier Guzman',
     student_advisor: 'Kevin Zhang',
     technical_chair: 'Felipe Fregoso',
-    community_service_chair: 'Maya Villa',
+    community_service_chair: 'Fernando Del Toro',
     publicity_chair: 'Miranda Kang',
-    graduate_ambassador: 'Jesus Sotelo',
+    graduate_ambassador: 'Jesus Stotelo',
     lead_developer: 'Santiago Gutierrez',
 }
